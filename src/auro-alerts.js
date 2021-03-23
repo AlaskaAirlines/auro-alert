@@ -12,8 +12,6 @@ import warning from '@alaskaairux/icons/dist/icons/alert/warning-stroke_es6.js';
 import information from '@alaskaairux/icons/dist/icons/alert/information-stroke_es6.js';
 import success from '@alaskaairux/icons/dist/icons/interface/check-stroke_es6.js';
 
-// Import touch detection lib
-import "focus-visible/dist/focus-visible.min.js";
 import styleCss from "./style-css.js";
 import styleCssFixed from './style-fixed-css.js';
 
