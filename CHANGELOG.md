@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [1.4.1](https://github.com/AlaskaAirlines/auro-alerts/compare/v1.4.0...v1.4.1) (2021-03-26)
+
+
+### Bug Fixes
+
+* remove focus-visible dependency ([3204a06](https://github.com/AlaskaAirlines/auro-alerts/commit/3204a062b2a473178697f5e19cddb94247d025ee))
+
 # [1.4.0](https://github.com/AlaskaAirlines/auro-alerts/compare/v1.3.0...v1.4.0) (2021-02-20)
 
 
