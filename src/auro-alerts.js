@@ -32,13 +32,29 @@ class AuroAlerts extends AuroElement {
   static get properties() {
     return {
       ...super.properties,
-      noIcon:         { type: Boolean },
-      error:          { type: Boolean },
-      success:        { type: Boolean },
-      warning:        { type: Boolean },
-      information:    { type: Boolean },
-      role:           { type: String,
-                        reflect: true }
+      noIcon: {
+        type: Boolean
+      },
+      error: {
+        type: Boolean,
+        reflect: true
+      },
+      success: {
+        type: Boolean,
+        reflect: true
+      },
+      warning: {
+        type: Boolean,
+        reflect: true
+      },
+      information: {
+        type: Boolean,
+        reflect: true
+      },
+      role: {
+        type: String,
+        reflect: true
+      }
     };
   }
 
