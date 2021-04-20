@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [1.4.2](https://github.com/AlaskaAirlines/auro-alerts/compare/v1.4.1...v1.4.2) (2021-04-20)
+
+
+### Bug Fixes
+
+* add reflection support for UI attributes ([cbcb9d6](https://github.com/AlaskaAirlines/auro-alerts/commit/cbcb9d6aa9649f2f468d51b424d9c93c5e0693af))
+
 ## [1.4.1](https://github.com/AlaskaAirlines/auro-alerts/compare/v1.4.0...v1.4.1) (2021-03-26)
 
 
