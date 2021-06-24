@@ -1,7 +1,7 @@
 ---
 name: Bug report
 about: Create a report to help us improve
-title: 'auro-alerts: [issue summary]'
+title: 'auro-alert: [issue summary]'
 labels: 'Type: Bug'
 assignees: blackfalcon
 ---

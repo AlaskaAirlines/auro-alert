@@ -1,1 +1,1 @@
-export * from './dist/auro-alerts';
+export * from './dist/auro-alert';

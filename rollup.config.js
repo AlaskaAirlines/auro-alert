@@ -26,10 +26,10 @@ const getSharedPlugins = (isLegacy) => [
 ];
 
 const modernConfig = {
-  input: 'src/auro-alerts.js',
+  input: 'src/auro-alert.js',
   output: {
     format: 'esm',
-    file: 'dist/auro-alerts__bundled.js'
+    file: 'dist/auro-alert__bundled.js'
   },
   plugins: [
     // remove shady DOM polyfill for modern browsers
@@ -55,7 +55,7 @@ const legacyConfig = {
   input: 'src/es5.js',
   output: {
     format: 'iife',
-    file: 'dist/auro-alerts__bundled.es5.js'
+    file: 'dist/auro-alert__bundled.es5.js'
   },
   plugins: getSharedPlugins(true)
 };

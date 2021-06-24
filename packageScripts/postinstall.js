@@ -19,7 +19,7 @@ console.log(chalk.hex('#f26135')(`
 ╭ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ─ ──────────────────────────────╮
 
         Thanks for installing the latest version
-                of `) + chalk.hex('#ffd200').bold(`auro-alerts v${pjson.version}.`) + chalk.hex('#f26135')(`
+                of `) + chalk.hex('#ffd200').bold(`auro-alert v${pjson.version}.`) + chalk.hex('#f26135')(`
 
    `) + chalk.hex('#ffd200').bold(`NOTE: `) + chalk.hex('#f26135')(`This update requires the latest version of
         @alaskaairux/webcorestylesheets

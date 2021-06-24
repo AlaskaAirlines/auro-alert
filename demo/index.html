@@ -6,14 +6,14 @@
       name="viewport"
       content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes"
     />
-    <title>Auro Web Component Generator | auro-alerts custom element</title>
+    <title>Auro Web Component Generator | auro-alert custom element</title>
     <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
     <script type="module">
       import '@polymer/iron-demo-helpers/demo-pages-shared-styles';
       import '@polymer/iron-demo-helpers/demo-snippet';
     </script>
-    <script type="module" src="../src/auro-alerts.js"></script>
-    <script type="module" src="../node_modules/@alaskaairux/auro-hyperlink/dist/auro-hyperlink.js"></script>
+    <script type="module" src="../src/auro-alert.js"></script>
+    <script src="https://unpkg.com/@alaskaairux/auro-hyperlink@latest/dist/auro-hyperlink__bundled.js" type="module"></script>
     <custom-style>
       <style is="custom-style" include="demo-pages-shared-styles"></style>
     </custom-style>
@@ -22,69 +22,69 @@
   </head>
   <body>
     <div class="vertical-section-container">
-      <h1>auro-alerts</h1>
+      <h1>auro-alert</h1>
 
       <demo-snippet>
         <template>
-          <auro-alerts fixed>This is a fixed/undefined alert</auro-alerts>
+          <auro-alert fixed>This is a fixed/undefined alert</auro-alert>
         </template>
       </demo-snippet>
 
       <demo-snippet>
         <template>
-          <auro-alerts>This is an undefined alert</auro-alerts>
+          <auro-alert>This is an undefined alert</auro-alert>
         </template>
       </demo-snippet>
 
       <demo-snippet>
         <template>
-          <auro-alerts error noIcon>This is an alert with no icon</auro-alerts>
+          <auro-alert type="error" noIcon>This is an alert with no icon</auro-alert>
         </template>
       </demo-snippet>
 
       <demo-snippet>
         <template>
-          <auro-alerts error>There is an error ... check that out</auro-alerts>
-          <auro-alerts warning>Hey, there is something wrong, but it's ok</auro-alerts>
-          <auro-alerts information>Just letting you know, don't look in your closet.</auro-alerts>
-          <auro-alerts success>Just letting you know, don't look in your closet.</auro-alerts>
+          <auro-alert type="error">There is an error ... check that out</auro-alert>
+          <auro-alert type="warning">Hey, there is something wrong, but it's ok</auro-alert>
+          <auro-alert type="information">Just letting you know, don't look in your closet.</auro-alert>
+          <auro-alert type="success">Just letting you know, don't look in your closet.</auro-alert>
         </template>
       </demo-snippet>
 
       <demo-snippet>
         <template>
-          <auro-alerts error hidden>This content will be hidden visually and from screen readers</auro-alerts>
+          <auro-alert type="error" hidden>This content will be hidden visually and from screen readers</auro-alert>
         </template>
       </demo-snippet>
 
       <demo-snippet>
         <template>
-          <auro-alerts warning hiddenVisually>This content will be hidden visually, but screen readers will pick it up..</auro-alerts>
+          <auro-alert type="warning" hiddenVisually>This content will be hidden visually, but screen readers will pick it up..</auro-alert>
         </template>
       </demo-snippet>
 
       <demo-snippet>
         <template>
-          <auro-alerts information hiddenAudible>This content will be hidden from screen readers.</auro-alerts>
+          <auro-alert type="information" hiddenAudible>This content will be hidden from screen readers.</auro-alert>
         </template>
       </demo-snippet>
 
       <demo-snippet>
         <template>
-          <auro-alerts error>
+          <auro-alert type="error">
             <p>Departing flight AS 344 cannot accommodate any additional unaccompanied minors. Please choose a different flight.</p>
             <p>Returning flight AS 1743 cannot accommodate any additional unaccompanied minors. Please choose a different flight.</p>
-          </auro-alerts>
+          </auro-alert>
         </template>
       </demo-snippet>
 
       <demo-snippet>
         <template>
-          <auro-alerts information>
+          <auro-alert type="information">
             <p>For your child's safety, unaccompanied minors aged 8-17 can only fly on Alaska Airlines flights departing between 5:00 AM and 9:00 PM. <auro-hyperlink href="/children-travel">Rules for children traveling alone.</auro-hyperlink></p>
             <p>We searched for all Seattle Area, WA airports. Be sure to note which airport is being used.</p>
             <p>We searched for all Bay Area, CA airports. Be sure to note which airport is being used.</p>
-          </auro-alerts>
+          </auro-alert>
         </template>
       </demo-snippet>
 
