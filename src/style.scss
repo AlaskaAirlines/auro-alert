@@ -13,16 +13,16 @@
 @import "./node_modules/@alaskaairux/webcorestylesheets/dist/auroElement/auroElement";
 
 // container styles - defines the look of the outer custom component
-:host([error]),
-:host([warning]),
-:host([information]),
-:host([success]) {
+:host([type='error']),
+:host([type='warning']),
+:host([type='information']),
+:host([type='success']) {
   .alert {
     color: var(--auro-color-text-primary-on-light);
   }
 }
 
-:host([error]) {
+:host([type='error']) {
   .alert {
     border-color: var(--auro-color-alert-error-on-light);
   }
@@ -32,7 +32,7 @@
   }
 }
 
-:host([warning]) {
+:host([type='warning']) {
   .alert {
     border-color: var(--auro-color-alert-warning-on-light);
   }
@@ -42,7 +42,7 @@
   }
 }
 
-:host([information]) {
+:host([type='information']) {
   .alert {
     border-color: var(--auro-color-alert-notification-on-light);
   }
@@ -52,7 +52,7 @@
   }
 }
 
-:host([success]) {
+:host([type='success']) {
   .alert {
     border-color: var(--auro-color-alert-success-on-light);
   }

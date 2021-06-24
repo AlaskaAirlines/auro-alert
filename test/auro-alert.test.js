@@ -1,12 +1,12 @@
 /* eslint-disable one-var */
 /* eslint-disable no-undef */
 import { fixture, html, expect } from '@open-wc/testing';
-import '../src/auro-alerts.js';
+import '../src/auro-alert.js';
 
-describe('auro-alerts', () => {
-  it('sets auro-alerts to default style', async () => {
+describe('auro-alert', () => {
+  it('sets auro-alert to default style', async () => {
     const el = await fixture(html`
-      <auro-alerts></auro-alerts>
+      <auro-alert></auro-alert>
     `);
 
     const root = el.shadowRoot;
@@ -14,9 +14,9 @@ describe('auro-alerts', () => {
     await expect(content.getAttribute('aria-hidden')).to.equal('false');
   });
 
-  it('sets auro-alerts to error style', async () => {
+  it('sets auro-alert to error style', async () => {
     const el = await fixture(html`
-      <auro-alerts error></auro-alerts>
+      <auro-alert type="error"></auro-alert>
     `);
 
     const root = el.shadowRoot;
@@ -29,9 +29,9 @@ describe('auro-alerts', () => {
     await expect(hiddenContent.innerHTML).to.equal("<!---->Error.<!---->");
   });
 
-  it('sets auro-alerts to warning style', async () => {
+  it('sets auro-alert to warning style', async () => {
     const el = await fixture(html`
-      <auro-alerts warning></auro-alerts>
+      <auro-alert type="warning"></auro-alert>
     `);
 
     const root = el.shadowRoot;
@@ -44,9 +44,9 @@ describe('auro-alerts', () => {
     await expect(hiddenContent.innerHTML).to.equal("<!---->Warning.<!---->");
   });
 
-  it('sets auro-alerts to success style', async () => {
+  it('sets auro-alert to success style', async () => {
     const el = await fixture(html`
-      <auro-alerts success></auro-alerts>
+      <auro-alert type="success"></auro-alert>
     `);
 
     const root = el.shadowRoot;
@@ -60,9 +60,9 @@ describe('auro-alerts', () => {
   });
 
 
-  it('sets auro-alerts to information style', async () => {
+  it('sets auro-alert to information style', async () => {
     const el = await fixture(html`
-      <auro-alerts information></auro-alerts>
+      <auro-alert type="information"></auro-alert>
     `);
 
     const root = el.shadowRoot;
@@ -75,9 +75,9 @@ describe('auro-alerts', () => {
     await expect(hiddenContent.innerHTML).to.equal("<!---->Informational notice.<!---->");
   });
 
-  it('sets auro-alerts to noIcon style', async () => {
+  it('sets auro-alert to noIcon style', async () => {
     const el = await fixture(html`
-      <auro-alerts information noIcon></auro-alerts>
+      <auro-alert type="information" noIcon></auro-alert>
     `);
 
     const root = el.shadowRoot;
@@ -87,20 +87,20 @@ describe('auro-alerts', () => {
     await expect(hiddenContent.innerHTML).to.equal("<!---->Informational notice.<!---->");
   });
 
-  it('auro-alerts is accessible', async () => {
+  it('auro-alert is accessible', async () => {
     const el = await fixture(html`
-      <auro-alerts information>
+      <auro-alert type="information">
         <p>For your child's safety, unaccompanied minors aged 8-17 can only fly on Alaska Airlines flights departing between 5:00 AM and 9:00 PM. <a href="#">Rules for children traveling alone.</a></p>
         <p>We searched for all Seattle Area, WA airports. Be sure to note which airport is being used.</p>
         <p>We searched for all Bay Area, CA airports. Be sure to note which airport is being used.</p>
-      </auro-alerts>
+      </auro-alert>
     `);
 
     await expect(el).to.be.accessible();
   });
 
-  it('auro-alerts custom element is defined', async () => {
-    const el = await Boolean(customElements.get("auro-alerts"));
+  it('auro-alert custom element is defined', async () => {
+    const el = await Boolean(customElements.get("auro-alert"));
 
     await expect(el).to.be.true;
   });

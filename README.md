@@ -1,6 +1,6 @@
-# auro-alerts
+# auro-alert
 
-`<auro-alerts>` is a [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) for the purpose of ...
+`<auro-alert>` is a [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) for the purpose of ...
 
 ## UI development browser support
 
@@ -8,12 +8,12 @@ For the most up to date information on [UI development browser support](https://
 
 ## Install
 
-[![Build Status](https://img.shields.io/github/workflow/status/AlaskaAirlines/auro-alerts/Test%20and%20publish?branch=master&style=for-the-badge)](https://github.com/AlaskaAirlines/auro-alerts/actions?query=workflow%3A%22test+and+publish%22)
-[![See it on NPM!](https://img.shields.io/npm/v/@alaskaairux/auro-alerts?style=for-the-badge&color=orange)](https://www.npmjs.com/package/@alaskaairux//auro-alerts)
-[![License](https://img.shields.io/npm/l/@alaskaairux/auro-alerts?color=blue&style=for-the-badge)](https://www.apache.org/licenses/LICENSE-2.0)
+[![Build Status](https://img.shields.io/github/workflow/status/AlaskaAirlines/auro-alert/Test%20and%20publish?branch=master&style=for-the-badge)](https://github.com/AlaskaAirlines/auro-alert/actions?query=workflow%3A%22test+and+publish%22)
+[![See it on NPM!](https://img.shields.io/npm/v/@alaskaairux/auro-alert?style=for-the-badge&color=orange)](https://www.npmjs.com/package/@alaskaairux//auro-alert)
+[![License](https://img.shields.io/npm/l/@alaskaairux/auro-alert?color=blue&style=for-the-badge)](https://www.apache.org/licenses/LICENSE-2.0)
 
 ```shell
-$ npm i @alaskaairux/auro-alerts
+$ npm i @alaskaairux/auro-alert
 ```
 
 Installing as a direct, dev or peer dependency is up to the user installing the package. If you are unsure as to what type of dependency you should use, consider reading this [stack overflow](https://stackoverflow.com/questions/18875674/whats-the-difference-between-dependencies-devdependencies-and-peerdependencies) answer.
@@ -30,21 +30,21 @@ Any update to the Auro Design Tokens will be immediately reflected with browsers
 
 ### Define dependency in project component
 
-Defining the component dependency within each component that is using the `<auro-alerts>` component.
+Defining the component dependency within each component that is using the `<auro-alert>` component.
 
 ```javascript
-import "@alaskaairux/auro-alerts";
+import "@alaskaairux/auro-alert";
 ```
 
 **Reference component in HTML**
 
 ```html
-<auro-alerts>Hello World</auro-alerts>
+<auro-alert>Hello World</auro-alert>
 ```
 
 ## Install bundled assets from CDN
 
-In cases where the project is not able to process JS assets, there are pre-processed assets available for use. Two bundles are available -- `auro-alerts__bundled.js` for modern browsers and `auro-alerts__bundled.es5.js` for legacy browsers (including IE11).
+In cases where the project is not able to process JS assets, there are pre-processed assets available for use. Two bundles are available -- `auro-alert__bundled.js` for modern browsers and `auro-alert__bundled.es5.js` for legacy browsers (including IE11).
 
 Since the legacy bundle includes many polyfills that are not needed by modern browsers, we recommend you load these bundles using [differential serving](https://philipwalton.com/articles/deploying-es2015-code-in-production-today/) so that the browser only loads the bundle it needs. To accomplish this, the script tag for the modern bundle should have `type="module"` and the script tag for the legacy bundle should have the `nomodule` attribute. See the example below.
 
@@ -54,8 +54,8 @@ Since the legacy bundle includes many polyfills that are not needed by modern br
 <link rel="stylesheet" href="https://unpkg.com/@alaskaairux/design-tokens@latest/dist/tokens/CSSCustomProperties.css" />
 <link rel="stylesheet" href="https://unpkg.com/@alaskaairux/webcorestylesheets@latest/dist/bundled/essentials.css" />
 
-<script src="https://unpkg.com/@alaskaairux/auro-alerts@latest/dist/auro-alerts__bundled.js" type="module"></script>
-<script src="https://unpkg.com/@alaskaairux/auro-alerts@latest/dist/auro-alerts__bundled.es5.js" nomodule></script>
+<script src="https://unpkg.com/@alaskaairux/auro-alert@latest/dist/auro-alert__bundled.js" type="module"></script>
+<script src="https://unpkg.com/@alaskaairux/auro-alert@latest/dist/auro-alert__bundled.es5.js" nomodule></script>
 ```
 
 ### IE11 Support
@@ -65,32 +65,32 @@ Since the legacy bundle includes many polyfills that are not needed by modern br
 
 ## API Code Examples
 
-Default auro-alerts
+Default auro-alert
 
 ```html
-<auro-alerts error>Departing flight AS 1066 cannot accommodate any ... </auro-alerts>
+<auro-alert type="error">Departing flight AS 1066 cannot accommodate any ... </auro-alert>
 ```
 
 ```html
-<auro-alerts warning>Departing flight AS 1066 cannot accommodate any ... </auro-alerts>
+<auro-alert type="warning">Departing flight AS 1066 cannot accommodate any ... </auro-alert>
 ```
 
 ```html
-<auro-alerts information>Departing flight AS 1066 cannot accommodate any ... </auro-alerts>
+<auro-alert type="information">Departing flight AS 1066 cannot accommodate any ... </auro-alert>
 ```
 
 ```html
-<auro-alerts success>Updates to your flight AS 1066 have been saved. </auro-alerts>
+<auro-alert type="success">Updates to your flight AS 1066 have been saved. </auro-alert>
 ```
 
 Auro alerts with nested content/components
 
 ```html
-<auro-alerts information>
+<auro-alert type="information">
   <p>For your child's safety, unaccompanied minors aged 8-17 can only fly on Alaska Airlines flights departing between 5:00 AM and 9:00 PM. <auro-hyperlink href="/children-travel">Rules for children traveling alone.</auro-hyperlink></p>
   <p>We searched for all Seattle Area, WA airports. Be sure to note which airport is being used.</p>
   <p>We searched for all Bay Area, CA airports. Be sure to note which airport is being used.</p>
-</auro-alerts>
+</auro-alert>
 ```
 
 ## Development
@@ -116,4 +116,4 @@ $ npm run serve
 Open [localhost:8000](http://localhost:8000/)
 
 ### Testing
-Automated tests are required for every Auro component. See `.\test\auro-alerts.test.js` for the tests for this component. Run `npm test` to run the tests and check code coverage. Tests must pass and meet a certain coverage threshold to commit. See [the testing documentation](https://auro.alaskaair.com/support/tests) for more details.
+Automated tests are required for every Auro component. See `.\test\auro-alert.test.js` for the tests for this component. Run `npm test` to run the tests and check code coverage. Tests must pass and meet a certain coverage threshold to commit. See [the testing documentation](https://auro.alaskaair.com/support/tests) for more details.

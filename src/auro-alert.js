@@ -16,17 +16,14 @@ import styleCss from "./style-css.js";
 import styleCssFixed from './style-fixed-css.js';
 
 /**
- * @attr {Boolean} error - Turns alert into error style
  * @attr {Boolean} fixed - uses px values instead of rem
- * @attr {Boolean} warning - Turns alert into warning style
- * @attr {Boolean} success - Turns alert into success style
- * @attr {Boolean} information - Turns alert into information style
  * @attr {Boolean} noIcon - Removes icon from alert UI
  * @attr {String} role - The role will be set based on type
+ * @attr {String} type - Component will render visually based on which type value is set; currently supports `error`, `warning`, `success`, `information`
  *
  * @slot - Provide text for the alert. If using multiple lines, separate each line with <p> tags.
  */
-class AuroAlerts extends AuroElement {
+class AuroAlert extends AuroElement {
 
   // function to define props used within the scope of this component
   static get properties() {
@@ -35,20 +32,8 @@ class AuroAlerts extends AuroElement {
       noIcon: {
         type: Boolean
       },
-      error: {
-        type: Boolean,
-        reflect: true
-      },
-      success: {
-        type: Boolean,
-        reflect: true
-      },
-      warning: {
-        type: Boolean,
-        reflect: true
-      },
-      information: {
-        type: Boolean,
+      type: {
+        type: String,
         reflect: true
       },
       role: {
@@ -74,37 +59,36 @@ class AuroAlerts extends AuroElement {
     const dom = new DOMParser().parseFromString(svgContent, 'text/html'),
     svg = dom.body.firstChild;
 
-  return this.noIcon
-    ? html``
-    : html`<div class="icon">${svg}</div>`
+    return this.noIcon
+      ? html``
+      : html`<div class="icon">${svg}</div>`
   }
 
   // function that renders the HTML and CSS into  the scope of the component
   render() {
     let output = html``;
-    const alertType = this.error || this.warning || this.information || this.success;
 
-    switch (alertType) {
+    switch (this.type) {
       case undefined:
         break;
-      case this.error:
+      case "error":
         output = this.generateIconHtml(error.svg);
         this.role = "alert";
-        this.type = "Error.";
+        this.typeStr = "Error.";
         break;
-      case this.success:
+      case "success":
         output = this.generateIconHtml(success.svg);
         this.role = "alert";
-        this.type = "Success.";
+        this.typeStr = "Success.";
         break;
-      case this.warning:
+      case "warning":
         output = this.generateIconHtml(warning.svg);
         this.role = "alert";
-        this.type = "Warning."
+        this.typeStr = "Warning."
         break;
-      case this.information:
+      case "information":
         output = this.generateIconHtml(information.svg);
-        this.type = "Informational notice."
+        this.typeStr = "Informational notice."
         break;
       default:
         break;
@@ -115,7 +99,7 @@ class AuroAlerts extends AuroElement {
         aria-hidden="${this.hideAudible(this.hiddenAudible)}">
         ${output}
         <div class="content">
-          <span class="util_displayHiddenVisually">${this.type}</span>
+          <span class="util_displayHiddenVisually">${this.typeStr}</span>
           <slot></slot>
         </div>
       </div>
@@ -125,6 +109,6 @@ class AuroAlerts extends AuroElement {
 
 /* istanbul ignore else */
 // define the name of the custom component
-if (!customElements.get("auro-alerts")) {
-  customElements.define("auro-alerts", AuroAlerts);
+if (!customElements.get("auro-alert")) {
+  customElements.define("auro-alert", AuroAlert);
 }

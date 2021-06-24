@@ -1,7 +1,7 @@
 ---
 name: Review Design Story
 about: Crate a new user story to address the design review process
-title: 'auro-alerts; design [feature] review'
+title: 'auro-alert; design [feature] review'
 labels: 'Status: Backlogged'
 ---
 

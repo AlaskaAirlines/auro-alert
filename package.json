@@ -7,13 +7,13 @@
     "  3. Go to http://localhost:8000",
     "================================================================================"
   ],
-  "name": "@alaskaairux/auro-alerts",
+  "name": "@alaskaairux/auro-alert",
   "version": "1.4.2",
-  "description": "Auro custom auro-alerts element",
+  "description": "Auro custom auro-alert element",
   "author": "Product design and research",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AlaskaAirlines/auro-alerts"
+    "url": "https://github.com/AlaskaAirlines/auro-alert"
   },
   "main": "index.js",
   "license": "Apache-2.0",
@@ -95,7 +95,7 @@
   ],
   "scripts": {
     "build": "npm run ciBuild",
-    "apiBuild": "wca analyze 'src/auro-alerts.js' --outFiles docs/api.md",
+    "apiBuild": "wca analyze 'src/auro-alert.js' --outFiles docs/api.md",
     "bundler": "rollup -c",
     "bundle:test": "rollup -c -w",
     "serve": "web-dev-server --open demo/ --node-resolve --watch",
