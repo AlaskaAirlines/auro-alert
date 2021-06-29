@@ -7,7 +7,9 @@ const removeRules = require('postcss-remove-rules');
 const comments = require('postcss-discard-comments');
 const fs = require('fs');
 
-fs.readFile('src/style.css', (err, css) => {
+const cssFiles = ['style']
+
+cssFiles.map(name => fs.readFile(`src/${name}.css`, (err, css) => {
   postcss([autoprefixer, postcssCustomProperties, comments])
     .use(comments({
       remove: function(comment) { return comment[0] == "@"; }
@@ -17,23 +19,23 @@ fs.readFile('src/style.css', (err, css) => {
         ':root': '*'
       }
     }))
-    .process(css, { from: 'src/style.css', to: 'src/style.css' })
+    .process(css, { from: `src/${name}.css`, to: `src/${name}.css` })
     .then(result => {
-      fs.writeFile('src/style.css', result.css, () => true)
+      fs.writeFile(`src/${name}.css`, result.css, () => true)
       if ( result.map ) {
-        fs.writeFile('src/style.map', result.map, () => true)
+        fs.writeFile(`src/${name}.map`, result.map, () => true)
       }
     })
-  });
+  }));
 
-
-  /*
+/*
   Output a "fixed" stylesheet that only contains declarations with rem units
   converted to their px equivalent.
-  */
-  const fixedFile = 'src/style-fixed.css';
-  const fixedFileMap = 'src/style-fixed.map';
-  fs.readFile(fixedFile, (err, css) => {
+*/
+const cssFixedFiles = ['style-fixed']
+
+cssFixedFiles.map(name => fs.readFile(`src/${name}.css`, (err, css) => {
+  fs.readFile(`src/${name}.css`, (err, css) => {
     postcss([
       autoprefixer,
       postcssCustomProperties({preserve: false}),
@@ -42,13 +44,14 @@ fs.readFile('src/style.css', (err, css) => {
       remToPx({replace: true, propList: ['*']})
     ])
     .use(comments({
-        remove: function(comment) { return comment[0] == "@"; }
-      }))
-      .process(css, { from: fixedFile, to: fixedFile })
-      .then(result => {
-        fs.writeFile(fixedFile, result.css, () => true)
-        if ( result.map ) {
-          fs.writeFile(fixedFileMap, result.map, () => true)
-        }
-      })
+      remove: function(comment) { return comment[0] == "@"; }
+    }))
+    .process(css, { from: `src/${name}.css`, to: `src/${name}.css` })
+    .then(result => {
+      fs.writeFile(`src/${name}.css`, result.css, () => true)
+      if ( result.map ) {
+        fs.writeFile(`src/${name}.map`, result.map, () => true)
+      }
+    })
   });
+}));

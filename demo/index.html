@@ -1,93 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes"
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auro Web Component Generator | auro-lockup custom element</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://unpkg.com/prismjs@latest/themes/prism.css"
     />
-    <title>Auro Web Component Generator | auro-alert custom element</title>
-    <script src="../node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
-    <script type="module">
-      import '@polymer/iron-demo-helpers/demo-pages-shared-styles';
-      import '@polymer/iron-demo-helpers/demo-snippet';
-    </script>
-    <script type="module" src="../src/auro-alert.js"></script>
-    <script src="https://unpkg.com/@alaskaairux/auro-hyperlink@latest/dist/auro-hyperlink__bundled.js" type="module"></script>
-    <custom-style>
-      <style is="custom-style" include="demo-pages-shared-styles"></style>
-    </custom-style>
-
     <link rel="stylesheet" type="text/css" href="css/style.css" />
   </head>
   <body>
-    <div class="vertical-section-container">
-      <h1>auro-alert</h1>
+    <main></main>
 
-      <demo-snippet>
-        <template>
-          <auro-alert fixed>This is a fixed/undefined alert</auro-alert>
-        </template>
-      </demo-snippet>
-
-      <demo-snippet>
-        <template>
-          <auro-alert>This is an undefined alert</auro-alert>
-        </template>
-      </demo-snippet>
-
-      <demo-snippet>
-        <template>
-          <auro-alert type="error" noIcon>This is an alert with no icon</auro-alert>
-        </template>
-      </demo-snippet>
-
-      <demo-snippet>
-        <template>
-          <auro-alert type="error">There is an error ... check that out</auro-alert>
-          <auro-alert type="warning">Hey, there is something wrong, but it's ok</auro-alert>
-          <auro-alert type="information">Just letting you know, don't look in your closet.</auro-alert>
-          <auro-alert type="success">Just letting you know, don't look in your closet.</auro-alert>
-        </template>
-      </demo-snippet>
-
-      <demo-snippet>
-        <template>
-          <auro-alert type="error" hidden>This content will be hidden visually and from screen readers</auro-alert>
-        </template>
-      </demo-snippet>
-
-      <demo-snippet>
-        <template>
-          <auro-alert type="warning" hiddenVisually>This content will be hidden visually, but screen readers will pick it up..</auro-alert>
-        </template>
-      </demo-snippet>
-
-      <demo-snippet>
-        <template>
-          <auro-alert type="information" hiddenAudible>This content will be hidden from screen readers.</auro-alert>
-        </template>
-      </demo-snippet>
-
-      <demo-snippet>
-        <template>
-          <auro-alert type="error">
-            <p>Departing flight AS 344 cannot accommodate any additional unaccompanied minors. Please choose a different flight.</p>
-            <p>Returning flight AS 1743 cannot accommodate any additional unaccompanied minors. Please choose a different flight.</p>
-          </auro-alert>
-        </template>
-      </demo-snippet>
-
-      <demo-snippet>
-        <template>
-          <auro-alert type="information">
-            <p>For your child's safety, unaccompanied minors aged 8-17 can only fly on Alaska Airlines flights departing between 5:00 AM and 9:00 PM. <auro-hyperlink href="/children-travel">Rules for children traveling alone.</auro-hyperlink></p>
-            <p>We searched for all Seattle Area, WA airports. Be sure to note which airport is being used.</p>
-            <p>We searched for all Bay Area, CA airports. Be sure to note which airport is being used.</p>
-          </auro-alert>
-        </template>
-      </demo-snippet>
-
-    </div>
+    <script type="module">
+      import 'https://unpkg.com/marked@latest/marked.min.js';
+      import 'https://unpkg.com/prismjs@latest/prism.js';
+      fetch('/demo/demo.md')
+        .then((response) => response.text())
+        .then((text) => {
+          const rawHtml = marked(text);
+          document.querySelector('main').innerHTML = rawHtml;
+          Prism.highlightAll();
+        });
+    </script>
+    <script type="module" src="../src/auro-alert.js"></script>
+    <script src="https://unpkg.com/@alaskaairux/auro-accordion@latest/dist/auro-accordion__bundled.js" type="module"></script>
   </body>
 </html>
