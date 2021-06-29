@@ -1,4 +1,4 @@
-# auro-alert
+# Alert
 
 `<auro-alert>` is a [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) for the purpose of ...
 
@@ -9,11 +9,11 @@ For the most up to date information on [UI development browser support](https://
 ## Install
 
 [![Build Status](https://img.shields.io/github/workflow/status/AlaskaAirlines/auro-alert/Test%20and%20publish?branch=master&style=for-the-badge)](https://github.com/AlaskaAirlines/auro-alert/actions?query=workflow%3A%22test+and+publish%22)
-[![See it on NPM!](https://img.shields.io/npm/v/@alaskaairux/auro-alert?style=for-the-badge&color=orange)](https://www.npmjs.com/package/@alaskaairux//auro-alert)
-[![License](https://img.shields.io/npm/l/@alaskaairux/auro-alert?color=blue&style=for-the-badge)](https://www.apache.org/licenses/LICENSE-2.0)
+[![See it on NPM!](https://img.shields.io/npm/v/@aurodesignsystem/auro-alert?style=for-the-badge&color=orange)](https://www.npmjs.com/package/@aurodesignsystem/auro-alert)
+[![License](https://img.shields.io/npm/l/@aurodesignsystem/auro-alert?color=blue&style=for-the-badge)](https://www.apache.org/licenses/LICENSE-2.0)
 
 ```shell
-$ npm i @alaskaairux/auro-alert
+$ npm i @aurodesignsystem/auro-alert
 ```
 
 Installing as a direct, dev or peer dependency is up to the user installing the package. If you are unsure as to what type of dependency you should use, consider reading this [stack overflow](https://stackoverflow.com/questions/18875674/whats-the-difference-between-dependencies-devdependencies-and-peerdependencies) answer.
@@ -33,39 +33,12 @@ Any update to the Auro Design Tokens will be immediately reflected with browsers
 Defining the component dependency within each component that is using the `<auro-alert>` component.
 
 ```javascript
-import "@alaskaairux/auro-alert";
+import "@aurodesignsystem/auro-alert";
 ```
 
 **Reference component in HTML**
 
-```html
-<auro-alert>Hello World</auro-alert>
-```
-
-## Install bundled assets from CDN
-
-In cases where the project is not able to process JS assets, there are pre-processed assets available for use. Two bundles are available -- `auro-alert__bundled.js` for modern browsers and `auro-alert__bundled.es5.js` for legacy browsers (including IE11).
-
-Since the legacy bundle includes many polyfills that are not needed by modern browsers, we recommend you load these bundles using [differential serving](https://philipwalton.com/articles/deploying-es2015-code-in-production-today/) so that the browser only loads the bundle it needs. To accomplish this, the script tag for the modern bundle should have `type="module"` and the script tag for the legacy bundle should have the `nomodule` attribute. See the example below.
-
-**NOTE:** Be sure to replace `@latest` in the URL with the version of the asset you want. @latest is NOT aware of any MAJOR releases, use at your own risk.
-
-```html
-<link rel="stylesheet" href="https://unpkg.com/@alaskaairux/design-tokens@latest/dist/tokens/CSSCustomProperties.css" />
-<link rel="stylesheet" href="https://unpkg.com/@alaskaairux/webcorestylesheets@latest/dist/bundled/essentials.css" />
-
-<script src="https://unpkg.com/@alaskaairux/auro-alert@latest/dist/auro-alert__bundled.js" type="module"></script>
-<script src="https://unpkg.com/@alaskaairux/auro-alert@latest/dist/auro-alert__bundled.es5.js" nomodule></script>
-```
-
-### IE11 Support
-
-**Displaimer:** While these components are supported in IE, there may be issues with loading the [web components polyfill](https://www.webcomponents.org/polyfills). Please consult their documentation when supporting IE11.
-
-
-## API Code Examples
-
-Default auro-alert
+Default `auro-alert`
 
 ```html
 <auro-alert type="error">Departing flight AS 1066 cannot accommodate any ... </auro-alert>
@@ -83,7 +56,7 @@ Default auro-alert
 <auro-alert type="success">Updates to your flight AS 1066 have been saved. </auro-alert>
 ```
 
-Auro alerts with nested content/components
+`auro-alert` with nested content/components
 
 ```html
 <auro-alert type="information">
@@ -91,6 +64,32 @@ Auro alerts with nested content/components
   <p>We searched for all Seattle Area, WA airports. Be sure to note which airport is being used.</p>
   <p>We searched for all Bay Area, CA airports. Be sure to note which airport is being used.</p>
 </auro-alert>
+```
+
+## Install bundled assets from CDN
+
+In cases where the project is not able to process JS assets, there are pre-processed assets available for use. Two bundles are available -- `auro-alert__bundled.js` for modern browsers and `auro-alert__bundled.es5.js` for legacy browsers (including IE11).
+
+Since the legacy bundle includes many polyfills that are not needed by modern browsers, we recommend you load these bundles using [differential serving](https://philipwalton.com/articles/deploying-es2015-code-in-production-today/) so that the browser only loads the bundle it needs. To accomplish this, the script tag for the modern bundle should have `type="module"` and the script tag for the legacy bundle should have the `nomodule` attribute. See the example below.
+
+### Bundle example code
+
+**NOTE:** Be sure to replace `@latest` in the URL with the version of the asset you want. @latest is NOT aware of any MAJOR releases, use at your own risk.
+
+```html
+<link rel="stylesheet" href="https://unpkg.com/@alaskaairux/design-tokens@latest/dist/tokens/CSSCustomProperties.css" />
+<link rel="stylesheet" href="https://unpkg.com/@alaskaairux/webcorestylesheets@latest/dist/bundled/essentials.css" />
+
+<script src="https://unpkg.com/@alaskaairux/auro-alert@latest/dist/auro-alert__bundled.js" type="module"></script>
+<script src="https://unpkg.com/@alaskaairux/auro-alert@latest/dist/auro-alert__bundled.es5.js" nomodule></script>
+```
+
+## API Code Examples
+
+Default auro-alert
+
+```html
+<auro-alert>Hello World</auro-alert>
 ```
 
 ## Development
@@ -101,9 +100,7 @@ Please be sure to review the [contribution guidelines](https://auro.alaskaair.co
 
 ### Start development environment
 
-Once the project has been cloned to your local resource and you have installed all the dependencies you will need to open three different shell sessions. One is for the **Gulp tasks**, the second is for a series of **npm tasks** and the last is to run the **Polymer server**.
-
-**Peer dependency:** Please make sure Polymer is installed globally in order to run the Polymer server. See [Auro Component Development Details](https://github.com/AlaskaAirlines/auro_docs/blob/master/src/TECH_DETAILS.md) for more information.
+Once the project has been cloned to your local resource and you have installed all the dependencies you will need to open two different shell sessions. One is for the **npm tasks**, the second is to run the **server**.
 
 ```shell
 // shell terminal one
@@ -115,5 +112,20 @@ $ npm run serve
 
 Open [localhost:8000](http://localhost:8000/)
 
+### API generation
+
+The custom element API file is generated in the build and committed back to the repo with a version change. If the API doc has changed without a version change, author's are to run `npm run build:api` to generate the doc and commit to version control.
+
 ### Testing
+
 Automated tests are required for every Auro component. See `.\test\auro-alert.test.js` for the tests for this component. Run `npm test` to run the tests and check code coverage. Tests must pass and meet a certain coverage threshold to commit. See [the testing documentation](https://auro.alaskaair.com/support/tests) for more details.
+
+### Bundled assets
+
+Bundled assets are only generated in the remote and not merged back to this repo. To review and/or test a bundled asset locally, run `$ npm run bundler` to generate assets.
+
+### Demo deployment
+
+To deploy a demo version of the component for review, run `npm run demo:build` to create a `./build` directory that can be pushed to any static server.
+
+<small>Built from WC-Generator v3.6.2</small>
