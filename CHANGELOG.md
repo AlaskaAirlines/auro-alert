@@ -1,5 +1,17 @@
 # Semantic Release Automated Changelog
 
+# [2.0.0](https://github.com/AlaskaAirlines/auro-alert/compare/v1.4.2...v2.0.0) (2021-07-12)
+
+
+### Features
+
+* **api:** new type definition and CE name ([e520893](https://github.com/AlaskaAirlines/auro-alert/commit/e5208932bf52bb405eb653f1a31b4c8970e47aae))
+
+
+### BREAKING CHANGES
+
+* **api:** type is now a string, boolean type definitions removed
+
 ## [1.4.2](https://github.com/AlaskaAirlines/auro-alert/compare/v1.4.1...v1.4.2) (2021-04-20)
 
 
