@@ -1,6 +1,6 @@
 # Alert
 
-`<auro-alert>` is a [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) for the purpose of ...
+`<auro-alert>` is a [HTML custom element](https://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements) for the purpose of illustrating alert messages to Alaska customers.
 
 ## UI development browser support
 
@@ -42,17 +42,11 @@ Default `auro-alert`
 
 ```html
 <auro-alert type="error">Departing flight AS 1066 cannot accommodate any ... </auro-alert>
-```
 
-```html
 <auro-alert type="warning">Departing flight AS 1066 cannot accommodate any ... </auro-alert>
-```
 
-```html
 <auro-alert type="information">Departing flight AS 1066 cannot accommodate any ... </auro-alert>
-```
 
-```html
 <auro-alert type="success">Updates to your flight AS 1066 have been saved. </auro-alert>
 ```
 
@@ -77,19 +71,11 @@ Since the legacy bundle includes many polyfills that are not needed by modern br
 **NOTE:** Be sure to replace `@latest` in the URL with the version of the asset you want. @latest is NOT aware of any MAJOR releases, use at your own risk.
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/@alaskaairux/design-tokens@latest/dist/tokens/CSSCustomProperties.css" />
-<link rel="stylesheet" href="https://unpkg.com/@alaskaairux/webcorestylesheets@latest/dist/bundled/essentials.css" />
+<link rel="stylesheet" href="https://unpkg.com/@aurodesignsystem/design-tokens@latest/dist/tokens/CSSCustomProperties.css" />
+<link rel="stylesheet" href="https://unpkg.com/@aurodesignsystem/webcorestylesheets@latest/dist/bundled/essentials.css" />
 
-<script src="https://unpkg.com/@alaskaairux/auro-alert@latest/dist/auro-alert__bundled.js" type="module"></script>
-<script src="https://unpkg.com/@alaskaairux/auro-alert@latest/dist/auro-alert__bundled.es5.js" nomodule></script>
-```
-
-## API Code Examples
-
-Default auro-alert
-
-```html
-<auro-alert>Hello World</auro-alert>
+<script src="https://unpkg.com/@aurodesignsystem/auro-alert@latest/dist/auro-alert__bundled.js" type="module"></script>
+<script src="https://unpkg.com/@aurodesignsystem/auro-alert@latest/dist/auro-alert__bundled.es5.js" nomodule></script>
 ```
 
 ## Development
