@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.0.1](https://github.com/AlaskaAirlines/auro-alert/compare/v2.0.0...v2.0.1) (2021-07-13)
+
+
+### Bug Fixes
+
+* address post release issues ([a4920bf](https://github.com/AlaskaAirlines/auro-alert/commit/a4920bfd5dd99d2ff24506fc7c80e4063771da73))
+
 # [2.0.0](https://github.com/AlaskaAirlines/auro-alert/compare/v1.4.2...v2.0.0) (2021-07-12)
 
 
