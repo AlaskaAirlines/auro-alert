@@ -9,7 +9,9 @@
       type="text/css"
       href="https://unpkg.com/prismjs@latest/themes/prism.css"
     />
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@alaskaairux/design-tokens@latest/dist/tokens/CSSCustomProperties.css">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@alaskaairux/webcorestylesheets@latest/dist/demoWrapper.css" />
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@alaskaairux/webcorestylesheets@latest/dist/elementDemoStyles.css" />
   </head>
   <body>
     <main></main>
@@ -20,7 +22,7 @@
       fetch('/demo/demo.md')
         .then((response) => response.text())
         .then((text) => {
-          const rawHtml = marked(text);
+          const rawHtml = marked.parse(text);
           document.querySelector('main').innerHTML = rawHtml;
           Prism.highlightAll();
         });
