@@ -4,13 +4,13 @@
 // ---------------------------------------------------------------------
 
 // Import Auro tokens
-@import "../node_modules/@alaskaairux/design-tokens/dist/tokens/SCSSVariables";
-@import "../node_modules/@alaskaairux/design-tokens/dist/tokens/SassCustomProperties";
+@import '../node_modules/@alaskaairux/design-tokens/dist/tokens/SCSSVariables';
+@import '../node_modules/@alaskaairux/design-tokens/dist/tokens/SassCustomProperties';
 
-@import "../node_modules/@alaskaairux/webcorestylesheets/dist/breakpoints";
-@import "../node_modules/@alaskaairux/webcorestylesheets/dist/core";
+@import '../node_modules/@alaskaairux/webcorestylesheets/dist/breakpoints';
+@import '../node_modules/@alaskaairux/webcorestylesheets/dist/core';
 
-@import "../node_modules/@alaskaairux/webcorestylesheets/dist/auroElement/auroElement";
+@import '../node_modules/@alaskaairux/webcorestylesheets/dist/auroElement/auroElement';
 
 // container styles - defines the look of the outer custom component
 :host([type='error']),
@@ -67,27 +67,26 @@
 
 .alert {
   display: flex;
-  border-width: var(--auro-border-width-thick);
-  border-left-width: var(--auro-size-xs);
-  border-style: solid;
-  border-radius: var(--auro-border-radius);
   padding: var(--auro-size-xs);
-  padding-left: var(--auro-size-sm);
   padding-right: var(--auro-size-md);
-
+  padding-left: var(--auro-size-sm);
+  border-width: var(--auro-border-width-thick);
+  border-style: solid;
   border-color: var(--auro-color-base-neutral-400);
+  border-left-width: var(--auro-size-xs);
+  border-radius: var(--auro-border-radius);
 }
 
 .icon {
   display: flex;
-  margin-right: var(--auro-size-xs);
   width: var(--auro-size-lg);
   height: var(--auro-size-lg);
+  margin-right: var(--auro-size-xs);
 }
 
 .content {
-  line-height: var(--auro-text-body-height-lg);
   width: -webkit-fill-available;
+  line-height: var(--auro-text-body-height-lg);
 }
 
 .content ::slotted(p) {

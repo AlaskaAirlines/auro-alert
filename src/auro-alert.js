@@ -47,21 +47,21 @@ class AuroAlert extends AuroElement {
     return [
       styleCss,
       styleCssFixed
-    ]
+    ];
   }
 
   /**
-   * @private Internal function to generate the HTML for the icon to use
-   * @param {string} svgContent - The imported svg icon
-   * @returns {TemplateResult} - The html template for the icon
+   * @private
+   * @param {string} svgContent - The imported svg icon.
+   * @returns {string} - The html template for the icon.
    */
   generateIconHtml(svgContent) {
     const dom = new DOMParser().parseFromString(svgContent, 'text/html'),
-    svg = dom.body.firstChild;
+      svg = dom.body.firstChild;
 
     return this.noIcon
       ? html``
-      : html`<div class="icon">${svg}</div>`
+      : html`<div class="icon">${svg}</div>`;
   }
 
   // function that renders the HTML and CSS into  the scope of the component
@@ -84,11 +84,11 @@ class AuroAlert extends AuroElement {
       case "warning":
         output = this.generateIconHtml(warning.svg);
         this.role = "alert";
-        this.typeStr = "Warning."
+        this.typeStr = "Warning.";
         break;
       case "information":
         output = this.generateIconHtml(information.svg);
-        this.typeStr = "Informational notice."
+        this.typeStr = "Informational notice.";
         break;
       default:
         break;
