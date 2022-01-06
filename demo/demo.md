@@ -225,7 +225,7 @@ The following illustrates the default use of the `auro-alert` element. Use the `
 
 ## Customize content
 
-While Auro commponents, `auro-alert` included, come with a pre-defined UI opinion, another feature that is fully supported is a user's ability to customize any content in the slot. The following example illustrates how a user can comletely customize the content in the `<slot>` of the element, while not needing to recreate the `auro-alert` UI.
+While Auro components, `auro-alert` included, come with a pre-defined UI opinion, another feature that is fully supported is a user's ability to customize any content in the slot. The following example illustrates how a user can completely customize the content in the `<slot>` of the element, while not needing to recreate the `auro-alert` UI.
 
 <div class="exampleWrapper">
   <auro-alert type="information">
