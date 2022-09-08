@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.0.2](https://github.com/AlaskaAirlines/auro-alert/compare/v2.0.1...v2.0.2) (2022-09-08)
+
+
+### Bug Fixes
+
+* **border:** set width to 1px [#24](https://github.com/AlaskaAirlines/auro-alert/issues/24) ([38333cb](https://github.com/AlaskaAirlines/auro-alert/commit/38333cbe74c907a9a223364c062b0b33bc9e44f1))
+
 ## [2.0.1](https://github.com/AlaskaAirlines/auro-alert/compare/v2.0.0...v2.0.1) (2021-07-13)
 
 
