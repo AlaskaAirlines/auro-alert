@@ -95,10 +95,10 @@ class AuroAlert extends AuroElement {
     }
 
     return html`
-      <div class="alert"
+      <div part="alert" class="alert"
         aria-hidden="${this.hideAudible(this.hiddenAudible)}">
         ${output}
-        <div class="content">
+        <div part="alert-content" class="content">
           <span class="util_displayHiddenVisually">${this.typeStr}</span>
           <slot></slot>
         </div>
