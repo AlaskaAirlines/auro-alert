@@ -20,6 +20,8 @@ import styleCssFixed from './style-fixed-css.js';
  * @attr {Boolean} noIcon - Removes icon from alert UI
  * @attr {String} role - The role will be set based on type
  * @attr {String} type - Component will render visually based on which type value is set; currently supports `error`, `warning`, `success`, `information`
+ * @csspart alert - Use for customizing the style of the alert container
+ * @csspart alert-content - Use for customizing the style of the alert content
  *
  * @slot - Provide text for the alert. If using multiple lines, separate each line with <p> tags.
  */
