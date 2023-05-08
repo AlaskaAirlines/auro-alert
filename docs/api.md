@@ -22,3 +22,10 @@
 | Name | Description                                      |
 |------|--------------------------------------------------|
 |      | Provide text for the alert. If using multiple lines, separate each line with <p> tags. |
+
+## CSS Shadow Parts
+
+| Part            | Description                                      |
+|-----------------|--------------------------------------------------|
+| `alert`         | Use for customizing the style of the alert container |
+| `alert-content` | Use for customizing the style of the alert content |
