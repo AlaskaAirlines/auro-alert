@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.0.3](https://github.com/AlaskaAirlines/auro-alert/compare/v2.0.2...v2.0.3) (2023-05-09)
+
+
+### Performance Improvements
+
+* **parts:** add css parts to alert and content [#28](https://github.com/AlaskaAirlines/auro-alert/issues/28) ([9da88bc](https://github.com/AlaskaAirlines/auro-alert/commit/9da88bc6c244b973f07f1b5e0c8e29a7678f197c))
+
 ## [2.0.2](https://github.com/AlaskaAirlines/auro-alert/compare/v2.0.1...v2.0.2) (2022-09-08)
 
 
