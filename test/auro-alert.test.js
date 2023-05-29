@@ -25,7 +25,7 @@ describe('auro-alert', () => {
     const hiddenContent = root.querySelector('.util_displayHiddenVisually');
 
     await expect(el.role).to.equal("alert");
-    await expect(title.innerHTML).to.equal("Error");
+    await expect(title.innerHTML).to.equal("");
     await expect(hiddenContent.innerHTML).to.equal("<!---->Error.<!---->");
   });
 
@@ -40,7 +40,7 @@ describe('auro-alert', () => {
     const hiddenContent = root.querySelector('.util_displayHiddenVisually');
 
     await expect(el.role).to.equal("alert");
-    await expect(title.innerHTML).to.equal("Warning");
+    await expect(title.innerHTML).to.equal("");
     await expect(hiddenContent.innerHTML).to.equal("<!---->Warning.<!---->");
   });
 
@@ -55,7 +55,7 @@ describe('auro-alert', () => {
     const hiddenContent = root.querySelector('.util_displayHiddenVisually');
 
     await expect(el.role).to.equal("alert");
-    await expect(title.innerHTML).to.equal("Check");
+    await expect(title.innerHTML).to.equal("");
     await expect(hiddenContent.innerHTML).to.equal("<!---->Success.<!---->");
   });
 
@@ -71,7 +71,7 @@ describe('auro-alert', () => {
     const hiddenContent = root.querySelector('.util_displayHiddenVisually');
 
     await expect(el.role).to.be.undefined;
-    await expect(title.innerHTML).to.equal("Information");
+    await expect(title.innerHTML).to.equal("");
     await expect(hiddenContent.innerHTML).to.equal("<!---->Informational notice.<!---->");
   });
 
