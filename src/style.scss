@@ -4,13 +4,13 @@
 // ---------------------------------------------------------------------
 
 // Import Auro tokens
-@import '../node_modules/@alaskaairux/design-tokens/dist/tokens/SCSSVariables';
-@import '../node_modules/@alaskaairux/design-tokens/dist/tokens/SassCustomProperties';
+@import './../node_modules/@alaskaairux/design-tokens/dist/tokens/SCSSVariables';
+@import './../node_modules/@alaskaairux/design-tokens/dist/tokens/SassCustomProperties';
 
-@import '../node_modules/@alaskaairux/webcorestylesheets/dist/breakpoints';
-@import '../node_modules/@alaskaairux/webcorestylesheets/dist/core';
+@import './../node_modules/@aurodesignsystem/webcorestylesheets/dist/breakpoints';
+@import './../node_modules/@aurodesignsystem/webcorestylesheets/dist/core';
 
-@import '../node_modules/@alaskaairux/webcorestylesheets/dist/auroElement/auroElement';
+@import './../node_modules/@aurodesignsystem/webcorestylesheets/dist/auroElement/auroElement';
 
 // container styles - defines the look of the outer custom component
 :host([type='error']),
@@ -73,8 +73,8 @@
   border-width: 1px;
   border-style: solid;
   border-color: var(--auro-color-base-neutral-400);
-  border-left-width: var(--auro-size-xs);
   border-radius: var(--auro-border-radius);
+  border-left-width: var(--auro-size-xs);
 }
 
 .icon {
@@ -85,7 +85,7 @@
 }
 
 .content {
-  width: -webkit-fill-available;
+  width: 100%;
   line-height: var(--auro-text-body-height-lg);
 }
 

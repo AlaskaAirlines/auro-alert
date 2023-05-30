@@ -1,1 +1,15 @@
-export * from './dist/auro-alert';
+import { AuroAlert } from './src/auro-alert';
+
+/**
+ * Register Custom Element.
+ * @param {Object} name - Name to use for custom element.
+ * @returns {void}
+ */
+const registerComponent = (name = 'custom-alert') => {
+  // alias definition
+  if (!customElements.get(name)) {
+    customElements.define(name, class extends AuroAlert {});
+  }
+};
+
+export { registerComponent };
