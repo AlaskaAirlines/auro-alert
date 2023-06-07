@@ -16,7 +16,7 @@ describe('auro-alert', () => {
 
   it('sets auro-alert to error style', async () => {
     const el = await fixture(html`
-      <auro-alert type="error">Error.</auro-alert>
+      <auro-alert type="error"></auro-alert>
     `);
 
     const root = el.shadowRoot;
@@ -26,12 +26,12 @@ describe('auro-alert', () => {
 
     await expect(el.role).to.equal("alert");
     await expect(title.innerHTML).to.equal("");
-    await expect(hiddenContent.innerHTML).not.to.equal("<!---->Error.<!---->");
+    await expect(hiddenContent.innerHTML).to.contain("Error.");
   });
 
   it('sets auro-alert to warning style', async () => {
     const el = await fixture(html`
-      <auro-alert type="warning">Warning.</auro-alert>
+      <auro-alert type="warning"></auro-alert>
     `);
 
     const root = el.shadowRoot;
@@ -41,12 +41,12 @@ describe('auro-alert', () => {
 
     await expect(el.role).to.equal("alert");
     await expect(title.innerHTML).to.equal("");
-    await expect(hiddenContent.innerHTML).not.to.equal("<!---->Warning.<!---->");
+    await expect(hiddenContent.innerHTML).to.contain("Warning.");
   });
 
   it('sets auro-alert to success style', async () => {
     const el = await fixture(html`
-      <auro-alert type="success">Success.</auro-alert>
+      <auro-alert type="success"></auro-alert>
     `);
 
     const root = el.shadowRoot;
@@ -56,13 +56,13 @@ describe('auro-alert', () => {
 
     await expect(el.role).to.equal("alert");
     await expect(title.innerHTML).to.equal("");
-    await expect(hiddenContent.innerHTML).not.to.equal("<!---->Success.<!---->");
+    await expect(hiddenContent.innerHTML).to.contain("Success.");
   });
 
 
   it('sets auro-alert to information style', async () => {
     const el = await fixture(html`
-      <auro-alert type="information">Informational notice.</auro-alert>
+      <auro-alert type="information"></auro-alert>
     `);
 
     const root = el.shadowRoot;
@@ -72,19 +72,19 @@ describe('auro-alert', () => {
 
     await expect(el.role).to.be.undefined;
     await expect(title.innerHTML).to.equal("");
-    await expect(hiddenContent.innerHTML).not.to.equal("<!---->Informational notice.<!---->");
+    await expect(hiddenContent.innerHTML).to.contain("Informational notice.");
   });
 
   it('sets auro-alert to noIcon style', async () => {
     const el = await fixture(html`
-      <auro-alert type="information" noIcon>Informational notice.</auro-alert>
+      <auro-alert type="information" noIcon></auro-alert>
     `);
 
     const root = el.shadowRoot;
     const hiddenContent = root.querySelector('.util_displayHiddenVisually');
 
     await expect(el.role).to.be.undefined;
-    await expect(hiddenContent.innerHTML).not.to.equal("<!---->Informational notice.<!---->");
+    await expect(hiddenContent.innerHTML).to.contain("Informational notice.");
   });
 
   it('auro-alert is accessible', async () => {

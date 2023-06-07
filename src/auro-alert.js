@@ -4,13 +4,13 @@
 // ---------------------------------------------------------------------
 
 import { html } from "lit";
-import AuroElement from '../node_modules/@aurodesignsystem/webcorestylesheets/dist/auroElement/auroElement';
+import AuroElement from '@aurodesignsystem/webcorestylesheets/dist/auroElement/auroElement';
 
 // Import Icons
-import error from '../node_modules/@alaskaairux/icons/dist/icons/alert/error_es6';
-import warning from '../node_modules/@alaskaairux/icons/dist/icons/alert/warning-stroke_es6';
-import information from '../node_modules/@alaskaairux/icons/dist/icons/alert/information-stroke_es6';
-import success from '../node_modules/@alaskaairux/icons/dist/icons/interface/check-stroke_es6';
+import error from '@alaskaairux/icons/dist/icons/alert/error_es6';
+import warning from '@alaskaairux/icons/dist/icons/alert/warning-stroke_es6';
+import information from '@alaskaairux/icons/dist/icons/alert/information-stroke_es6';
+import success from '@alaskaairux/icons/dist/icons/interface/check-stroke_es6';
 
 import styleCss from "./style-css.js";
 
