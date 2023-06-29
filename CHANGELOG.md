@@ -1,5 +1,16 @@
 # Semantic Release Automated Changelog
 
+## [2.0.4](https://github.com/AlaskaAirlines/auro-alert/compare/v2.0.3...v2.0.4) (2023-06-29)
+
+
+### Performance Improvements
+
+* **deps:** remove unsed dependencies from project ([ab67636](https://github.com/AlaskaAirlines/auro-alert/commit/ab676369dfd3badb372c7077a4a30fc7f9e186b9))
+* fix general feedback ([1c70c07](https://github.com/AlaskaAirlines/auro-alert/commit/1c70c0760758b8fef5ca561f6cf7af8e26125d2e))
+* remove legacy es5 bundling resources [#31](https://github.com/AlaskaAirlines/auro-alert/issues/31) ([6c5b43a](https://github.com/AlaskaAirlines/auro-alert/commit/6c5b43a32e00c8ff705f07d6f91bf8af304f1ed6))
+* update to Lit2.0, TS support, issue templates, component registration extension [#32](https://github.com/AlaskaAirlines/auro-alert/issues/32) and update all depedencies legacy [#34](https://github.com/AlaskaAirlines/auro-alert/issues/34) ([c52ee38](https://github.com/AlaskaAirlines/auro-alert/commit/c52ee38f3d269bcd4d4667a8d7de54616be3a2c7))
+* update to node 18 [#33](https://github.com/AlaskaAirlines/auro-alert/issues/33) ([216ab80](https://github.com/AlaskaAirlines/auro-alert/commit/216ab8091b945d02b8632537055332655f661036))
+
 ## [2.0.3](https://github.com/AlaskaAirlines/auro-alert/compare/v2.0.2...v2.0.3) (2023-05-09)
 
 
