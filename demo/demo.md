@@ -353,14 +353,14 @@ registerComponent('custom-alert');
 This will create a new custom element that you can use in your HTML that will function identically to the `auro-alert` element.
 
 <div class="exampleWrapper">
-  <custom-alert display="display">Salutations World!</custom-alert>
+  <custom-alert type="warning">Salutations World!</custom-alert>
 </div>
 
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
 
   ```html
-  <custom-alert display="display">Salutations World!</custom-alert>
+  <custom-alert type="warning">Salutations World!</custom-alert>
   ```
 
 </auro-accordion>
