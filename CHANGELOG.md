@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.0.5](https://github.com/AlaskaAirlines/auro-alert/compare/v2.0.4...v2.0.5) (2023-07-25)
+
+
+### Performance Improvements
+
+* **npm:** update package build configs [#39](https://github.com/AlaskaAirlines/auro-alert/issues/39) ([70d1de0](https://github.com/AlaskaAirlines/auro-alert/commit/70d1de08f61d2bf0c1353ba9f92d16376e5c3bc0))
+
 ## [2.0.4](https://github.com/AlaskaAirlines/auro-alert/compare/v2.0.3...v2.0.4) (2023-06-29)
 
 
