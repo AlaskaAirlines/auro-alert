@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "chalk": "^5.2.0",
-    "lit": "^2.7.5",
+    "lit": "^2.7.6",
     "typescript": "^5.1.6"
   },
   "peerDependencies": {
