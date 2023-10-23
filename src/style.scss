@@ -4,13 +4,11 @@
 // ---------------------------------------------------------------------
 
 // Import Auro tokens
-@import '../node_modules/@alaskaairux/design-tokens/dist/tokens/SCSSVariables';
-@import '../node_modules/@alaskaairux/design-tokens/dist/tokens/SassCustomProperties';
+@import '../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
+@import '../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SassCustomProperties';
 
-@import '../node_modules/@aurodesignsystem/webcorestylesheets/dist/breakpoints';
-@import '../node_modules/@aurodesignsystem/webcorestylesheets/dist/core';
-
-@import '../node_modules/@aurodesignsystem/webcorestylesheets/dist/auroElement/auroElement';
+@import '../node_modules/@aurodesignsystem/webcorestylesheets/src/breakpoints';
+@import '../node_modules/@aurodesignsystem/webcorestylesheets/src/core';
 
 // container styles - defines the look of the outer custom component
 :host([type='error']),
@@ -18,47 +16,47 @@
 :host([type='information']),
 :host([type='success']) {
   .alert {
-    color: var(--auro-color-text-primary-on-light);
+    color: var(--ds-color-text-primary-default, $ds-color-text-primary-default);
   }
 }
 
 :host([type='error']) {
   .alert {
-    border-color: var(--auro-color-alert-error-on-light);
+    border-color: var(--ds-color-alert-error-default, $ds-color-alert-error-default);
   }
 
   svg {
-    color: var(--auro-color-alert-error-on-light);
+    color: var(--ds-color-alert-error-default, $ds-color-alert-error-default);
   }
 }
 
 :host([type='warning']) {
   .alert {
-    border-color: var(--auro-color-alert-warning-on-light);
+    border-color: var(--ds-color-alert-warning-default, $ds-color-alert-warning-default);
   }
 
   svg {
-    color: var(--auro-color-alert-warning-on-light);
+    color: var(--ds-color-alert-warning-default, $ds-color-alert-warning-default);
   }
 }
 
 :host([type='information']) {
   .alert {
-    border-color: var(--auro-color-alert-notification-on-light);
+    border-color: var(--ds-color-alert-notification-default, $ds-color-alert-notification-default);
   }
 
   svg {
-    color: var(--auro-color-alert-notification-on-light);
+    color: var(--ds-color-alert-notification-default, $ds-color-alert-notification-default);
   }
 }
 
 :host([type='success']) {
   .alert {
-    border-color: var(--auro-color-alert-success-on-light);
+    border-color: var(--ds-color-alert-success-default, $ds-color-alert-success-default);
   }
 
   svg {
-    color: var(--auro-color-alert-success-on-light);
+    color: var(--ds-color-alert-success-default, $ds-color-alert-success-default);
   }
 }
 
@@ -67,33 +65,29 @@
 
 .alert {
   display: flex;
-  padding: var(--auro-size-xs);
-  padding-right: var(--auro-size-md);
-  padding-left: var(--auro-size-sm);
+  padding: var(--ds-size-100, $ds-size-100);
+  padding-right: var(--ds-size-200, $ds-size-200);
+  padding-left: var(--ds-size-150, $ds-size-150);
   border-width: 1px;
   border-style: solid;
-  border-color: var(--auro-color-base-neutral-400);
-  border-radius: var(--auro-border-radius);
-  border-left-width: var(--auro-size-xs);
-  background-color: var(--auro-color-background-lightest);
+  border-color: var(--ds-color-brand-neutral-400, $ds-color-brand-neutral-400);
+  border-radius: var(--ds-border-radius, $ds-border-radius);
+  border-left-width: var(--ds-size-100, $ds-size-100);
+  background-color: var(--ds-color-background-lightest, $ds-color-background-lightest);
 }
 
 .icon {
   display: flex;
-  width: var(--auro-size-lg);
-  height: var(--auro-size-lg);
-  margin-right: var(--auro-size-xs);
+  width: var(--ds-size-300, $ds-size-300);
+  height: var(--ds-size-300, $ds-size-300);
+  margin-right: var(--ds-size-100, $ds-size-100);
 }
 
 .content {
   width: -webkit-fill-available;
-  line-height: var(--auro-text-body-height-lg);
-}
-
-.content ::slotted(p) {
-  margin-top: var(--auro-size-none);
+  line-height: var(--ds-text-body-height-lg, $ds-text-body-height-lg);
 }
 
 .content ::slotted(p:last-child) {
-  margin-bottom: var(--auro-size-none);
+  margin-bottom: var(--ds-size-none, $ds-size-none);
 }
