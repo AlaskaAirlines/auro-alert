@@ -87,7 +87,3 @@
   width: -webkit-fill-available;
   line-height: var(--ds-text-body-height-lg, $ds-text-body-height-lg);
 }
-
-.content ::slotted(p:last-child) {
-  margin-bottom: var(--ds-size-none, $ds-size-none);
-}
