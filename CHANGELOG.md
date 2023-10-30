@@ -1,5 +1,13 @@
 # Semantic Release Automated Changelog
 
+## [2.0.6](https://github.com/AlaskaAirlines/auro-alert/compare/v2.0.5...v2.0.6) (2023-10-30)
+
+
+### Performance Improvements
+
+* **background:** update background color to white [#43](https://github.com/AlaskaAirlines/auro-alert/issues/43) ([23affd0](https://github.com/AlaskaAirlines/auro-alert/commit/23affd0e9cc42cddcd0f8fb9c28917c6a4a307bb))
+* **tokens:** update tokens to use ds prefix ([b0d0bdb](https://github.com/AlaskaAirlines/auro-alert/commit/b0d0bdbe8b0b421d7c633b933023824c12a7ea91))
+
 ## [2.0.5](https://github.com/AlaskaAirlines/auro-alert/compare/v2.0.4...v2.0.5) (2023-07-25)
 
 
