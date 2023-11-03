@@ -18,7 +18,7 @@ The following illustrates the default use of the `auro-alert` element. Use the `
   <auro-alert>This is a default error with no error type specified.</auro-alert>
 </div>
 
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
   ```html
@@ -34,7 +34,7 @@ The following illustrates the default use of the `auro-alert` element. Use the `
   <auro-alert type="error">Transaction failed.</auro-alert>
 </div>
 
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
   ```html
@@ -48,7 +48,7 @@ The following illustrates the default use of the `auro-alert` element. Use the `
   <auro-alert type="warning">Warning. Session timed out. Look for a confirmation email to verify your transaction.</auro-alert>
 </div>
 
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
   ```html
@@ -62,7 +62,7 @@ The following illustrates the default use of the `auro-alert` element. Use the `
   <auro-alert type="information">You are confirmed on Flight 20 to Aruba.</auro-alert>
 </div>
 
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
   ```html
@@ -76,7 +76,7 @@ The following illustrates the default use of the `auro-alert` element. Use the `
   <auro-alert type="success">Your status with flight 20 to Aruba had been updated.</auro-alert>
 </div>
 
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
   ```html
@@ -95,7 +95,7 @@ The following illustrates the default use of the `auro-alert` element. Use the `
   </auro-alert>
 </div>
 
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
   ```html
@@ -115,7 +115,7 @@ The following illustrates the default use of the `auro-alert` element. Use the `
   </auro-alert>
 </div>
 
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
   ```html
@@ -135,7 +135,7 @@ The following illustrates the default use of the `auro-alert` element. Use the `
   </auro-alert>
 </div>
 
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
   ```html
@@ -155,7 +155,7 @@ The following illustrates the default use of the `auro-alert` element. Use the `
   </auro-alert>
 </div>
 
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
   ```html
@@ -173,7 +173,7 @@ The following illustrates the default use of the `auro-alert` element. Use the `
   <auro-alert noIcon type="error">Transaction failed.</auro-alert>
 </div>
 
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
   ```html
@@ -187,7 +187,7 @@ The following illustrates the default use of the `auro-alert` element. Use the `
   <auro-alert noIcon type="warning">Warning.Session timed out. Look for a confirmation email to verify your transaction.</auro-alert>
 </div>
 
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
   ```html
@@ -201,7 +201,7 @@ The following illustrates the default use of the `auro-alert` element. Use the `
   <auro-alert noIcon type="information">You are confirmed on Flight 20 to Aruba.</auro-alert>
 </div>
 
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
   ```html
@@ -215,7 +215,7 @@ The following illustrates the default use of the `auro-alert` element. Use the `
   <auro-alert noIcon type="success">Your status with flight 20 to Aruba had been updated.</auro-alert>
 </div>
 
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
   ```html
@@ -250,7 +250,7 @@ While Auro components, `auro-alert` included, come with a pre-defined UI opinion
   </auro-alert>
 </div>
 
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
   ```html
@@ -285,7 +285,7 @@ There are scenarios where the styles of a component do not appear as intended du
   <auro-alert fixed type="warning">This is warning message</auro-alert>
 </div>
 
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
   ```html
@@ -301,7 +301,7 @@ There are scenarios where the styles of a component do not appear as intended du
   <auro-alert hidden type="error">This content will be hidden visually and from screen readers.</auro-alert>
 </div>
 
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
   ```html
@@ -315,7 +315,7 @@ There are scenarios where the styles of a component do not appear as intended du
   <auro-alert hiddenVisually type="error">This content will be hidden visually, but screen readers will still pick it up.</auro-alert>
 </div>
 
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
   ```html
@@ -330,7 +330,7 @@ There are scenarios where the styles of a component do not appear as intended du
   <auro-alert hiddenAudible type="error">This content will be hidden from screen readers.</auro-alert>
 </div>
 
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
   ```html
@@ -356,7 +356,7 @@ This will create a new custom element that you can use in your HTML that will fu
   <custom-alert type="warning">Salutations World!</custom-alert>
 </div>
 
-<auro-accordion lowProfile justifyRight>
+<auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
   ```html
