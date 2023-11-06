@@ -45,14 +45,14 @@ The following illustrates the default use of the `auro-alert` element. Use the `
 ### Warning
 
 <div class="exampleWrapper">
-  <auro-alert type="warning">Warning.Session timed out. Look for a confirmation email to verify your transaction.</auro-alert>
+  <auro-alert type="warning">Warning. Session timed out. Look for a confirmation email to verify your transaction.</auro-alert>
 </div>
 
 <auro-accordion lowProfile justifyRight>
   <span slot="trigger">See code</span>
 
   ```html
-  <auro-alert type="warning">Warning.Session timed out. Look for a confirmation email to verify your transaction.</auro-alert>
+  <auro-alert type="warning">Warning. Session timed out. Look for a confirmation email to verify your transaction.</auro-alert>
   ```
 </auro-accordion>
 
