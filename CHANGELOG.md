@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.0.7](https://github.com/AlaskaAirlines/auro-alert/compare/v2.0.6...v2.0.7) (2023-11-06)
+
+
+### Bug Fixes
+
+* **ally:** import styles for ally functionality [#48](https://github.com/AlaskaAirlines/auro-alert/issues/48) ([5757f53](https://github.com/AlaskaAirlines/auro-alert/commit/5757f531a2dc6102bbbacd443e6517565ad28708))
+
 ## [2.0.6](https://github.com/AlaskaAirlines/auro-alert/compare/v2.0.5...v2.0.6) (2023-10-30)
 
 
