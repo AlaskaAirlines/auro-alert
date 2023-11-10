@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [2.0.8](https://github.com/AlaskaAirlines/auro-alert/compare/v2.0.7...v2.0.8) (2023-11-10)
+
+
+### Performance Improvements
+
+* update to Node20 and related dependencies 46 ([6ae8043](https://github.com/AlaskaAirlines/auro-alert/commit/6ae80437edcc2380b528a1e654b6da4e1be6268b))
+
 ## [2.0.7](https://github.com/AlaskaAirlines/auro-alert/compare/v2.0.6...v2.0.7) (2023-11-06)
 
 
