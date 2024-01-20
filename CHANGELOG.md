@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+# [2.1.0](https://github.com/AlaskaAirlines/auro-alert/compare/v2.0.8...v2.1.0) (2024-01-20)
+
+
+### Features
+
+* update to support SSR ([7443eac](https://github.com/AlaskaAirlines/auro-alert/commit/7443eac4f1130b0f63644e75b3996a8e67431879))
+
 ## [2.0.8](https://github.com/AlaskaAirlines/auro-alert/compare/v2.0.7...v2.0.8) (2023-11-10)
 
 
