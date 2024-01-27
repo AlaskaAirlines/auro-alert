@@ -1,4 +1,4 @@
-import { AuroAlert } from './src/auro-alert';
+import { AuroAlert } from './src/auro-alert.js';
 
 /**
  * Register Custom Element.
