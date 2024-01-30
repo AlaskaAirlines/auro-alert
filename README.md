@@ -68,8 +68,8 @@ In cases where the project is not able to process JS assets, there are pre-proce
 Include the following example HTML code in the `<head>` element of your page.
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@alaskaairux/design-tokens@latest/dist/tokens/CSSCustomProperties.css" />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@alaskaairux/webcorestylesheets@latest/dist/bundled/essentials.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@aurodesignsystem/design-tokens@latest/dist/tokens/CSSCustomProperties.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@aurodesignsystem/webcorestylesheets@latest/dist/bundled/essentials.css" />
 
 <script src="https://cdn.jsdelivr.net/npm/@aurodesignsystem/auro-alert@latest/dist/auro-alert__bundled.js" type="module"></script>
 ```

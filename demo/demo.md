@@ -346,7 +346,7 @@ There are two important parts of every Auro component. The <a href="https://deve
 To protect from versioning conflicts with other instances of the component being loaded, it is recommended to use our `registerComponent(name)` method and pass in a unique name.
 
 ```js
-import './node_modules/@alaskaairux/auro-alert';
+import './node_modules/@aurodesignsystem/auro-alert';
 registerComponent('custom-alert');
 ```
 
