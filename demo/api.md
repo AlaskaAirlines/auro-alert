@@ -1,29 +1,42 @@
-<!--
-The demo.md file is a compiled document. No edits should be made directly to this file.
-README.md is created by running `npm run build:docs`.
-This file is generated based on a template fetched from `./docs/partials/demo.md`
--->
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=./../api.md) -->
+<!-- The below content is automatically added from ./../api.md -->
 
-# accordion
+# auro-alert
 
-<!-- AURO-GENERATED-CONTENT:START (FILE:src=./description.md) -->
-<!-- The below content is automatically added from ./description.md -->
-The `auro-alert` component renders errors, warnings, and other inline notifications with automated styling elements. Simply add the `type` attribute the corresponding value. If you need to present multiple lines in the same alert wrapper, use p tags for each line.
+## Attributes
+
+| Attribute | Type      | Description                   |
+|-----------|-----------|-------------------------------|
+| [fixed](#fixed)   | `Boolean` | uses px values instead of rem |
+
+## Properties
+
+| Property         | Attribute        | Type      | Description                                      |
+|------------------|------------------|-----------|--------------------------------------------------|
+| [hidden](#hidden)         | `hidden`         | `Boolean` | If present, the component will be hidden both visually and from screen readers |
+| [hiddenAudible](#hiddenAudible)  | `hiddenAudible`  | `Boolean` | If present, the component will be hidden from screen readers, but seen visually |
+| [hiddenVisually](#hiddenVisually) | `hiddenVisually` | `Boolean` | If present, the component will be hidden visually, but still read by screen readers |
+| [noIcon](#noIcon)         | `noIcon`         | `Boolean` | Removes icon from alert UI                       |
+| [role](#role)           | `role`           | `String`  | The role will be set based on type               |
+| [type](#type)           | `type`           | `String`  | Component will render visually based on which type value is set; currently supports `error`, `warning`, `success`, `information` |
+
+## Slots
+
+| Name | Description                                      |
+|------|--------------------------------------------------|
+|      | Provide text for the alert. If using multiple lines, separate each line with <p> tags. |
+
+## CSS Shadow Parts
+
+| Part            | Description                                      |
+|-----------------|--------------------------------------------------|
+| [alert](#alert)         | Use for customizing the style of the alert container |
+| `alert-content` | Use for customizing the style of the alert content |
 <!-- AURO-GENERATED-CONTENT:END -->
 
-## auro-accordion use cases
+## Alert API Examples
 
-<!-- AURO-GENERATED-CONTENT:START (FILE:src=./useCases.md) -->
-<!-- The below content is automatically added from ./useCases.md -->
-The `auro-alert` use cases include:
-
-* Error messages
-* Warning messages
-* Informational messages
-<!-- AURO-GENERATED-CONTENT:END -->
-
-## auro-alert default use
-The following illustrates the default use of the `auro-alert` element. Use the `title` and `subtitle` slots to add content to the lockup.
+### type
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
@@ -41,11 +54,6 @@ The following illustrates the default use of the `auro-alert` element. Use the `
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
-
-## Single line alerts
-
-### Error
-
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/error.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/error.html -->
@@ -62,9 +70,6 @@ The following illustrates the default use of the `auro-alert` element. Use the `
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
-
-### Warning
-
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/warning.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/warning.html -->
@@ -81,9 +86,6 @@ The following illustrates the default use of the `auro-alert` element. Use the `
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
-
-### Information
-
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/information.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/information.html -->
@@ -100,9 +102,6 @@ The following illustrates the default use of the `auro-alert` element. Use the `
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
-
-### Success
-
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/success.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/success.html -->
@@ -120,9 +119,7 @@ The following illustrates the default use of the `auro-alert` element. Use the `
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
-## Multiline alerts
-
-### Error
+### Multiline
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/error-multiline.html) -->
@@ -146,9 +143,6 @@ The following illustrates the default use of the `auro-alert` element. Use the `
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
-
-### Warning
-
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/warning-multiline.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/warning-multiline.html -->
@@ -171,9 +165,6 @@ The following illustrates the default use of the `auro-alert` element. Use the `
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
-
-### Information
-
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/information-multiline.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/information-multiline.html -->
@@ -196,9 +187,6 @@ The following illustrates the default use of the `auro-alert` element. Use the `
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
-
-### Success
-
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/success-multiline.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/success-multiline.html -->
@@ -222,9 +210,7 @@ The following illustrates the default use of the `auro-alert` element. Use the `
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
-## No icon alerts
-
-### Error
+### noIcon
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/error-no-icon.html) -->
@@ -242,9 +228,6 @@ The following illustrates the default use of the `auro-alert` element. Use the `
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
-
-### Warning
-
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/warning-no-icon.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/warning-no-icon.html -->
@@ -261,9 +244,6 @@ The following illustrates the default use of the `auro-alert` element. Use the `
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
-
-### Information
-
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/information-no-icon.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/information-no-icon.html -->
@@ -280,9 +260,6 @@ The following illustrates the default use of the `auro-alert` element. Use the `
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
-
-### Success
-
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/success-no-icon.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/success-no-icon.html -->
@@ -300,68 +277,7 @@ The following illustrates the default use of the `auro-alert` element. Use the `
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
-## Customize content
-
-While Auro components, `auro-alert` included, come with a pre-defined UI opinion, another feature that is fully supported is a user's ability to customize any content in the slot. The following example illustrates how a user can completely customize the content in the `<slot>` of the element, while not needing to recreate the `auro-alert` UI.
-
-<div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/custom-content.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/custom-content.html -->
-  <auro-alert type="information">
-    <style>
-      .contentWrapper { padding-top: .25rem; }
-      .contentWrapper * { line-height: 1.2; font-size: var(--auro-text-body-size-sm); }
-      .leanPara { margin: 0 0 var(--auro-size-xs) 0 !important; }
-      .unstyled { padding-left: 20px; }
-    </style>
-    <div class="contentWrapper leanPara">
-      <p class="leanPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Interdum varius sit amet mattis vulputate.</p>
-      <p>Eu nisl nunc mi ipsum faucibus vitae. Tristique senectus et netus et malesuada fames ac turpis. Nunc sed velit dignissim sodales ut. Commodo quis imperdiet massa tincidunt nunc pulvinar sapien et ligula. Vel pharetra vel turpis nunc eget lorem. Vitae sapien pellentesque habitant morbi tristique senectus et. </p>
-      <ul class="unstyled">
-        <li>Varius sit amet mattis vulputate enim. </li>
-        <li>Amet risus nullam eget felis eget nunc. Id consectetur purus ut faucibus pulvinar.</li>
-      </ul>
-      <p class="leanPara">Sem viverra aliquet eget sit amet tellus cras adipiscing enim. Porttitor rhoncus dolor purus non enim. Sit amet nulla facilisi morbi tempus iaculis urna id. Nec ullamcorper sit amet risus nullam eget felis.</p>
-      <p class="fineprint" style="margin: 0;">
-        * Non arcu risus quis varius quam quisque id. Euismod elementum nisi quis eleifend quam adipiscing vitae proin sagittis. Nec feugiat nisl pretium fusce id velit ut tortor.
-      </p>
-    </div>
-  </auro-alert>
-  <!-- AURO-GENERATED-CONTENT:END -->
-</div>
-<auro-accordion alignRight>
-  <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/custom-content.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/custom-content.html -->
-
-```html
-<auro-alert type="information">
-  <style>
-    .contentWrapper { padding-top: .25rem; }
-    .contentWrapper * { line-height: 1.2; font-size: var(--auro-text-body-size-sm); }
-    .leanPara { margin: 0 0 var(--auro-size-xs) 0 !important; }
-    .unstyled { padding-left: 20px; }
-  </style>
-  <div class="contentWrapper leanPara">
-    <p class="leanPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Interdum varius sit amet mattis vulputate.</p>
-    <p>Eu nisl nunc mi ipsum faucibus vitae. Tristique senectus et netus et malesuada fames ac turpis. Nunc sed velit dignissim sodales ut. Commodo quis imperdiet massa tincidunt nunc pulvinar sapien et ligula. Vel pharetra vel turpis nunc eget lorem. Vitae sapien pellentesque habitant morbi tristique senectus et. </p>
-    <ul class="unstyled">
-      <li>Varius sit amet mattis vulputate enim. </li>
-      <li>Amet risus nullam eget felis eget nunc. Id consectetur purus ut faucibus pulvinar.</li>
-    </ul>
-    <p class="leanPara">Sem viverra aliquet eget sit amet tellus cras adipiscing enim. Porttitor rhoncus dolor purus non enim. Sit amet nulla facilisi morbi tempus iaculis urna id. Nec ullamcorper sit amet risus nullam eget felis.</p>
-    <p class="fineprint" style="margin: 0;">
-      * Non arcu risus quis varius quam quisque id. Euismod elementum nisi quis eleifend quam adipiscing vitae proin sagittis. Nec feugiat nisl pretium fusce id velit ut tortor.
-    </p>
-  </div>
-</auro-alert>
-```
-<!-- AURO-GENERATED-CONTENT:END -->
-</auro-accordion>
-
-## Fixed pixels
-
-There are scenarios where the styles of a component do not appear as intended due to a dependency on `16px` root font size. In order to address this, use the `fixed` feature to update the default `REM` values with fixed `px` values.
+### fixed
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/fixed-pixels.html) -->
@@ -380,9 +296,7 @@ There are scenarios where the styles of a component do not appear as intended du
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
-## a11y alerts
-
-### Hidden visually and from screen readers
+### hidden
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/hidden.html) -->
@@ -401,7 +315,7 @@ There are scenarios where the styles of a component do not appear as intended du
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
-### Hidden visually
+### hiddenVisually
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/hidden-visually.html) -->
@@ -420,7 +334,7 @@ There are scenarios where the styles of a component do not appear as intended du
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
-### Hidden from screen readers
+### hiddenAudible
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/hidden-audible.html) -->
@@ -435,6 +349,25 @@ There are scenarios where the styles of a component do not appear as intended du
 
 ```html
 <auro-alert hiddenAudible type="error">This content will be hidden from screen readers.</auro-alert>
+```
+<!-- AURO-GENERATED-CONTENT:END -->
+</auro-accordion>
+
+### role
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/role.html) -->
+  <!-- The below content is automatically added from ./../../apiExamples/role.html -->
+  <auro-alert role="alert">This alert has role of "alert"</auro-alert>
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion alignRight>
+  <span slot="trigger">See code</span>
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/role.html) -->
+<!-- The below code snippet is automatically added from ./../../apiExamples/role.html -->
+
+```html
+<auro-alert role="alert">This alert has role of "alert"</auro-alert>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>

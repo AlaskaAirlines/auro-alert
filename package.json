@@ -55,6 +55,7 @@
     "eslint-plugin-jsdoc": "^48.0.2",
     "husky": "^8.0.3",
     "lodash": "^4.17.21",
+    "markdown-magic": "^2.6.1",
     "nodemon": "^3.0.3",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.33",
@@ -125,10 +126,11 @@
     "web components"
   ],
   "scripts": {
-    "build": "npm-run-all build:sass sass:render scssLint dist:js bundler postinstall build:api types",
+    "build": "npm-run-all build:sass sass:render scssLint dist:js bundler postinstall build:api build:docs types",
     "build:ci": "npm-run-all sweep build",
     "build:api": "wca analyze 'src/auro-alert.js' --outFiles docs/api.md",
-    "build:dev:assets": "npm-run-all build:sass:component postCss:component sass:render",
+    "build:dev:assets": "npm-run-all build:sass:component postCss:component sass:render build:docs",
+    "build:docs": "node scripts/generateDocs.mjs",
     "build:sass": "npm-run-all build:sass:demo build:sass:component postCss:component sass:render",
     "build:sass:demo": "sass --no-source-map demo:demo",
     "build:sass:component": "sass --no-source-map src:src",
