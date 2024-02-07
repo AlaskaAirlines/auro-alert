@@ -38,6 +38,8 @@
 
 ### type
 
+The default version of `auro-alert` with no `type` assigned to it.
+
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
@@ -54,6 +56,8 @@
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
+An `auro-alert` component using `type="error"`.
+
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/error.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/error.html -->
@@ -70,6 +74,8 @@
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
+An `auro-alert` component using `type="warning"`.
+
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/warning.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/warning.html -->
@@ -86,6 +92,8 @@
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
+An `auro-alert` component using `type="information"`.
+
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/information.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/information.html -->
@@ -102,6 +110,8 @@
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
+An `auro-alert` component using `type="success"`.
+
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/success.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/success.html -->
@@ -120,6 +130,8 @@
 </auro-accordion>
 
 ### Multiline
+
+A series of examples showing how the `auro-alert` component can be used to display multiline messages.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/error-multiline.html) -->
@@ -212,6 +224,8 @@
 
 ### noIcon
 
+A series of examples showing how the `auro-alert` component can be used in conjunction with the `noIcon` attribute to display messages without an icon.
+
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/error-no-icon.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/error-no-icon.html -->
@@ -231,7 +245,7 @@
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/warning-no-icon.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/warning-no-icon.html -->
-  <auro-alert noIcon type="warning">Warning.Session timed out. Look for a confirmation email to verify your transaction.</
+  <auro-alert noIcon type="warning">Warning. Session timed out. Look for a confirmation email to verify your transaction.</
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
@@ -240,7 +254,7 @@
 <!-- The below code snippet is automatically added from ./../../apiExamples/warning-no-icon.html -->
 
 ```html
-<auro-alert noIcon type="warning">Warning.Session timed out. Look for a confirmation email to verify your transaction.</
+<auro-alert noIcon type="warning">Warning. Session timed out. Look for a confirmation email to verify your transaction.</
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
@@ -279,6 +293,8 @@
 
 ### fixed
 
+There are scenarios where the styles of a component do not appear as intended due to a dependency on `16px` root font size. In order to address this, use the `fixed` feature to update the default `REM` values with fixed `px` values.
+
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/fixed-pixels.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/fixed-pixels.html -->
@@ -297,6 +313,8 @@
 </auro-accordion>
 
 ### hidden
+
+Use the `hidden` attribute to hide the `auro-alert` component from the user and screenreader.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/hidden.html) -->
@@ -317,6 +335,8 @@
 
 ### hiddenVisually
 
+Use the `hiddenVisually` attribute to visually hide the `auro-alert` component from the user only.
+
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/hidden-visually.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/hidden-visually.html -->
@@ -336,6 +356,8 @@
 
 ### hiddenAudible
 
+Use the `hiddenAudible` attribute to hide the `auro-alert` component from the screenreader only.
+
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/hidden-audible.html) -->
   <!-- The below content is automatically added from ./../../apiExamples/hidden-audible.html -->
@@ -354,6 +376,8 @@
 </auro-accordion>
 
 ### role
+
+An example of using the `role="alert"` attribute to be used by screen readers to announce the alert.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/role.html) -->
