@@ -15,14 +15,12 @@ import success from '@alaskaairux/icons/dist/icons/interface/check-stroke_es6';
 import styleCss from "./style-css.js";
 
 /**
- * @attr {Boolean} fixed - uses px values instead of rem
  * @attr {Boolean} noIcon - Removes icon from alert UI
- * @attr {String} role - The role will be set based on type
  * @attr {String} type - Component will render visually based on which type value is set; currently supports `error`, `warning`, `success`, `information`
  * @csspart alert - Use for customizing the style of the alert container
  * @csspart alert-content - Use for customizing the style of the alert content
  *
- * @slot - Provide text for the alert. If using multiple lines, separate each line with <p> tags.
+ * @slot - Provide text for the alert. If using multiple lines, separate each line with `<p>` tags.
  */
 export class AuroAlert extends AuroElement {
 
@@ -37,6 +35,10 @@ export class AuroAlert extends AuroElement {
         type: String,
         reflect: true
       },
+
+      /**
+       * @private
+       */
       role: {
         type: String,
         reflect: true
@@ -62,7 +64,7 @@ export class AuroAlert extends AuroElement {
       : html`<div class="icon">${svg}</div>`;
   }
 
-  // function that renders the HTML and CSS into  the scope of the component
+  // function that renders the HTML and CSS into the scope of the component
   render() {
     let output = html``;
 
@@ -105,7 +107,6 @@ export class AuroAlert extends AuroElement {
   }
 }
 
-/* istanbul ignore else */
 // define the name of the custom component
 if (!customElements.get("auro-alert")) {
   customElements.define("auro-alert", AuroAlert);
