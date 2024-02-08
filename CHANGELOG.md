@@ -1,5 +1,18 @@
 # Semantic Release Automated Changelog
 
+## [2.1.4](https://github.com/AlaskaAirlines/auro-alert/compare/v2.1.3...v2.1.4) (2024-02-08)
+
+
+### Bug Fixes
+
+* **readme:** remove readme additional info content ([0a63317](https://github.com/AlaskaAirlines/auro-alert/commit/0a63317b310dd423aae60db23fcd206ef32a771b))
+
+
+### Performance Improvements
+
+* **api:** add descriptions to api examples ([6ae281c](https://github.com/AlaskaAirlines/auro-alert/commit/6ae281cc82caa023ebe845a945846197827fab61))
+* modernize documentation-related generator ([7e39712](https://github.com/AlaskaAirlines/auro-alert/commit/7e39712f0d5e2b56b84c82f1d2159da3b5c21c97))
+
 ## [2.1.3](https://github.com/AlaskaAirlines/auro-alert/compare/v2.1.2...v2.1.3) (2024-02-01)
 
 
