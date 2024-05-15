@@ -7,7 +7,7 @@ import { html } from "lit";
 import AuroElement from '@aurodesignsystem/webcorestylesheets/dist/auroElement/auroElement.mjs';
 
 // Import Icons
-import error from '@alaskaairux/icons/dist/icons/alert/error.mjs';
+import error from '@alaskaairux/icons/dist/icons/alert/error-stroke.mjs';
 import warning from '@alaskaairux/icons/dist/icons/alert/warning-stroke.mjs';
 import information from '@alaskaairux/icons/dist/icons/alert/information-stroke.mjs';
 import success from '@alaskaairux/icons/dist/icons/interface/check-stroke.mjs';
