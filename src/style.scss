@@ -1,4 +1,4 @@
-// Copyright (c) 2020 Alaska Airlines. All right reserved. Licensed under the Apache-2.0 license
+// Copyright (c) 2024 Alaska Airlines. All right reserved. Licensed under the Apache-2.0 license
 // See LICENSE in the project root for license information.
 
 // ---------------------------------------------------------------------
@@ -12,59 +12,6 @@
 
 @import '../node_modules/@aurodesignsystem/webcorestylesheets/dist/auroElement/auroElement';
 
-// container styles - defines the look of the outer custom component
-:host([type='error']),
-:host([type='warning']),
-:host([type='information']),
-:host([type='success']) {
-  .alert {
-    color: var(--ds-color-text-primary-default, $ds-color-text-primary-default);
-  }
-}
-
-:host([type='error']) {
-  .alert {
-    border-color: var(--ds-color-alert-error-default, $ds-color-alert-error-default);
-  }
-
-  svg {
-    color: var(--ds-color-alert-error-default, $ds-color-alert-error-default);
-  }
-}
-
-:host([type='warning']) {
-  .alert {
-    border-color: var(--ds-color-alert-warning-default, $ds-color-alert-warning-default);
-  }
-
-  svg {
-    color: var(--ds-color-alert-warning-default, $ds-color-alert-warning-default);
-  }
-}
-
-:host([type='information']) {
-  .alert {
-    border-color: var(--ds-color-alert-notification-default, $ds-color-alert-notification-default);
-  }
-
-  svg {
-    color: var(--ds-color-alert-notification-default, $ds-color-alert-notification-default);
-  }
-}
-
-:host([type='success']) {
-  .alert {
-    border-color: var(--ds-color-alert-success-default, $ds-color-alert-success-default);
-  }
-
-  svg {
-    color: var(--ds-color-alert-success-default, $ds-color-alert-success-default);
-  }
-}
-
-// layout styles - define any layout specifications for UI that is contained WITHIN the component
-// never define layout that would cause effect on element outside the scope of this component
-
 .alert {
   display: flex;
   padding: var(--ds-size-100, $ds-size-100);
@@ -72,10 +19,8 @@
   padding-left: var(--ds-size-150, $ds-size-150);
   border-width: 1px;
   border-style: solid;
-  border-color: var(--ds-color-brand-neutral-400, $ds-color-brand-neutral-400);
   border-radius: var(--ds-border-radius, $ds-border-radius);
   border-left-width: var(--ds-size-100, $ds-size-100);
-  background-color: var(--ds-color-background-lightest, $ds-color-background-lightest);
 }
 
 .icon {
