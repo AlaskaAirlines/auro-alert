@@ -1,0 +1,38 @@
+// Copyright (c) 2024 Alaska Airlines. All right reserved. Licensed under the Apache-2.0 license
+// See LICENSE in the project root for license information.
+
+// ---------------------------------------------------------------------
+
+// Import Auro tokens
+@import '../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
+
+.alert {
+  border-color: var(--ds-auro-alert-border-color);
+  background-color: var(--ds-auro-alert-container-color);
+  color: var(--ds-auro-alert-text-color);
+}
+
+svg {
+  color: var(--ds-auro-alert-icon-color);
+}
+
+:host([type='error']) {
+  --ds-auro-alert-border-color: var(--ds-color-border-error-default, #{$ds-color-border-error-default});
+  --ds-auro-alert-icon-color: var(--ds-color-icon-error-default, #{$ds-color-icon-error-default});
+}
+
+:host([type='warning']) {
+  --ds-auro-alert-border-color: var(--ds-color-border-warning-inverse, #{$ds-color-border-warning-inverse});
+  --ds-auro-alert-icon-color: var(--ds-color-icon-warning-default, #{$ds-color-icon-warning-default});
+}
+
+:host([type='information']) {
+  --ds-auro-alert-border-color: var(--ds-color-border-info-default, #{$ds-color-border-info-default});
+  --ds-auro-alert-icon-color: var(--ds-color-icon-info-default, #{$ds-color-icon-info-default});
+}
+
+:host([type='success']) {
+  --ds-auro-alert-border-color: var(--ds-color-border-success-default, #{$ds-color-border-success-default});
+  --ds-auro-alert-icon-color: var(--ds-color-icon-success-default, #{$ds-color-icon-success-default});
+}
+

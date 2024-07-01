@@ -13,6 +13,8 @@ import information from '@alaskaairux/icons/dist/icons/alert/information-stroke.
 import success from '@alaskaairux/icons/dist/icons/interface/check-stroke.mjs';
 
 import styleCss from "./style-css.js";
+import colorCss from "./color-css.js";
+import tokensCss from "./tokens-css.js";
 
 /**
  * @attr {Boolean} noIcon - Removes icon from alert UI
@@ -47,7 +49,11 @@ export class AuroAlert extends AuroElement {
   }
 
   static get styles() {
-    return [styleCss];
+    return [
+      styleCss,
+      colorCss,
+      tokensCss
+    ];
   }
 
   /**
