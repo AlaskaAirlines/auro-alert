@@ -23,7 +23,7 @@
   "dependencies": {
     "chalk": "^5.2.0",
     "lit": "^3.1.4",
-    "typescript": "^5.5.2"
+    "typescript": "^5.5.3"
   },
   "peerDependencies": {
     "@alaskaairux/icons": "^4.34.2",
@@ -33,7 +33,7 @@
   "devDependencies": {
     "@alaskaairux/icons": "^4.41.1",
     "@aurodesignsystem/auro-library": "^2.6.0",
-    "@aurodesignsystem/design-tokens": "^4.7.0",
+    "@aurodesignsystem/design-tokens": "^4.8.0",
     "@aurodesignsystem/eslint-config": "^1.3.1",
     "@aurodesignsystem/webcorestylesheets": "^5.1.1",
     "@commitlint/cli": "^19.3.0",
@@ -51,14 +51,14 @@
     "concurrently": "^8.2.0",
     "copyfiles": "^2.4.1",
     "core-js": "^3.37.1",
-    "eslint": "^8.56.0",
-    "eslint-plugin-jsdoc": "^48.2.12",
+    "eslint": "^9.6.0",
+    "eslint-plugin-jsdoc": "^48.5.0",
     "husky": "^9.0.10",
     "lodash": "^4.17.21",
     "markdown-magic": "^2.6.1",
     "nodemon": "^3.1.4",
     "npm-run-all": "^4.1.5",
-    "postcss": "^8.4.35",
+    "postcss": "^8.4.39",
     "postcss-discard-comments": "^7.0.1",
     "rollup": "^4.18.0",
     "rollup-plugin-serve": "^2.0.2",
@@ -66,7 +66,7 @@
     "semantic-release": "^24.0.0",
     "stylelint": "^16.6.1",
     "stylelint-config-idiomatic-order": "^10.0.0",
-    "stylelint-config-standard": "^36.0.0",
+    "stylelint-config-standard": "^36.0.1",
     "stylelint-config-standard-scss": "^13.0.0",
     "stylelint-order": "^6.0.4",
     "stylelint-scss": "^6.3.2",
