@@ -8,7 +8,7 @@
     "================================================================================"
   ],
   "name": "@aurodesignsystem/auro-alert",
-  "version": "2.1.8",
+  "version": "2.2.0-beta.1",
   "description": "auro-alert HTML custom element",
   "repository": {
     "type": "git",
