@@ -3,16 +3,18 @@
 
 // ---------------------------------------------------------------------
 
-import { html } from "lit";
+/* eslint-disable lit/binding-positions, lit/no-invalid-html */
+
+import { html } from 'lit/static-html.js';
 import AuroElement from '@aurodesignsystem/webcorestylesheets/dist/auroElement/auroElement.mjs';
 
-// Import Icons
-import error from '@alaskaairux/icons/dist/icons/alert/error-stroke.mjs';
-import warning from '@alaskaairux/icons/dist/icons/alert/warning-stroke.mjs';
-import information from '@alaskaairux/icons/dist/icons/alert/information-stroke.mjs';
-import success from '@alaskaairux/icons/dist/icons/interface/check-stroke.mjs';
+import { AuroDependencyVersioning } from '@aurodesignsystem/auro-library/scripts/runtime/dependencyTagVersioning.mjs';
+import { AuroIcon } from '@aurodesignsystem/auro-icon/src/auro-icon.js';
+import iconVersion from './iconVersion';
 
 import styleCss from "./style-css.js";
+import colorCss from "./color-css.js";
+import tokensCss from "./tokens-css.js";
 
 /**
  * @attr {Boolean} noIcon - Removes icon from alert UI
@@ -23,6 +25,15 @@ import styleCss from "./style-css.js";
  * @slot - Provide text for the alert. If using multiple lines, separate each line with `<p>` tags.
  */
 export class AuroAlert extends AuroElement {
+  constructor() {
+    super();
+
+    /**
+     * Generate unique names for dependency components.
+     */
+    const versioning = new AuroDependencyVersioning();
+    this.iconTag = versioning.generateTag('auro-icon', iconVersion, AuroIcon);
+  }
 
   // function to define props used within the scope of this component
   static get properties() {
@@ -42,26 +53,23 @@ export class AuroAlert extends AuroElement {
       role: {
         type: String,
         reflect: true
+      },
+
+      /**
+       * @private
+       */
+      iconTag: {
+        type: String
       }
     };
   }
 
   static get styles() {
-    return [styleCss];
-  }
-
-  /**
-   * @private
-   * @param {string} svgContent - The imported svg icon.
-   * @returns {string} - The html template for the icon.
-   */
-  generateIconHtml(svgContent) {
-    const dom = new DOMParser().parseFromString(svgContent, 'text/html'),
-      svg = dom.body.firstChild;
-
-    return this.noIcon
-      ? html``
-      : html`<div class="icon">${svg}</div>`;
+    return [
+      styleCss,
+      colorCss,
+      tokensCss
+    ];
   }
 
   // function that renders the HTML and CSS into the scope of the component
@@ -72,23 +80,16 @@ export class AuroAlert extends AuroElement {
       case undefined:
         break;
       case "error":
-        output = this.generateIconHtml(error.svg);
-        this.role = "alert";
-        this.typeStr = "Error.";
+        output = html`<${this.iconTag} customSize customColor category="alert" name="error-stroke"></${this.iconTag}>`;
         break;
       case "success":
-        output = this.generateIconHtml(success.svg);
-        this.role = "alert";
-        this.typeStr = "Success.";
+        output = html`<${this.iconTag} customSize customColor category="interface" name="check-stroke"></${this.iconTag}>`;
         break;
       case "warning":
-        output = this.generateIconHtml(warning.svg);
-        this.role = "alert";
-        this.typeStr = "Warning.";
+        output = html`<${this.iconTag} customSize customColor category="alert" name="warning-stroke"></${this.iconTag}>`;
         break;
       case "information":
-        output = this.generateIconHtml(information.svg);
-        this.typeStr = "Informational notice.";
+        output = html`<${this.iconTag} customSize customColor category="alert" name="information-stroke"></${this.iconTag}>`;
         break;
       default:
         break;

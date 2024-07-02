@@ -1,0 +1,6 @@
+:host {
+  --ds-auro-alert-border-color: var(--ds-color-border-secondary-default, $ds-color-border-secondary-default);
+  --ds-auro-alert-container-color: var(--ds-color-container-primary-default, $ds-color-container-primary-default);
+  --ds-auro-alert-icon-color: transparent;
+  --ds-auro-alert-text-color: var(--ds-color-text-primary-default, $ds-color-text-primary-default);
+}
