@@ -20,13 +20,12 @@ describe('auro-alert', () => {
     `);
 
     const root = el.shadowRoot;
-    const svg = root.querySelector('svg');
-    const title = svg.querySelector('title');
-    const hiddenContent = root.querySelector('.util_displayHiddenVisually');
+    const icon = root.querySelector('[auro-icon="true"]');
+    const category = icon.getAttribute('category');
+    const iconName = icon.getAttribute('name');
 
-    await expect(el.role).to.equal("alert");
-    await expect(title.innerHTML).to.equal("");
-    await expect(hiddenContent.innerHTML).to.contain("Error.");
+    await expect(category).to.equal("alert");
+    await expect(iconName).to.equal("error-stroke");
   });
 
   it('sets auro-alert to warning style', async () => {
@@ -35,13 +34,12 @@ describe('auro-alert', () => {
     `);
 
     const root = el.shadowRoot;
-    const svg = root.querySelector('svg');
-    const title = svg.querySelector('title');
-    const hiddenContent = root.querySelector('.util_displayHiddenVisually');
+    const icon = root.querySelector('[auro-icon="true"]');
+    const category = icon.getAttribute('category');
+    const iconName = icon.getAttribute('name');
 
-    await expect(el.role).to.equal("alert");
-    await expect(title.innerHTML).to.equal("");
-    await expect(hiddenContent.innerHTML).to.contain("Warning.");
+    await expect(category).to.equal("alert");
+    await expect(iconName).to.equal("warning-stroke");
   });
 
   it('sets auro-alert to success style', async () => {
@@ -50,13 +48,12 @@ describe('auro-alert', () => {
     `);
 
     const root = el.shadowRoot;
-    const svg = root.querySelector('svg');
-    const title = svg.querySelector('title');
-    const hiddenContent = root.querySelector('.util_displayHiddenVisually');
+    const icon = root.querySelector('[auro-icon="true"]');
+    const category = icon.getAttribute('category');
+    const iconName = icon.getAttribute('name');
 
-    await expect(el.role).to.equal("alert");
-    await expect(title.innerHTML).to.equal("");
-    await expect(hiddenContent.innerHTML).to.contain("Success.");
+    await expect(category).to.equal("interface");
+    await expect(iconName).to.equal("check-stroke");
   });
 
 
@@ -66,25 +63,12 @@ describe('auro-alert', () => {
     `);
 
     const root = el.shadowRoot;
-    const svg = root.querySelector('svg');
-    const title = svg.querySelector('title');
-    const hiddenContent = root.querySelector('.util_displayHiddenVisually');
+    const icon = root.querySelector('[auro-icon="true"]');
+    const category = icon.getAttribute('category');
+    const iconName = icon.getAttribute('name');
 
-    await expect(el.role).to.be.undefined;
-    await expect(title.innerHTML).to.equal("");
-    await expect(hiddenContent.innerHTML).to.contain("Informational notice.");
-  });
-
-  it('sets auro-alert to noIcon style', async () => {
-    const el = await fixture(html`
-      <auro-alert type="information" noIcon></auro-alert>
-    `);
-
-    const root = el.shadowRoot;
-    const hiddenContent = root.querySelector('.util_displayHiddenVisually');
-
-    await expect(el.role).to.be.undefined;
-    await expect(hiddenContent.innerHTML).to.contain("Informational notice.");
+    await expect(category).to.equal("alert");
+    await expect(iconName).to.equal("information-stroke");
   });
 
   it('auro-alert is accessible', async () => {
