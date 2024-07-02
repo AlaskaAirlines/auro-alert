@@ -1,5 +1,13 @@
 # Semantic Release Automated Changelog
 
+# [2.2.0-beta.1](https://github.com/AlaskaAirlines/auro-alert/compare/v2.1.8...v2.2.0-beta.1) (2024-07-02)
+
+
+### Features
+
+* **icon:** convert icons into auro-icons ([f6ea49b](https://github.com/AlaskaAirlines/auro-alert/commit/f6ea49b8fd0b331945eb89df7a95b69bb571bc3b))
+* refactor color styles using tier 3 tokens [#57](https://github.com/AlaskaAirlines/auro-alert/issues/57) ([ef1b0ca](https://github.com/AlaskaAirlines/auro-alert/commit/ef1b0ca5d2444486d97ba74715ed2a3d4836bccf))
+
 ## [2.1.8](https://github.com/AlaskaAirlines/auro-alert/compare/v2.1.7...v2.1.8) (2024-05-15)
 
 
