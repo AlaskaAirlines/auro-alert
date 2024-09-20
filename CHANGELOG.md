@@ -1,5 +1,18 @@
 # Semantic Release Automated Changelog
 
+# [2.2.0-beta.2](https://github.com/AlaskaAirlines/auro-alert/compare/v2.2.0-beta.1...v2.2.0-beta.2) (2024-09-20)
+
+
+### Features
+
+* add tag name as attribute when custom reigstered ([80737a8](https://github.com/AlaskaAirlines/auro-alert/commit/80737a833c3504a80eb0d5b31c7b55d031eee5ea))
+
+
+### Performance Improvements
+
+* refactor custom component registration config ([a140441](https://github.com/AlaskaAirlines/auro-alert/commit/a1404414dd7b5a6a2a3cfb05e74611ea160327b3))
+* update dependencies ([f94535d](https://github.com/AlaskaAirlines/auro-alert/commit/f94535d2eb62c7334eab8064a5f053a72bc45d10))
+
 # [2.2.0-beta.1](https://github.com/AlaskaAirlines/auro-alert/compare/v2.1.8...v2.2.0-beta.1) (2024-07-02)
 
 
