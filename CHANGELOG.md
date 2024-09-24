@@ -1,17 +1,5 @@
 # Semantic Release Automated Changelog
 
-# [3.0.0-beta.1](https://github.com/AlaskaAirlines/auro-alert/compare/v2.2.0-beta.2...v3.0.0-beta.1) (2024-09-24)
-
-
-### Performance Improvements
-
-* update dependencies ([5228a87](https://github.com/AlaskaAirlines/auro-alert/commit/5228a87aac4a78602666ee55f070ca8f631dc261))
-
-
-### BREAKING CHANGES
-
-* trigger major release for theming support #57
-
 ## [2.1.8](https://github.com/AlaskaAirlines/auro-alert/compare/v2.1.7...v2.1.8) (2024-05-15)
 
 
