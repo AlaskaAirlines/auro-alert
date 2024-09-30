@@ -1,5 +1,26 @@
 # Semantic Release Automated Changelog
 
+# [3.0.0](https://github.com/AlaskaAirlines/auro-alert/compare/v2.1.8...v3.0.0) (2024-09-30)
+
+
+### Features
+
+* add tag name as attribute when custom reigstered ([1d03bdd](https://github.com/AlaskaAirlines/auro-alert/commit/1d03bdd198387523f2c478602a773432a89032ea))
+* **icon:** convert icons into auro-icons ([b890e39](https://github.com/AlaskaAirlines/auro-alert/commit/b890e391c8863212da83fcfd6c5c796d839df8be))
+* refactor color styles using tier 3 tokens [#57](https://github.com/AlaskaAirlines/auro-alert/issues/57) ([e378540](https://github.com/AlaskaAirlines/auro-alert/commit/e3785407b65bd2504f858508a92e3211a414ce86))
+
+
+### Performance Improvements
+
+* refactor custom component registration config ([acd89e1](https://github.com/AlaskaAirlines/auro-alert/commit/acd89e14e4adb373518bc5798ef3431090ca4294))
+* update dependencies ([50b6ec8](https://github.com/AlaskaAirlines/auro-alert/commit/50b6ec85f34a521b6d4711d946143e014757e9ea))
+* update dependencies ([4700ecf](https://github.com/AlaskaAirlines/auro-alert/commit/4700ecffb75678b6b7b3c25a07bc808a0865133c))
+
+
+### BREAKING CHANGES
+
+* trigger major release for theming support #57
+
 ## [2.1.8](https://github.com/AlaskaAirlines/auro-alert/compare/v2.1.7...v2.1.8) (2024-05-15)
 
 
