@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [3.0.1](https://github.com/AlaskaAirlines/auro-alert/compare/v3.0.0...v3.0.1) (2024-10-04)
+
+
+### Performance Improvements
+
+* add missing theme docs ([42d5883](https://github.com/AlaskaAirlines/auro-alert/commit/42d588351ec11cec072c2a124591c6013dde9c76))
+
 # [3.0.0](https://github.com/AlaskaAirlines/auro-alert/compare/v2.1.8...v3.0.0) (2024-09-30)
 
 
