@@ -93,7 +93,7 @@ export class AuroAlert extends AuroElement {
   generateIconHtml(category, name) {
     return this.noIcon
       ? html``
-      : html`<${this.iconTag} customSize customColor category="${category}" name="${name}"></${this.iconTag}>`;
+      : html`<${this.iconTag} customColor category="${category}" name="${name}"></${this.iconTag}>`;
 
   }
 
