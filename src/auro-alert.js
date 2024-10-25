@@ -79,6 +79,18 @@ export class AuroAlert extends AuroElement {
     ];
   }
 
+  /**
+   * This will register this element with the browser.
+   * @param {string} [name="auro-alert"] - The name of element that you want to register to.
+   *
+   * @example
+   * AuroAlert.register("custom-alert") // this will register this element to <custom-alert/>
+   *
+   */
+  static register(name = "auro-alert") {
+    AuroLibraryRuntimeUtils.prototype.registerComponent(name, AuroAlert);
+  }
+
   firstUpdated() {
     // Add the tag name as an attribute if it is different than the component name
     this.runtimeUtils.handleComponentTagRename(this, 'auro-alert');
@@ -138,9 +150,4 @@ export class AuroAlert extends AuroElement {
       </div>
     `;
   }
-}
-
-// define the name of the custom component
-if (!customElements.get("auro-alert")) {
-  customElements.define("auro-alert", AuroAlert);
 }
