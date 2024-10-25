@@ -24,8 +24,7 @@
 }
 
 [auro-icon] {
-  width: var(--ds-size-300, $ds-size-300);
-  height: var(--ds-size-300, $ds-size-300);
+  width: $ds-size-300;
   margin-right: var(--ds-size-100, $ds-size-100);
 }
 
