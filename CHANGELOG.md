@@ -1,5 +1,19 @@
 # Semantic Release Automated Changelog
 
+# [3.1.0](https://github.com/AlaskaAirlines/auro-alert/compare/v3.0.2...v3.1.0) (2024-10-30)
+
+
+### Bug Fixes
+
+* set size of icon to lock it for this component [#71](https://github.com/AlaskaAirlines/auro-alert/issues/71) ([89001ff](https://github.com/AlaskaAirlines/auro-alert/commit/89001ffd2a058957afdae0ece0ee781304bfbcf7))
+
+
+### Features
+
+* **api:** add register static method [#70](https://github.com/AlaskaAirlines/auro-alert/issues/70) ([087f5cc](https://github.com/AlaskaAirlines/auro-alert/commit/087f5ccc2d0a5c028bb379b4e8ccee5facc8faf9))
+* apply latest token ds-auro-icon-size [#69](https://github.com/AlaskaAirlines/auro-alert/issues/69) ([5a027c6](https://github.com/AlaskaAirlines/auro-alert/commit/5a027c6876ccc64ec0acc2583abc19029b30ebb7))
+* update auro-icon package and icon size token applied [#69](https://github.com/AlaskaAirlines/auro-alert/issues/69) ([ecb4be5](https://github.com/AlaskaAirlines/auro-alert/commit/ecb4be5f721850f69c3f15a1887ae6468ba56c66))
+
 ## [3.0.2](https://github.com/AlaskaAirlines/auro-alert/compare/v3.0.1...v3.0.2) (2024-10-08)
 
 
