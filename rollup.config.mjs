@@ -30,7 +30,10 @@ const indexExamplesConfig = {
   output: {
     format: 'esm',
     dir: 'demo/'
-  }
+  },
+  plugins: [
+    nodeResolve()
+  ]
 };
 
 const apiExamplesConfig = {
@@ -40,8 +43,11 @@ const apiExamplesConfig = {
   output: {
     format: 'esm',
     dir: 'demo/'
-  }
+  },
+  plugins: [
+    nodeResolve()
+  ]
 };
 
 export default [modernConfig, indexExamplesConfig, apiExamplesConfig];
-  
+
