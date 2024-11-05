@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [3.1.1](https://github.com/AlaskaAirlines/auro-alert/compare/v3.1.0...v3.1.1) (2024-11-05)
+
+
+### Bug Fixes
+
+* address unresolved deps w/bundled assets [#77](https://github.com/AlaskaAirlines/auro-alert/issues/77) ([3bc9e88](https://github.com/AlaskaAirlines/auro-alert/commit/3bc9e880119b9b58e8a8a858dcbc8a6a79445e13))
+
 # [3.1.0](https://github.com/AlaskaAirlines/auro-alert/compare/v3.0.2...v3.1.0) (2024-10-30)
 
 
