@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [3.1.2](https://github.com/AlaskaAirlines/auro-alert/compare/v3.1.1...v3.1.2) (2024-11-05)
+
+
+### Bug Fixes
+
+* update import and Sass var reference [#75](https://github.com/AlaskaAirlines/auro-alert/issues/75) ([25c6229](https://github.com/AlaskaAirlines/auro-alert/commit/25c6229395f08ff214c68164c8c3ac98fedea138))
+
 ## [3.1.1](https://github.com/AlaskaAirlines/auro-alert/compare/v3.1.0...v3.1.1) (2024-11-05)
 
 
