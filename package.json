@@ -117,7 +117,10 @@
             "./README.md",
             "./docs/api.md",
             "./demo/index.md",
-            "./demo/api.md"
+            "./demo/api.md",
+            "./demo/api.min.js",
+            "./demo/index.min.js",
+            "./src/iconVersion.js"
           ]
         }
       ],
