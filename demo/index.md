@@ -6,15 +6,15 @@ This file is generated based on a template fetched from `./docs/partials/index.m
 
 # Alert
 
-<!-- AURO-GENERATED-CONTENT:START (FILE:src=./description.md) -->
-<!-- The below content is automatically added from ./description.md -->
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=./../docs/partials/description.md) -->
+<!-- The below content is automatically added from ./../docs/partials/description.md -->
 The `auro-alert` component renders errors, warnings, and other inline notifications with automated styling elements. Simply add the `type` attribute the corresponding value. If you need to present multiple lines in the same alert wrapper, use p tags for each line.
 <!-- AURO-GENERATED-CONTENT:END -->
 
 ## auro-alert use cases
 
-<!-- AURO-GENERATED-CONTENT:START (FILE:src=./useCases.md) -->
-<!-- The below content is automatically added from ./useCases.md -->
+<!-- AURO-GENERATED-CONTENT:START (FILE:src=./../docs/partials/useCases.md) -->
+<!-- The below content is automatically added from ./../docs/partials/useCases.md -->
 The `auro-alert` use cases include:
 
 * Error messages
@@ -26,15 +26,15 @@ The `auro-alert` use cases include:
 The following illustrates the default use of the `auro-alert` element.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/basic.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/basic.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/basic.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/basic.html -->
   <auro-alert>This is a default error with no error type specified.</auro-alert>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/basic.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/basic.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/basic.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/basic.html -->
 
 ```html
 <auro-alert>This is a default error with no error type specified.</auro-alert>
@@ -47,51 +47,51 @@ The following illustrates the default use of the `auro-alert` element.
 See the following examples that illustrate how to generate a basic alert with the various `error`, `warning`, `information`, or `success` types.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/error.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/error.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/error.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/error.html -->
   <auro-alert type="error">Transaction failed.</auro-alert>
   <!-- AURO-GENERATED-CONTENT:END -->
   <br>
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/warning.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/warning.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/warning.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/warning.html -->
   <auro-alert type="warning">Warning. Session timed out. Look for a confirmation email to verify your transaction.</auro-alert>
   <!-- AURO-GENERATED-CONTENT:END -->
   <br>
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/information.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/information.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/information.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/information.html -->
   <auro-alert type="information">You are confirmed on Flight 20 to Aruba.</auro-alert>
   <!-- AURO-GENERATED-CONTENT:END -->
   <br>
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/success.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/success.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/success.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/success.html -->
   <auro-alert type="success">Your status with flight 20 to Aruba had been updated.</auro-alert>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/error.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/error.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/error.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/error.html -->
 
 ```html
 <auro-alert type="error">Transaction failed.</auro-alert>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/warning.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/warning.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/warning.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/warning.html -->
 
 ```html
 <auro-alert type="warning">Warning. Session timed out. Look for a confirmation email to verify your transaction.</auro-alert>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/information.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/information.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/information.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/information.html -->
 
 ```html
 <auro-alert type="information">You are confirmed on Flight 20 to Aruba.</auro-alert>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/success.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/success.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/success.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/success.html -->
 
 ```html
 <auro-alert type="success">Your status with flight 20 to Aruba had been updated.</auro-alert>
@@ -104,8 +104,8 @@ See the following examples that illustrate how to generate a basic alert with th
 While Auro components, `auro-alert` included, come with a pre-defined UI opinion, another feature that is fully supported is a user's ability to customize any content in the slot. The following example illustrates how a user can completely customize the content in the `<slot>` of the element, while not needing to recreate the `auro-alert` UI.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/custom-content.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/custom-content.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/custom-content.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/custom-content.html -->
   <auro-alert type="information">
     <style>
       .contentWrapper { padding-top: .25rem; }
@@ -130,8 +130,8 @@ While Auro components, `auro-alert` included, come with a pre-defined UI opinion
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/custom-content.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/custom-content.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/custom-content.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/custom-content.html -->
 
 ```html
 <auro-alert type="information">
@@ -173,15 +173,15 @@ AuroAlert.register('custom-alert');
 This will create a new custom element that you can use in your HTML that will function identically to the `auro-alert` element.
 
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../../apiExamples/custom.html) -->
-  <!-- The below content is automatically added from ./../../apiExamples/custom.html -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/custom.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/custom.html -->
   <custom-alert type="warning">Salutations World!</custom-alert>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../../apiExamples/custom.html) -->
-<!-- The below code snippet is automatically added from ./../../apiExamples/custom.html -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/custom.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/custom.html -->
 
 ```html
 <custom-alert type="warning">Salutations World!</custom-alert>
