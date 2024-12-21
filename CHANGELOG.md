@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+## [3.2.1](https://github.com/AlaskaAirlines/auro-alert/compare/v3.2.0...v3.2.1) (2024-12-21)
+
+
+### Performance Improvements
+
+* update node to version 22 ([c03ca18](https://github.com/AlaskaAirlines/auro-alert/commit/c03ca18671c9633c85b95af3fc1f1bbc9d1817a2))
+
 # [3.2.0](https://github.com/AlaskaAirlines/auro-alert/compare/v3.1.3...v3.2.0) (2024-11-15)
 
 
