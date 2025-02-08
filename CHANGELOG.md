@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+# [3.3.0](https://github.com/AlaskaAirlines/auro-alert/compare/v3.2.1...v3.3.0) (2025-02-08)
+
+
+### Features
+
+* update to use latest wcss ([587a5da](https://github.com/AlaskaAirlines/auro-alert/commit/587a5dab3a07391b523377a9a4cccd1e5c0a0409))
+
 ## [3.2.1](https://github.com/AlaskaAirlines/auro-alert/compare/v3.2.0...v3.2.1) (2024-12-21)
 
 
