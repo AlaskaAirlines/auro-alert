@@ -227,13 +227,14 @@ The component may be restyled using the following code sample and changing the v
 <!-- The below code snippet is automatically added from ./../src/tokens.scss -->
 
 ```scss
-@import '../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
+@import '../node_modules/@aurodesignsystem/design-tokens/dist/auro-classic/SCSSVariables';
+@import '../node_modules/@aurodesignsystem/design-tokens/dist/alaska/SCSSVariables--alaska';
 
 :host {
-  --ds-auro-alert-border-color: var(--ds-color-border-secondary-default, #{$ds-color-border-secondary-default});
-  --ds-auro-alert-container-color: var(--ds-color-container-primary-default, #{$ds-color-container-primary-default});
+  --ds-auro-alert-border-color: var(--ds-basic-color-status-default, #{$ds-basic-color-status-default});
+  --ds-auro-alert-container-color: var(--ds-basic-color-surface-default, #{$ds-basic-color-surface-default});
   --ds-auro-alert-icon-color: transparent;
-  --ds-auro-alert-text-color: var(--ds-color-text-primary-default, #{$ds-color-text-primary-default});
+  --ds-auro-alert-text-color: var(--ds-basic-color-texticon-default, #{$ds-basic-color-texticon-default});
 }
 ```
 <!-- AURO-GENERATED-CONTENT:END -->

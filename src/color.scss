@@ -4,7 +4,7 @@
 // ---------------------------------------------------------------------
 
 // Import Auro tokens
-@import '../node_modules/@aurodesignsystem/design-tokens/dist/tokens/SCSSVariables';
+@import '../node_modules/@aurodesignsystem/design-tokens/dist/alaska/SCSSVariables--alaska';
 
 .alert {
   border-color: var(--ds-auro-alert-border-color);
@@ -17,22 +17,22 @@
 }
 
 :host([type='error']) {
-  --ds-auro-alert-border-color: var(--ds-color-border-error-default, #{$ds-color-border-error-default});
-  --ds-auro-alert-icon-color: var(--ds-color-icon-error-default, #{$ds-color-icon-error-default});
+  --ds-auro-alert-border-color: var(--ds-basic-color-status-error, #{$ds-basic-color-status-error});
+  --ds-auro-alert-icon-color: var(--ds-basic-color-status-error, #{$ds-basic-color-status-error});
 }
 
 :host([type='warning']) {
-  --ds-auro-alert-border-color: var(--ds-color-border-warning-inverse, #{$ds-color-border-warning-inverse});
-  --ds-auro-alert-icon-color: var(--ds-color-icon-warning-default, #{$ds-color-icon-warning-default});
+  --ds-auro-alert-border-color: var(--ds-basic-color-status-warning, #{$ds-basic-color-status-warning});
+  --ds-auro-alert-icon-color: var(--ds-basic-color-status-warning, #{$ds-basic-color-status-warning});
 }
 
 :host([type='information']) {
-  --ds-auro-alert-border-color: var(--ds-color-border-info-default, #{$ds-color-border-info-default});
-  --ds-auro-alert-icon-color: var(--ds-color-icon-info-default, #{$ds-color-icon-info-default});
+  --ds-auro-alert-border-color: var(--ds-basic-color-status-info, #{$ds-basic-color-status-info});
+  --ds-auro-alert-icon-color: var(--ds-basic-color-status-info, #{$ds-basic-color-status-info});
 }
 
 :host([type='success']) {
-  --ds-auro-alert-border-color: var(--ds-color-border-success-default, #{$ds-color-border-success-default});
-  --ds-auro-alert-icon-color: var(--ds-color-icon-success-default, #{$ds-color-icon-success-default});
+  --ds-auro-alert-border-color: var(--ds-basic-color-status-success, #{$ds-basic-color-status-success});
+  --ds-auro-alert-icon-color: var(--ds-basic-color-status-success, #{$ds-basic-color-status-success});
 }
 
