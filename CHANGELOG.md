@@ -1,5 +1,12 @@
 # Semantic Release Automated Changelog
 
+# [4.1.0](https://github.com/AlaskaAirlines/auro-alert/compare/v4.0.1...v4.1.0) (2025-04-15)
+
+
+### Features
+
+* add new theme support [#95](https://github.com/AlaskaAirlines/auro-alert/issues/95) ([6c500dd](https://github.com/AlaskaAirlines/auro-alert/commit/6c500ddbcec925ae76e76a7b202549eb5772b00d))
+
 ## [4.0.1](https://github.com/AlaskaAirlines/auro-alert/compare/v4.0.0...v4.0.1) (2025-04-09)
 
 
