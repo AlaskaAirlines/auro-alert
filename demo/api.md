@@ -223,17 +223,17 @@ Use the `hiddenAudible` attribute to hide the `auro-alert` component from the sc
 
 The component may be restyled using the following code sample and changing the values of the following token(s).
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../src/tokens.scss) -->
-<!-- The below code snippet is automatically added from ./../src/tokens.scss -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../src/styles/tokens.scss) -->
+<!-- The below code snippet is automatically added from ./../src/styles/tokens.scss -->
 
 ```scss
-@import '../node_modules/@aurodesignsystem/design-tokens/dist/alaska/SCSSVariables--alaska';
+@use '@aurodesignsystem/design-tokens/dist/themes/alaska/SCSSVariables--alaska' as v;
 
 :host {
-  --ds-auro-alert-border-color: var(--ds-basic-color-status-default, #{$ds-basic-color-status-default});
-  --ds-auro-alert-container-color: var(--ds-basic-color-surface-default, #{$ds-basic-color-surface-default});
+  --ds-auro-alert-border-color: var(--ds-basic-color-status-default, #{v.$ds-basic-color-status-default});
+  --ds-auro-alert-container-color: var(--ds-basic-color-surface-default, #{v.$ds-basic-color-surface-default});
   --ds-auro-alert-icon-color: transparent;
-  --ds-auro-alert-text-color: var(--ds-basic-color-texticon-default, #{$ds-basic-color-texticon-default});
+  --ds-auro-alert-text-color: var(--ds-basic-color-texticon-default, #{v.$ds-basic-color-texticon-default});
 }
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
