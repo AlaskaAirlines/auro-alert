@@ -14,9 +14,9 @@ import iconVersion from './iconVersion.js';
 
 import AuroLibraryRuntimeUtils from '@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs';
 
-import styleCss from "./style-css.js";
-import colorCss from "./color-css.js";
-import tokensCss from "./tokens-css.js";
+import styleCss from "./styles/style-css.js";
+import colorCss from "./styles/color-css.js";
+import tokensCss from "./styles/tokens-css.js";
 
 /**
  * @attr {Boolean} noIcon - Removes icon from alert UI
