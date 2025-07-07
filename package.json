@@ -156,7 +156,7 @@
     "postCss:component": "node ./node_modules/@aurodesignsystem/auro-library/scripts/build/postCss.mjs",
     "postinstall": "node packageScripts/postinstall.mjs",
     "sass:render": "sass-render src/styles/*.css -t ./node_modules/@aurodesignsystem/auro-library/scripts/build/staticStyles-template.js",
-    "serve": "web-dev-server --open demo/ --node-resolve --watch",
+    "serve": "web-dev-server --open --node-resolve --watch",
     "sweep": "rm -rf ./demo/css ./dist | rm ./src/styles/*.css ./src/styles/*-css.js",
     "test": "wtr --coverage",
     "test:watch": "wtr --watch",
