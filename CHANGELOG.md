@@ -1,5 +1,14 @@
 # Semantic Release Automated Changelog
 
+## [4.1.1](https://github.com/AlaskaAirlines/auro-alert/compare/v4.1.0...v4.1.1) (2025-07-08)
+
+
+### Bug Fixes
+
+* update dependencies, restructure styles ([9a4ecec](https://github.com/AlaskaAirlines/auro-alert/commit/9a4ececf726024f589c4643808c704a42a4d909e))
+* update docs head content ([25d66e2](https://github.com/AlaskaAirlines/auro-alert/commit/25d66e2da0c142a0cb1f5a443313627dfdf6dfe9))
+* update typography to be themable via class ([8942624](https://github.com/AlaskaAirlines/auro-alert/commit/8942624224aa302d2a4a265393eb4a1b076ec84c))
+
 # [4.1.0](https://github.com/AlaskaAirlines/auro-alert/compare/v4.0.1...v4.1.0) (2025-04-15)
 
 
