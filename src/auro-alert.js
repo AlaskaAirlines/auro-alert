@@ -143,7 +143,7 @@ export class AuroAlert extends AuroElement {
       <div part="alert" class="alert"
         aria-hidden="${this.hideAudible(this.hiddenAudible)}">
         ${output}
-        <div part="alert-content" class="content">
+        <div part="alert-content" class="content body-lg">
           <span class="util_displayHiddenVisually">${this.typeStr}</span>
           <slot></slot>
         </div>
