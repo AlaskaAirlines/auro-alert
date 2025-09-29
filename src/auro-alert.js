@@ -5,17 +5,14 @@
 
 /* eslint-disable lit/binding-positions, lit/no-invalid-html */
 
-import { html } from 'lit/static-html.js';
-import AuroElement from '@aurodesignsystem/webcorestylesheets/dist/auroElement/auroElement.mjs';
-
-import { AuroDependencyVersioning } from '@aurodesignsystem/auro-library/scripts/runtime/dependencyTagVersioning.mjs';
-import { AuroIcon } from '@aurodesignsystem/auro-icon/src/auro-icon.js';
-import iconVersion from './iconVersion.js';
-
-import AuroLibraryRuntimeUtils from '@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs';
-
-import styleCss from "./styles/style-css.js";
+import { AuroIcon } from "@aurodesignsystem/auro-icon/src/auro-icon.js";
+import { AuroDependencyVersioning } from "@aurodesignsystem/auro-library/scripts/runtime/dependencyTagVersioning.mjs";
+import AuroLibraryRuntimeUtils from "@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs";
+import AuroElement from "@aurodesignsystem/webcorestylesheets/dist/auroElement/auroElement.mjs";
+import { html } from "lit/static-html.js";
+import iconVersion from "./iconVersion.js";
 import colorCss from "./styles/color-css.js";
+import styleCss from "./styles/style-css.js";
 import tokensCss from "./styles/tokens-css.js";
 
 /**
@@ -34,7 +31,7 @@ export class AuroAlert extends AuroElement {
      * Generate unique names for dependency components.
      */
     const versioning = new AuroDependencyVersioning();
-    this.iconTag = versioning.generateTag('auro-icon', iconVersion, AuroIcon);
+    this.iconTag = versioning.generateTag("auro-icon", iconVersion, AuroIcon);
 
     /**
      * @private
@@ -45,13 +42,13 @@ export class AuroAlert extends AuroElement {
   // function to define props used within the scope of this component
   static get properties() {
     return {
-      ...super.properties,
+      ...AuroElement.properties,
       noIcon: {
-        type: Boolean
+        type: Boolean,
       },
       type: {
         type: String,
-        reflect: true
+        reflect: true,
       },
 
       /**
@@ -59,24 +56,20 @@ export class AuroAlert extends AuroElement {
        */
       role: {
         type: String,
-        reflect: true
+        reflect: true,
       },
 
       /**
        * @private
        */
       iconTag: {
-        type: String
-      }
+        type: String,
+      },
     };
   }
 
   static get styles() {
-    return [
-      styleCss,
-      colorCss,
-      tokensCss
-    ];
+    return [styleCss, colorCss, tokensCss];
   }
 
   /**
@@ -93,7 +86,7 @@ export class AuroAlert extends AuroElement {
 
   firstUpdated() {
     // Add the tag name as an attribute if it is different than the component name
-    this.runtimeUtils.handleComponentTagRename(this, 'auro-alert');
+    this.runtimeUtils.handleComponentTagRename(this, "auro-alert");
   }
 
   /**
@@ -106,7 +99,6 @@ export class AuroAlert extends AuroElement {
     return this.noIcon
       ? html``
       : html`<${this.iconTag} customColor category="${category}" name="${name}"></${this.iconTag}>`;
-
   }
 
   // function that renders the HTML and CSS into the scope of the component
