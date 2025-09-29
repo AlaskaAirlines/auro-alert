@@ -5,15 +5,17 @@
 
 /* eslint-disable lit/binding-positions, lit/no-invalid-html */
 
-import { AuroIcon } from "@aurodesignsystem/auro-icon/src/auro-icon.js";
+import { html } from "lit/static-html.js";
+import { AuroIcon } from "@aurodesignsystem/auro-icon/class";
 import { AuroDependencyVersioning } from "@aurodesignsystem/auro-library/scripts/runtime/dependencyTagVersioning.mjs";
 import AuroLibraryRuntimeUtils from "@aurodesignsystem/auro-library/scripts/utils/runtimeUtils.mjs";
 import AuroElement from "@aurodesignsystem/webcorestylesheets/dist/auroElement/auroElement.mjs";
-import { html } from "lit/static-html.js";
+
 import iconVersion from "./iconVersion.js";
-import colorCss from "./styles/color-css.js";
-import styleCss from "./styles/style-css.js";
-import tokensCss from "./styles/tokens-css.js";
+
+import colorCss from "./styles/color.scss";
+import styleCss from "./styles/style.scss";
+import tokensCss from "./styles/tokens.scss";
 
 /**
  * @attr {Boolean} noIcon - Removes icon from alert UI

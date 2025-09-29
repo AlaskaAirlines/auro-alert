@@ -1,7 +1,7 @@
 /* eslint-disable one-var */
 /* eslint-disable no-undef */
 import { expect, fixture, html } from "@open-wc/testing";
-import "../index.js";
+import "../src/registered";
 
 describe("auro-alert", () => {
   it("sets auro-alert to default style", async () => {
