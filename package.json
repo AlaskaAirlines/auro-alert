@@ -51,6 +51,7 @@
   ],
   "scripts": {
     "build": "auro build",
+    "build:version": "node ./scripts/version.mjs",
     "dev": "auro dev -w -s",
     "dev:open": "auro dev -w -s --open",
     "lint": "biome check --no-errors-on-unmatched && stylelint \"./src/**/*.scss\"",
