@@ -1,1 +1,0 @@
-The `auro-alert` component renders errors, warnings, and other inline notifications with automated styling elements. Simply add the `type` attribute the corresponding value. If you need to present multiple lines in the same alert wrapper, use p tags for each line.

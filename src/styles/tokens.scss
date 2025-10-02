@@ -1,8 +1,0 @@
-@use '@aurodesignsystem/design-tokens/dist/themes/alaska/SCSSVariables--alaska' as v;
-
-:host {
-  --ds-auro-alert-border-color: var(--ds-basic-color-status-default, #{v.$ds-basic-color-status-default});
-  --ds-auro-alert-container-color: var(--ds-basic-color-surface-default, #{v.$ds-basic-color-surface-default});
-  --ds-auro-alert-icon-color: transparent;
-  --ds-auro-alert-text-color: var(--ds-basic-color-texticon-default, #{v.$ds-basic-color-texticon-default});
-}
