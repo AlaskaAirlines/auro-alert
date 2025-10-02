@@ -1,5 +1,4 @@
-
-import { AuroAlert } from '../../src/auro-alert.js';
+import { AuroAlert } from "../../src/auro-alert.js";
 
 /**
  * */
