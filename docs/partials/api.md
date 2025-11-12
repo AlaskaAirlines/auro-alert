@@ -16,7 +16,7 @@
 
 </auro-accordion>
 
-## Attribute & Property Examples
+## Property & Attribute Examples
 
 ### Hidden
 
@@ -108,6 +108,8 @@ Use the `type` attribute to apply an icon and border color that match the alertâ
 ## Event Examples
 
 ## Slot Examples
+
+## CSS Shadow Part Examples
 
 ## Common Usage Patterns & Functional Examples
 
