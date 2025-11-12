@@ -18,12 +18,9 @@ import styleCss from "./styles/style.scss";
 import tokensCss from "./styles/tokens.scss";
 
 /**
- * @attr {Boolean} noIcon - Removes icon from alert UI when `type` attribute is set
- * @attr {String} type - Component will render visually based on which type value is set; currently supports `error`, `information`, `success`, `warning`
+ * @slot - Provide text for the alert. If using multiple lines, separate each line with `<p>` tags.
  * @csspart alert - Use for customizing the style of the alert container
  * @csspart alert-content - Use for customizing the style of the alert content
- *
- * @slot - Provide text for the alert. If using multiple lines, separate each line with `<p>` tags.
  */
 export class AuroAlert extends AuroElement {
   constructor() {
@@ -45,11 +42,19 @@ export class AuroAlert extends AuroElement {
   static get properties() {
     return {
       ...AuroElement.properties,
+
+      /**
+       * @private
+       */
+      iconTag: {
+        type: String,
+      },
+
+      /**
+       * Removes icon from alert UI when `type` attribute is set
+       */
       noIcon: {
         type: Boolean,
-      },
-      type: {
-        type: String,
         reflect: true,
       },
 
@@ -62,10 +67,11 @@ export class AuroAlert extends AuroElement {
       },
 
       /**
-       * @private
+       * Component will render visually based on which type value is set; currently supports `error`, `information`, `success`, `warning`
        */
-      iconTag: {
+      type: {
         type: String,
+        reflect: true,
       },
     };
   }
