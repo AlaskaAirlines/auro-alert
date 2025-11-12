@@ -71,7 +71,7 @@ Use the `hiddenVisually` attribute to visually hide the `auro-alert` component f
 
 ### No Icon
 
-The following `<auro-alert>` example illustrates using the `noIcon` attribute.
+Use the `noIcon` attribute to remove the icon from the alert UI when the `type` attribute is set.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/type-noicon.html) -->
@@ -88,7 +88,7 @@ The following `<auro-alert>` example illustrates using the `noIcon` attribute.
 
 ### Type
 
-The `type` attribute of the `<auro-alert>` element supports the following values, `error`, `warning`, `information` and `success`.
+Use the `type` attribute to apply an icon and border color that match the alert’s purpose. It supports the following values: `error`, `information`, `success`, and `warning`.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/type.html) -->
@@ -113,15 +113,17 @@ The `type` attribute of the `<auro-alert>` element supports the following values
 
 ### Multi-line Alert
 
+If you need to present multiple lines in the same alert, wrap each line in a `<p>` tag.
+
 <div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/error-multiline.html) -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/multiline.html) -->
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/error-multiline.html) -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/multiline.html) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>

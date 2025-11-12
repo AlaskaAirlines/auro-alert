@@ -7,8 +7,8 @@
 | `hidden`         | `hidden`         | `Boolean` | If present, the component will be hidden both visually and from screen readers |
 | `hiddenAudible`  | `hiddenAudible`  | `Boolean` | If present, the component will be hidden from screen readers, but seen visually |
 | `hiddenVisually` | `hiddenVisually` | `Boolean` | If present, the component will be hidden visually, but still read by screen readers |
-| `noIcon`         | `noIcon`         | `Boolean` | Removes icon from alert UI                       |
-| `type`           | `type`           | `String`  | Component will render visually based on which type value is set; currently supports `error`, `warning`, `success`, `information` |
+| `noIcon`         | `noIcon`         | `Boolean` | Removes icon from alert UI when `type` attribute is set |
+| `type`           | `type`           | `String`  | Component will render visually based on which type value is set; currently supports `error`, `information`, `success`, `warning` |
 
 ## Slots
 

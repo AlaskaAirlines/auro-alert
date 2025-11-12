@@ -21,7 +21,7 @@ The following sections are editable by making changes to the following files:
 
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./docs/partials/description.md) -->
 <!-- The below content is automatically added from ./docs/partials/description.md -->
-The `auro-alert` component renders errors, warnings, and other inline notifications with automated styling elements. Simply add the `type` attribute the corresponding value. If you need to present multiple lines in the same alert wrapper, use p tags for each line.
+The `auro-alert` component renders inline notifications with automated styling elements.
 <!-- AURO-GENERATED-CONTENT:END -->
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./docs/partials/readmeAddlInfo.md) -->
 <!-- The below content is automatically added from ./docs/partials/readmeAddlInfo.md -->
@@ -93,11 +93,9 @@ In cases where the project is not able to process JS assets, there are pre-proce
 
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./docs/partials/useCases.md) -->
 <!-- The below content is automatically added from ./docs/partials/useCases.md -->
-The `auro-alert` use cases include:
+The `auro-alert` element should be used:
 
-* Error messages
-* Warning messages
-* Informational messages
+* To communicate important, time-sensitive or state-changing information to users
 <!-- AURO-GENERATED-CONTENT:END -->
 
 ## API Code Examples
