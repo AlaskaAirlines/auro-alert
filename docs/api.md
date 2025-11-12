@@ -1,24 +1,27 @@
 # auro-alert
 
-## Properties
+### Properties & Attributes
 
-| Property         | Attribute        | Type      | Description                                      |
-|------------------|------------------|-----------|--------------------------------------------------|
-| `hidden`         | `hidden`         | `Boolean` | If present, the component will be hidden both visually and from screen readers |
-| `hiddenAudible`  | `hiddenAudible`  | `Boolean` | If present, the component will be hidden from screen readers, but seen visually |
-| `hiddenVisually` | `hiddenVisually` | `Boolean` | If present, the component will be hidden visually, but still read by screen readers |
-| `noIcon`         | `noIcon`         | `Boolean` | Removes icon from alert UI when `type` attribute is set |
-| `type`           | `type`           | `String`  | Component will render visually based on which type value is set; currently supports `error`, `information`, `success`, `warning` |
+| Properties | Attributes | Modifiers | Type    | Default | Description                                                                                                                      |
+| ---------- | ---------- | --------- | ------- | ------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| noIcon     | noIcon     |           | boolean |         | Removes icon from alert UI when `type` attribute is set                                                                          |
+| type       | type       |           | string  |         | Component will render visually based on which type value is set; currently supports `error`, `information`, `success`, `warning` |
 
-## Slots
+### Methods
 
-| Name | Description                                      |
-|------|--------------------------------------------------|
-|      | Provide text for the alert. If using multiple lines, separate each line with `<p>` tags. |
+| Name     | Parameters                                                          | Return | Description                                       |
+| -------- | ------------------------------------------------------------------- | ------ | ------------------------------------------------- |
+| register | `name` (string) - The name of element that you want to register to. |        | This will register this element with the browser. |
 
-## CSS Shadow Parts
+### Slots
 
-| Part            | Description                                      |
-|-----------------|--------------------------------------------------|
-| `alert`         | Use for customizing the style of the alert container |
-| `alert-content` | Use for customizing the style of the alert content |
+| Name      | Description                                                                              |
+| --------- | ---------------------------------------------------------------------------------------- |
+| (default) | Provide text for the alert. If using multiple lines, separate each line with `<p>` tags. |
+
+### CSS Shadow Parts
+
+| Name          | Description                                          |
+| ------------- | ---------------------------------------------------- |
+| alert         | Use for customizing the style of the alert container |
+| alert-content | Use for customizing the style of the alert content   |
