@@ -14,7 +14,7 @@ This file is generated based on a template fetched from `./docs/partials/index.m
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../docs/partials/useCases.md) -->
 <!-- AURO-GENERATED-CONTENT:END -->
 
-## Default Example
+## Basic
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/basic.html) -->
@@ -24,7 +24,7 @@ This file is generated based on a template fetched from `./docs/partials/index.m
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/basic.html) -->
-<!-- AURO-GENERATED-CONTENT:END -->
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/basic.html) -->
+  <!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>

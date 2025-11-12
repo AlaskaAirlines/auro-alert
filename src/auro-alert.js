@@ -18,8 +18,8 @@ import styleCss from "./styles/style.scss";
 import tokensCss from "./styles/tokens.scss";
 
 /**
- * @attr {Boolean} noIcon - Removes icon from alert UI
- * @attr {String} type - Component will render visually based on which type value is set; currently supports `error`, `warning`, `success`, `information`
+ * @attr {Boolean} noIcon - Removes icon from alert UI when `type` attribute is set
+ * @attr {String} type - Component will render visually based on which type value is set; currently supports `error`, `information`, `success`, `warning`
  * @csspart alert - Use for customizing the style of the alert container
  * @csspart alert-content - Use for customizing the style of the alert content
  *

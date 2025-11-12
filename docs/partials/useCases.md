@@ -1,5 +1,3 @@
-The `auro-alert` use cases include:
+The `auro-alert` element should be used:
 
-* Error messages
-* Warning messages
-* Informational messages
+* To communicate important, time-sensitive or state-changing information to users
