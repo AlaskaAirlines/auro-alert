@@ -1,1 +1,1 @@
-The `auro-alert` component renders inline notifications with automated styling elements.
+The `auro-alert` component renders inline notifications with automatic styling based on the alert type.
