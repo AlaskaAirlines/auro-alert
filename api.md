@@ -3,60 +3,42 @@
 
 # auro-alert
 
-## Properties
+### Properties & Attributes
 
-| Property         | Attribute        | Type      | Description                                      |
-|------------------|------------------|-----------|--------------------------------------------------|
-| [hidden](#hidden)         | `hidden`         | `Boolean` | If present, the component will be hidden both visually and from screen readers |
-| [hiddenAudible](#hiddenAudible)  | `hiddenAudible`  | `Boolean` | If present, the component will be hidden from screen readers, but seen visually |
-| [hiddenVisually](#hiddenVisually) | `hiddenVisually` | `Boolean` | If present, the component will be hidden visually, but still read by screen readers |
-| [noIcon](#noIcon)         | `noIcon`         | `Boolean` | Removes icon from alert UI                       |
-| [type](#type)           | `type`           | `String`  | Component will render visually based on which type value is set; currently supports `error`, `warning`, `success`, `information` |
+| Properties     | Attributes     | Modifiers | Type                                               | Default | Description                                                                         |
+| -------------- | -------------- | --------- | -------------------------------------------------- | ------- | ----------------------------------------------------------------------------------- |
+| hidden         | hidden         |           | boolean                                            |         | If present, the component will be hidden both visually and from screen readers      |
+| hiddenAudible  | hiddenAudible  |           | boolean                                            |         | If present, the component will be hidden from screen readers, but seen visually     |
+| hiddenVisually | hiddenVisually |           | boolean                                            |         | If present, the component will be hidden visually, but still read by screen readers |
+| noIcon         | noIcon         |           | boolean                                            |         | Removes icon from alert UI when `type` attribute is set                             |
+| type           | type           |           | 'information' \| 'error' \| 'success' \| 'warning' |         | Component will render visually based on which type value is set                     |
 
-## Slots
+### Methods
 
-| Name | Description                                      |
-|------|--------------------------------------------------|
-|      | Provide text for the alert. If using multiple lines, separate each line with `<p>` tags. |
+| Name     | Parameters                                                          | Return | Description                                       |
+| -------- | ------------------------------------------------------------------- | ------ | ------------------------------------------------- |
+| register | `name` (string) - The name of element that you want to register to. |        | This will register this element with the browser. |
 
-## CSS Shadow Parts
+### Slots
 
-| Part            | Description                                      |
-|-----------------|--------------------------------------------------|
-| [alert](#alert)         | Use for customizing the style of the alert container |
-| `alert-content` | Use for customizing the style of the alert content |
+| Name      | Description                                                                              |
+| --------- | ---------------------------------------------------------------------------------------- |
+| (default) | Provide text for the alert. If using multiple lines, separate each line with `<p>` tags. |
+
+### CSS Shadow Parts
+
+| Name          | Description                                          |
+| ------------- | ---------------------------------------------------- |
+| alert         | Use for customizing the style of the alert container |
+| alert-content | Use for customizing the style of the alert content   |
 <!-- AURO-GENERATED-CONTENT:END -->
 
-## Alert API Examples
-
-### `type`
-
-The `type` attribute of the `<auro-alert>` element supports the following values, `error`, `warning`, `information` and `success`.
+## Basic
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/basic.html) -->
   <!-- The below content is automatically added from ./../apiExamples/basic.html -->
   <auro-alert>This is a default error with no error type specified.</auro-alert>
-  <!-- AURO-GENERATED-CONTENT:END -->
-  <br>
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/error.html) -->
-  <!-- The below content is automatically added from ./../apiExamples/error.html -->
-  <auro-alert type="error">Transaction failed.</auro-alert>
-  <!-- AURO-GENERATED-CONTENT:END -->
-  <br>
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/warning.html) -->
-  <!-- The below content is automatically added from ./../apiExamples/warning.html -->
-  <auro-alert type="warning">Warning. Session timed out. Look for a confirmation email to verify your transaction.</auro-alert>
-  <!-- AURO-GENERATED-CONTENT:END -->
-  <br>
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/information.html) -->
-  <!-- The below content is automatically added from ./../apiExamples/information.html -->
-  <auro-alert type="information">You are confirmed on Flight 20 to Aruba.</auro-alert>
-  <!-- AURO-GENERATED-CONTENT:END -->
-  <br>
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/success.html) -->
-  <!-- The below content is automatically added from ./../apiExamples/success.html -->
-  <auro-alert type="success">Your status with flight 20 to Aruba had been updated.</auro-alert>
   <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
@@ -68,95 +50,11 @@ The `type` attribute of the `<auro-alert>` element supports the following values
 <auro-alert>This is a default error with no error type specified.</auro-alert>
 ```
 <!-- AURO-GENERATED-CONTENT:END -->
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/error.html) -->
-<!-- The below code snippet is automatically added from ./../apiExamples/error.html -->
-
-```html
-<auro-alert type="error">Transaction failed.</auro-alert>
-```
-<!-- AURO-GENERATED-CONTENT:END -->
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/warning.html) -->
-<!-- The below code snippet is automatically added from ./../apiExamples/warning.html -->
-
-```html
-<auro-alert type="warning">Warning. Session timed out. Look for a confirmation email to verify your transaction.</auro-alert>
-```
-<!-- AURO-GENERATED-CONTENT:END -->
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/information.html) -->
-<!-- The below code snippet is automatically added from ./../apiExamples/information.html -->
-
-```html
-<auro-alert type="information">You are confirmed on Flight 20 to Aruba.</auro-alert>
-```
-<!-- AURO-GENERATED-CONTENT:END -->
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/success.html) -->
-<!-- The below code snippet is automatically added from ./../apiExamples/success.html -->
-
-```html
-<auro-alert type="success">Your status with flight 20 to Aruba had been updated.</auro-alert>
-```
-<!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
-### `noIcon`
+## Property & Attribute Examples
 
-The following `<auro-alert>` example illustrates using the `noIcon` attribute.
-
-<div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/error-no-icon.html) -->
-  <!-- The below content is automatically added from ./../apiExamples/error-no-icon.html -->
-  <auro-alert noIcon type="error">Transaction failed.</auro-alert>
-  <!-- AURO-GENERATED-CONTENT:END -->
-  <br>
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/information-no-icon.html) -->
-  <!-- The below content is automatically added from ./../apiExamples/information-no-icon.html -->
-  <auro-alert noIcon type="information">You are confirmed on Flight 20 to Aruba.</auro-alert>
-  <!-- AURO-GENERATED-CONTENT:END -->
-  <br>
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/warning-no-icon.html) -->
-  <!-- The below content is automatically added from ./../apiExamples/warning-no-icon.html -->
-  <auro-alert noIcon type="warning">Warning. Session timed out. Look for a confirmation email to verify your transaction.</auro-alert>
-  <!-- AURO-GENERATED-CONTENT:END -->
-  <br>
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/success-no-icon.html) -->
-  <!-- The below content is automatically added from ./../apiExamples/success-no-icon.html -->
-  <auro-alert noIcon type="success">Your status with flight 20 to Aruba had been updated.</auro-alert>
-  <!-- AURO-GENERATED-CONTENT:END -->
-  <br>
-</div>
-<auro-accordion alignRight>
-  <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/error-no-icon.html) -->
-<!-- The below code snippet is automatically added from ./../apiExamples/error-no-icon.html -->
-
-```html
-<auro-alert noIcon type="error">Transaction failed.</auro-alert>
-```
-<!-- AURO-GENERATED-CONTENT:END -->
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/information-no-icon.html) -->
-<!-- The below code snippet is automatically added from ./../apiExamples/information-no-icon.html -->
-
-```html
-<auro-alert noIcon type="information">You are confirmed on Flight 20 to Aruba.</auro-alert>
-```
-<!-- AURO-GENERATED-CONTENT:END -->
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/warning-no-icon.html) -->
-<!-- The below code snippet is automatically added from ./../apiExamples/warning-no-icon.html -->
-
-```html
-<auro-alert noIcon type="warning">Warning. Session timed out. Look for a confirmation email to verify your transaction.</auro-alert>
-```
-<!-- AURO-GENERATED-CONTENT:END -->
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/success-no-icon.html) -->
-<!-- The below code snippet is automatically added from ./../apiExamples/success-no-icon.html -->
-
-```html
-<auro-alert noIcon type="success">Your status with flight 20 to Aruba had been updated.</auro-alert>
-```
-<!-- AURO-GENERATED-CONTENT:END -->
-</auro-accordion>
-
-### `hidden`
+### Hidden
 
 Use the `hidden` attribute to hide the `auro-alert` component from the user and screenreader.
 
@@ -177,28 +75,7 @@ Use the `hidden` attribute to hide the `auro-alert` component from the user and 
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
-### `hiddenVisually`
-
-Use the `hiddenVisually` attribute to visually hide the `auro-alert` component from the user only.
-
-<div class="exampleWrapper">
-  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/hidden-visually.html) -->
-  <!-- The below content is automatically added from ./../apiExamples/hidden-visually.html -->
-  <auro-alert hiddenVisually type="error">This content will be hidden visually, but screen readers will still pick it up.</auro-alert>
-  <!-- AURO-GENERATED-CONTENT:END -->
-</div>
-<auro-accordion alignRight>
-  <span slot="trigger">See code</span>
-<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/hidden-visually.html) -->
-<!-- The below code snippet is automatically added from ./../apiExamples/hidden-visually.html -->
-
-```html
-<auro-alert hiddenVisually type="error">This content will be hidden visually, but screen readers will still pick it up.</auro-alert>
-```
-<!-- AURO-GENERATED-CONTENT:END -->
-</auro-accordion>
-
-### `hiddenAudible`
+### Hidden Audibly
 
 Use the `hiddenAudible` attribute to hide the `auro-alert` component from the screenreader only.
 
@@ -219,9 +96,182 @@ Use the `hiddenAudible` attribute to hide the `auro-alert` component from the sc
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
-### Theme Support
+### Hidden Visually
 
-The component may be restyled using the following code sample and changing the values of the following token(s).
+Use the `hiddenVisually` attribute to visually hide the `auro-alert` component from the user only.
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/hidden-visually.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/hidden-visually.html -->
+  <auro-alert hiddenVisually type="error">This content will be hidden visually, but screen readers will still pick it up.</auro-alert>
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion alignRight>
+  <span slot="trigger">See code</span>
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/hidden-visually.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/hidden-visually.html -->
+
+```html
+<auro-alert hiddenVisually type="error">This content will be hidden visually, but screen readers will still pick it up.</auro-alert>
+```
+<!-- AURO-GENERATED-CONTENT:END -->
+</auro-accordion>
+
+### No Icon
+
+Use the `noIcon` attribute to remove the icon from the alert UI when the `type` attribute is set.
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/type-noicon.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/type-noicon.html -->
+  <auro-alert noIcon type="error">Transaction failed.</auro-alert>
+  <br />
+  <auro-alert noIcon type="information">You are confirmed on Flight 20 to Aruba.</auro-alert>
+  <br />
+  <auro-alert noIcon type="success">Your status with flight 20 to Aruba had been updated.</auro-alert>
+  <br />
+  <auro-alert noIcon type="warning">Warning. Session timed out. Look for a confirmation email to verify your transaction.</auro-alert>
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion alignRight>
+  <span slot="trigger">See code</span>
+  <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/type-noicon.html) -->
+  <!-- The below code snippet is automatically added from ./../apiExamples/type-noicon.html -->
+  ```html
+  <auro-alert noIcon type="error">Transaction failed.</auro-alert>
+  <br />
+  <auro-alert noIcon type="information">You are confirmed on Flight 20 to Aruba.</auro-alert>
+  <br />
+  <auro-alert noIcon type="success">Your status with flight 20 to Aruba had been updated.</auro-alert>
+  <br />
+  <auro-alert noIcon type="warning">Warning. Session timed out. Look for a confirmation email to verify your transaction.</auro-alert>
+  ```
+  <!-- AURO-GENERATED-CONTENT:END -->
+</auro-accordion>
+
+### Type
+
+Use the `type` attribute to apply an icon and border color that match the alert’s purpose. It supports the following values: `error`, `information`, `success`, and `warning`.
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/type.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/type.html -->
+  <auro-alert type="error">Transaction failed.</auro-alert>
+  <br />
+  <auro-alert type="information">You are confirmed on Flight 20 to Aruba.</auro-alert>
+  <br />
+  <auro-alert type="success">Your status with flight 20 to Aruba had been updated.</auro-alert>
+  <br />
+  <auro-alert type="warning">Warning. Session timed out. Look for a confirmation email to verify your transaction.</auro-alert>
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion alignRight>
+  <span slot="trigger">See code</span>
+  <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/type.html) -->
+  <!-- The below code snippet is automatically added from ./../apiExamples/type.html -->
+  ```html
+  <auro-alert type="error">Transaction failed.</auro-alert>
+  <br />
+  <auro-alert type="information">You are confirmed on Flight 20 to Aruba.</auro-alert>
+  <br />
+  <auro-alert type="success">Your status with flight 20 to Aruba had been updated.</auro-alert>
+  <br />
+  <auro-alert type="warning">Warning. Session timed out. Look for a confirmation email to verify your transaction.</auro-alert>
+  ```
+  <!-- AURO-GENERATED-CONTENT:END -->
+</auro-accordion>
+
+## Common Usage Patterns & Functional Examples
+
+### Multi-line Alert
+
+If you need to present multiple lines in the same alert, wrap each line in a `<p>` tag.
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/multiline.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/multiline.html -->
+  <auro-alert type="error">
+    <p>This is error message 1.</p>
+    <p>This is error message 2.</p>
+  </auro-alert>
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion alignRight>
+  <span slot="trigger">See code</span>
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/multiline.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/multiline.html -->
+
+```html
+<auro-alert type="error">
+  <p>This is error message 1.</p>
+  <p>This is error message 2.</p>
+</auro-alert>
+```
+<!-- AURO-GENERATED-CONTENT:END -->
+</auro-accordion>
+
+### Customize content
+
+While Auro components, `auro-alert` included, come with a pre-defined UI opinion, another feature that is fully supported is a user's ability to customize any content in the slot. The following example illustrates how a user can completely customize the content in the `<slot>` of the element, while not needing to recreate the `auro-alert` UI.
+
+<div class="exampleWrapper">
+  <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/custom-content.html) -->
+  <!-- The below content is automatically added from ./../apiExamples/custom-content.html -->
+  <auro-alert type="information">
+    <style>
+      .contentWrapper { padding-top: .25rem; }
+      .contentWrapper * { line-height: 1.2 !important; font-size: var(--ds-text-body-size-sm); }
+      .leanPara { margin: 0 0 var(--ds-size-xs) 0 !important; }
+      .unstyled { padding-left: 20px; }
+    </style>
+    <div class="contentWrapper leanPara">
+      <p class="leanPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Interdum varius sit amet mattis vulputate.</p>
+      <p>Eu nisl nunc mi ipsum faucibus vitae. Tristique senectus et netus et malesuada fames ac turpis. Nunc sed velit dignissim sodales ut. Commodo quis imperdiet massa tincidunt nunc pulvinar sapien et ligula. Vel pharetra vel turpis nunc eget lorem. Vitae sapien pellentesque habitant morbi tristique senectus et. </p>
+      <ul class="unstyled">
+        <li>Varius sit amet mattis vulputate enim. </li>
+        <li>Amet risus nullam eget felis eget nunc. Id consectetur purus ut faucibus pulvinar.</li>
+      </ul>
+      <p class="leanPara">Sem viverra aliquet eget sit amet tellus cras adipiscing enim. Porttitor rhoncus dolor purus non enim. Sit amet nulla facilisi morbi tempus iaculis urna id. Nec ullamcorper sit amet risus nullam eget felis.</p>
+      <p class="fineprint" style="margin: 0;">
+        * Non arcu risus quis varius quam quisque id. Euismod elementum nisi quis eleifend quam adipiscing vitae proin sagittis. Nec feugiat nisl pretium fusce id velit ut tortor.
+      </p>
+    </div>
+  </auro-alert>
+  <!-- AURO-GENERATED-CONTENT:END -->
+</div>
+<auro-accordion alignRight>
+  <span slot="trigger">See code</span>
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/custom-content.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/custom-content.html -->
+
+```html
+<auro-alert type="information">
+  <style>
+    .contentWrapper { padding-top: .25rem; }
+    .contentWrapper * { line-height: 1.2 !important; font-size: var(--ds-text-body-size-sm); }
+    .leanPara { margin: 0 0 var(--ds-size-xs) 0 !important; }
+    .unstyled { padding-left: 20px; }
+  </style>
+  <div class="contentWrapper leanPara">
+    <p class="leanPara">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Interdum varius sit amet mattis vulputate.</p>
+    <p>Eu nisl nunc mi ipsum faucibus vitae. Tristique senectus et netus et malesuada fames ac turpis. Nunc sed velit dignissim sodales ut. Commodo quis imperdiet massa tincidunt nunc pulvinar sapien et ligula. Vel pharetra vel turpis nunc eget lorem. Vitae sapien pellentesque habitant morbi tristique senectus et. </p>
+    <ul class="unstyled">
+      <li>Varius sit amet mattis vulputate enim. </li>
+      <li>Amet risus nullam eget felis eget nunc. Id consectetur purus ut faucibus pulvinar.</li>
+    </ul>
+    <p class="leanPara">Sem viverra aliquet eget sit amet tellus cras adipiscing enim. Porttitor rhoncus dolor purus non enim. Sit amet nulla facilisi morbi tempus iaculis urna id. Nec ullamcorper sit amet risus nullam eget felis.</p>
+    <p class="fineprint" style="margin: 0;">
+      * Non arcu risus quis varius quam quisque id. Euismod elementum nisi quis eleifend quam adipiscing vitae proin sagittis. Nec feugiat nisl pretium fusce id velit ut tortor.
+    </p>
+  </div>
+</auro-alert>
+```
+<!-- AURO-GENERATED-CONTENT:END -->
+</auro-accordion>
+
+## Restyle Component with CSS Variables
+
+The component may be restyled by changing the values of the following token(s).
 
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../src/styles/tokens.scss) -->
 <!-- The below code snippet is automatically added from ./../src/styles/tokens.scss -->
