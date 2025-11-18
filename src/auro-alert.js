@@ -44,6 +44,30 @@ export class AuroAlert extends AuroElement {
       ...AuroElement.properties,
 
       /**
+       * If present, the component will be hidden both visually and from screen readers
+       */
+      hidden: { 
+        type: Boolean,
+        reflect: true 
+      },
+
+      /**
+       * If present, the component will be hidden from screen readers, but seen visually
+       */
+      hiddenAudible:  { 
+        type: Boolean,
+        reflect: true 
+      },
+
+      /**
+       * If present, the component will be hidden visually, but still read by screen readers
+       */
+      hiddenVisually: { 
+        type: Boolean,
+        reflect: true 
+      },
+
+      /**
        * @private
        */
       iconTag: {
@@ -67,10 +91,12 @@ export class AuroAlert extends AuroElement {
       },
 
       /**
-       * Component will render visually based on which type value is set; currently supports `error`, `information`, `success`, `warning`
+       * Component will render visually based on which type value is set
+       * @type {'information' | 'error' | 'success' | 'warning'}
        */
       type: {
         type: String,
+        attribute: "type",
         reflect: true,
       },
     };

@@ -103,14 +103,6 @@ Use the `type` attribute to apply an icon and border color that match the alertâ
 
 </auro-accordion>
 
-## Method Examples
-
-## Event Examples
-
-## Slot Examples
-
-## CSS Shadow Part Examples
-
 ## Common Usage Patterns & Functional Examples
 
 ### Multi-line Alert
