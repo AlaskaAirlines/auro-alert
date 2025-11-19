@@ -18,12 +18,9 @@ import styleCss from "./styles/style.scss";
 import tokensCss from "./styles/tokens.scss";
 
 /**
- * @attr {Boolean} noIcon - Removes icon from alert UI
- * @attr {String} type - Component will render visually based on which type value is set; currently supports `error`, `warning`, `success`, `information`
+ * @slot - Provide text for the alert. If using multiple lines, separate each line with `<p>` tags.
  * @csspart alert - Use for customizing the style of the alert container
  * @csspart alert-content - Use for customizing the style of the alert content
- *
- * @slot - Provide text for the alert. If using multiple lines, separate each line with `<p>` tags.
  */
 export class AuroAlert extends AuroElement {
   constructor() {
@@ -45,11 +42,43 @@ export class AuroAlert extends AuroElement {
   static get properties() {
     return {
       ...AuroElement.properties,
+
+      /**
+       * If present, the component will be hidden both visually and from screen readers
+       */
+      hidden: { 
+        type: Boolean,
+        reflect: true 
+      },
+
+      /**
+       * If present, the component will be hidden from screen readers, but seen visually
+       */
+      hiddenAudible:  { 
+        type: Boolean,
+        reflect: true 
+      },
+
+      /**
+       * If present, the component will be hidden visually, but still read by screen readers
+       */
+      hiddenVisually: { 
+        type: Boolean,
+        reflect: true 
+      },
+
+      /**
+       * @private
+       */
+      iconTag: {
+        type: String,
+      },
+
+      /**
+       * Removes icon from alert UI when `type` attribute is set
+       */
       noIcon: {
         type: Boolean,
-      },
-      type: {
-        type: String,
         reflect: true,
       },
 
@@ -62,10 +91,13 @@ export class AuroAlert extends AuroElement {
       },
 
       /**
-       * @private
+       * Component will render visually based on which type value is set
+       * @type {'information' | 'error' | 'success' | 'warning'}
        */
-      iconTag: {
+      type: {
         type: String,
+        attribute: "type",
+        reflect: true,
       },
     };
   }
