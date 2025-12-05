@@ -11,7 +11,7 @@
 | hiddenAudible  | hiddenAudible  |           | boolean                                            |         | If present, the component will be hidden from screen readers, but seen visually     |
 | hiddenVisually | hiddenVisually |           | boolean                                            |         | If present, the component will be hidden visually, but still read by screen readers |
 | noIcon         | noIcon         |           | boolean                                            |         | Removes icon from alert UI when `type` attribute is set                             |
-| type           | type           |           | 'information' \| 'error' \| 'success' \| 'warning' |         | Component will render visually based on which type value is set                     |
+| type           | type           |           | `information` \| `error` \| `success` \| `warning` |         | Component will render visually based on which type value is set                     |
 
 ### Methods
 
@@ -135,18 +135,19 @@ Use the `noIcon` attribute to remove the icon from the alert UI when the `type` 
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-  <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/type-noicon.html) -->
-  <!-- The below code snippet is automatically added from ./../apiExamples/type-noicon.html -->
-  ```html
-  <auro-alert noIcon type="error">Transaction failed.</auro-alert>
-  <br />
-  <auro-alert noIcon type="information">You are confirmed on Flight 20 to Aruba.</auro-alert>
-  <br />
-  <auro-alert noIcon type="success">Your status with flight 20 to Aruba had been updated.</auro-alert>
-  <br />
-  <auro-alert noIcon type="warning">Warning. Session timed out. Look for a confirmation email to verify your transaction.</auro-alert>
-  ```
-  <!-- AURO-GENERATED-CONTENT:END -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/type-noicon.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/type-noicon.html -->
+
+```html
+<auro-alert noIcon type="error">Transaction failed.</auro-alert>
+<br />
+<auro-alert noIcon type="information">You are confirmed on Flight 20 to Aruba.</auro-alert>
+<br />
+<auro-alert noIcon type="success">Your status with flight 20 to Aruba had been updated.</auro-alert>
+<br />
+<auro-alert noIcon type="warning">Warning. Session timed out. Look for a confirmation email to verify your transaction.</auro-alert>
+```
+<!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
 ### Type
@@ -167,18 +168,19 @@ Use the `type` attribute to apply an icon and border color that match the alertâ
 </div>
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
-  <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/type.html) -->
-  <!-- The below code snippet is automatically added from ./../apiExamples/type.html -->
-  ```html
-  <auro-alert type="error">Transaction failed.</auro-alert>
-  <br />
-  <auro-alert type="information">You are confirmed on Flight 20 to Aruba.</auro-alert>
-  <br />
-  <auro-alert type="success">Your status with flight 20 to Aruba had been updated.</auro-alert>
-  <br />
-  <auro-alert type="warning">Warning. Session timed out. Look for a confirmation email to verify your transaction.</auro-alert>
-  ```
-  <!-- AURO-GENERATED-CONTENT:END -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/type.html) -->
+<!-- The below code snippet is automatically added from ./../apiExamples/type.html -->
+
+```html
+<auro-alert type="error">Transaction failed.</auro-alert>
+<br />
+<auro-alert type="information">You are confirmed on Flight 20 to Aruba.</auro-alert>
+<br />
+<auro-alert type="success">Your status with flight 20 to Aruba had been updated.</auro-alert>
+<br />
+<auro-alert type="warning">Warning. Session timed out. Look for a confirmation email to verify your transaction.</auro-alert>
+```
+<!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
 ## Common Usage Patterns & Functional Examples
