@@ -108,7 +108,7 @@ import { AuroAlert } from '@aurodesignsystem/auro-alert/class';
 AuroAlert.register('custom-alert');
 ```
 
-This will create a new custom element <custom-alert> that behaves exactly like <auro-alert>, allowing both to coexist on the same page without interfering with each other.
+This will create a new custom element `<custom-alert>` that behaves exactly like `<auro-alert>`, allowing both to coexist on the same page without interfering with each other.
 <!-- AURO-GENERATED-CONTENT:END -->
 <div class="exampleWrapper exampleWrapper--flex">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./apiExamples/custom.html) -->

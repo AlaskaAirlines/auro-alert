@@ -81,8 +81,8 @@ Use the `noIcon` attribute to remove the icon from the alert UI when the `type` 
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
-  <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/type-noicon.html) -->
-  <!-- AURO-GENERATED-CONTENT:END -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/type-noicon.html) -->
+<!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
 
@@ -98,8 +98,8 @@ Use the `type` attribute to apply an icon and border color that match the alertâ
 <auro-accordion alignRight>
   <span slot="trigger">See code</span>
 
-  <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/type.html) -->
-  <!-- AURO-GENERATED-CONTENT:END -->
+<!-- AURO-GENERATED-CONTENT:START (CODE:src=./../apiExamples/type.html) -->
+<!-- AURO-GENERATED-CONTENT:END -->
 
 </auro-accordion>
 
