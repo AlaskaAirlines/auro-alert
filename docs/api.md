@@ -8,7 +8,7 @@
 | hiddenAudible  | hiddenAudible  |           | boolean                                            |         | If present, the component will be hidden from screen readers, but seen visually     |
 | hiddenVisually | hiddenVisually |           | boolean                                            |         | If present, the component will be hidden visually, but still read by screen readers |
 | noIcon         | noIcon         |           | boolean                                            |         | Removes icon from alert UI when `type` attribute is set                             |
-| type           | type           |           | 'information' \| 'error' \| 'success' \| 'warning' |         | Component will render visually based on which type value is set                     |
+| type           | type           |           | `information` \| `error` \| `success` \| `warning` |         | Component will render visually based on which type value is set                     |
 
 ### Methods
 
