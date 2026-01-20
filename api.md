@@ -3,6 +3,8 @@
 
 # auro-alert
 
+The `auro-alert` element is used to provide contextual feedback messages for typical user actions.
+
 ### Properties & Attributes
 
 | Properties     | Attributes     | Modifiers | Type                                               | Default | Description                                                                         |
@@ -15,9 +17,9 @@
 
 ### Methods
 
-| Name     | Parameters                                                          | Return | Description                                       |
-| -------- | ------------------------------------------------------------------- | ------ | ------------------------------------------------- |
-| register | `name` (string) - The name of element that you want to register to. |        | This will register this element with the browser. |
+| Name     | Parameters                                                           | Return | Description                                       |
+| -------- | -------------------------------------------------------------------- | ------ | ------------------------------------------------- |
+| register | `name` (string) - The name of the element that you want to register. |        | This will register this element with the browser. |
 
 ### Slots
 
