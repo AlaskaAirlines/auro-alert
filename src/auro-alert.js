@@ -1,4 +1,4 @@
-// Copyright (c) 2020 Alaska Airlines. All right reserved. Licensed under the Apache-2.0 license
+// Copyright (c) 2026 Alaska Airlines. All right reserved. Licensed under the Apache-2.0 license
 // See LICENSE in the project root for license information.
 
 // ---------------------------------------------------------------------
@@ -18,6 +18,9 @@ import styleCss from "./styles/style.scss";
 import tokensCss from "./styles/tokens.scss";
 
 /**
+ * The `auro-alert` element is used to provide contextual feedback messages for typical user actions.
+ * @customElement auro-alert
+ * 
  * @slot - Provide text for the alert. If using multiple lines, separate each line with `<p>` tags.
  * @csspart alert - Use for customizing the style of the alert container
  * @csspart alert-content - Use for customizing the style of the alert content
@@ -108,7 +111,7 @@ export class AuroAlert extends AuroElement {
 
   /**
    * This will register this element with the browser.
-   * @param {string} [name="auro-alert"] - The name of element that you want to register to.
+   * @param {string} [name="auro-alert"] - The name of the element that you want to register.
    *
    * @example
    * AuroAlert.register("custom-alert") // this will register this element to <custom-alert/>
