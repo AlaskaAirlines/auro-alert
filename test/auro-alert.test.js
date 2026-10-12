@@ -70,6 +70,24 @@ describe("auro-alert", () => {
     await expect(iconName).to.equal("information-stroke");
   });
 
+  it("sets role to alert on the host for error, warning, and success types", async () => {
+    for (const type of ["error", "warning", "success"]) {
+      const el = await fixture(html`
+        <auro-alert type="${type}"></auro-alert>
+      `);
+
+      await expect(el.getAttribute("role")).to.equal("alert");
+    }
+  });
+
+  it("does not set role on the host for information type", async () => {
+    const el = await fixture(html`
+      <auro-alert type="information"></auro-alert>
+    `);
+
+    await expect(el.hasAttribute("role")).to.be.false;
+  });
+
   it("auro-alert is accessible", async () => {
     const el = await fixture(html`
       <auro-alert type="information">
@@ -80,6 +98,17 @@ describe("auro-alert", () => {
     `);
 
     await expect(el).to.be.accessible();
+  });
+
+  it("binds lowercase attributes to camelCase properties", async () => {
+    const el = await fixture(html`
+      <auro-alert hiddenaudible hiddenvisually noicon type="error"></auro-alert>
+    `);
+
+    await expect(el.hiddenAudible).to.be.true;
+    await expect(el.hiddenVisually).to.be.true;
+    await expect(el.noIcon).to.be.true;
+    await expect(el.shadowRoot.querySelector('[auro-icon="true"]')).to.be.null;
   });
 
   it("auro-alert custom element is defined", async () => {
