@@ -59,6 +59,7 @@ export class AuroAlert extends AuroElement {
        */
       hiddenAudible:  { 
         type: Boolean,
+        attribute: "hiddenaudible",
         reflect: true 
       },
 
@@ -67,6 +68,7 @@ export class AuroAlert extends AuroElement {
        */
       hiddenVisually: { 
         type: Boolean,
+        attribute: "hiddenvisually",
         reflect: true 
       },
 
@@ -75,6 +77,7 @@ export class AuroAlert extends AuroElement {
        */
       iconTag: {
         type: String,
+        attribute: false,
       },
 
       /**
@@ -82,14 +85,7 @@ export class AuroAlert extends AuroElement {
        */
       noIcon: {
         type: Boolean,
-        reflect: true,
-      },
-
-      /**
-       * @private
-       */
-      role: {
-        type: String,
+        attribute: "noicon",
         reflect: true,
       },
 
@@ -147,17 +143,17 @@ export class AuroAlert extends AuroElement {
         break;
       case "error":
         output = this.generateIconHtml("alert", "error-stroke");
-        this.role = "alert";
+        this.setAttribute("role", "alert");
         this.typeStr = "Error.";
         break;
       case "success":
         output = this.generateIconHtml("interface", "check-stroke");
-        this.role = "alert";
+        this.setAttribute("role", "alert");
         this.typeStr = "Success.";
         break;
       case "warning":
         output = this.generateIconHtml("alert", "warning-stroke");
-        this.role = "alert";
+        this.setAttribute("role", "alert");
         this.typeStr = "Warning.";
         break;
       case "information":
