@@ -88,7 +88,7 @@ Use the `noIcon` attribute to remove the icon from the alert UI when the `type` 
 
 ### Type
 
-Use the `type` attribute to apply an icon and border color that match the alert’s purpose. It supports the following values: `error`, `information`, `success`, and `warning`.
+Use the `type` attribute to apply an icon and border color that match the alert’s purpose. It supports the following values: `error`, `information`, `success`, and `warning`. The `error`, `success`, and `warning` types use `role="alert"`, so screen readers announce them right away. The `information` type doesn't use it, so screen readers don't announce it automatically.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/type.html) -->
