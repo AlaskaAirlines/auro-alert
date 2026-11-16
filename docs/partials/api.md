@@ -88,7 +88,8 @@ Use the `noIcon` attribute to remove the icon from the alert UI when the `type` 
 
 ### Type
 
-Use the `type` attribute to apply an icon and border color that match the alert’s purpose. It supports the following values: `error`, `information`, `success`, and `warning`. The `error`, `success`, and `warning` types set `role="alert"`, so screen readers announce them right away. The `information` type sets no role, so screen readers don't announce it automatically. The alert does not currently reset its role when `type` changes, so set `type` before the alert is shown.
+Use the `type` attribute to apply an icon and border color that match the alert’s purpose. It supports the following values: `error`, `information`, `success`, and `warning`. The `error`, `success`, and `warning` types set `role="alert"`, so screen readers announce them right away. The `information` type sets no role, so screen readers don't announce it automatically.
+Each type also adds a hidden label that screen readers hear before your text, such as "Warning." for `warning` and "Informational notice." for `information`. Don't repeat the type in your message.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/type.html) -->
