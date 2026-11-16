@@ -37,6 +37,11 @@ import tokensCss from "./styles/tokens.scss";
  * @slot - Provide text for the alert. If using multiple lines, separate each line with `<p>` tags.
  * @csspart alert - The outer container that holds the icon and the message.
  * @csspart alert-content - The area next to the icon that holds the alert message.
+ *
+ * @cssprop --ds-auro-alert-border-color - Color of the alert's border.
+ * @cssprop --ds-auro-alert-container-color - Background color of the alert.
+ * @cssprop --ds-auro-alert-icon-color - Color of the alert's icon.
+ * @cssprop --ds-auro-alert-text-color - Color of the alert's text.
  */
 export class AuroAlert extends AuroElement {
   constructor() {
@@ -108,7 +113,7 @@ export class AuroAlert extends AuroElement {
       },
 
       /**
-       * Sets the alert's purpose, which controls its icon and border color: `error`, `warning`, `success`, or `information`. Without a value, the alert shows no icon and uses a default border color.
+       * Sets the alert's purpose, which controls its icon and border color: `error`, `warning`, `success`, or `information`. Without a value, the alert shows no icon and uses a default border color. Screen readers announce `error`, `success`, and `warning` alerts right away because they use `role="alert"`, but `information` alerts aren't announced automatically.
        * @type {'information' | 'error' | 'success' | 'warning'}
        */
       type: {
