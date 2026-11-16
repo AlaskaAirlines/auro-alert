@@ -18,12 +18,25 @@ import styleCss from "./styles/style.scss";
 import tokensCss from "./styles/tokens.scss";
 
 /**
- * The `auro-alert` element is used to provide contextual feedback messages for typical user actions.
+ * Shows an inline message that gives feedback about a user action, such as an error, success, warning, or information message.
+ *
+ * **Key capabilities**
+ * - **Alert types**: Set `type` to `error`, `information`, `success`, or `warning` to change the icon and border color.
+ * - **Optional icon**: Set `noIcon` to remove the icon.
+ * - **Hiding**: Set `hidden` to hide the alert from everyone, `hiddenVisually` to hide it visually but keep it available to screen readers, or `hiddenAudible` to keep it visible but hidden from screen readers.
+ * - **Custom content**: The default slot accepts any content, and each `<p>` tag starts a new line.
+ *
+ * **Example**
+ * ```html
+ * <auro-alert type="success">Your changes are saved.</auro-alert>
+ * ```
+ *
+ * @summary An inline alert with icons and colors for error, success, warning, and information messages.
  * @customElement auro-alert
- * 
+ *
  * @slot - Provide text for the alert. If using multiple lines, separate each line with `<p>` tags.
- * @csspart alert - Use for customizing the style of the alert container
- * @csspart alert-content - Use for customizing the style of the alert content
+ * @csspart alert - The outer container that holds the icon and the message.
+ * @csspart alert-content - The area next to the icon that holds the alert message.
  */
 export class AuroAlert extends AuroElement {
   constructor() {
@@ -47,7 +60,7 @@ export class AuroAlert extends AuroElement {
       ...AuroElement.properties,
 
       /**
-       * If present, the component will be hidden both visually and from screen readers
+       * Hides the alert both visually and from screen readers.
        */
       hidden: { 
         type: Boolean,
@@ -55,7 +68,7 @@ export class AuroAlert extends AuroElement {
       },
 
       /**
-       * If present, the component will be hidden from screen readers, but seen visually
+       * Hides the alert from screen readers while keeping it visible.
        */
       hiddenAudible:  { 
         type: Boolean,
@@ -63,7 +76,7 @@ export class AuroAlert extends AuroElement {
       },
 
       /**
-       * If present, the component will be hidden visually, but still read by screen readers
+       * Hides the alert visually while keeping it available to screen readers.
        */
       hiddenVisually: { 
         type: Boolean,
@@ -78,7 +91,8 @@ export class AuroAlert extends AuroElement {
       },
 
       /**
-       * Removes icon from alert UI when `type` attribute is set
+       * Removes the icon from the alert. Applies only when `type` is set, because an alert without a type has no icon.
+       * @relevantWhen type
        */
       noIcon: {
         type: Boolean,
@@ -94,7 +108,7 @@ export class AuroAlert extends AuroElement {
       },
 
       /**
-       * Component will render visually based on which type value is set
+       * Sets the alert's purpose, which controls its icon and border color: `error`, `warning`, `success`, or `information`. Without a value, the alert shows no icon and uses a default border color.
        * @type {'information' | 'error' | 'success' | 'warning'}
        */
       type: {
@@ -110,11 +124,11 @@ export class AuroAlert extends AuroElement {
   }
 
   /**
-   * This will register this element with the browser.
-   * @param {string} [name="auro-alert"] - The name of the element that you want to register.
+   * Registers the element with the browser under a tag name.
+   * @param {string} [name="auro-alert"] - The tag name to register the element under.
    *
    * @example
-   * AuroAlert.register("custom-alert") // this will register this element to <custom-alert/>
+   * AuroAlert.register("custom-alert") // Registers the element as <custom-alert>
    *
    */
   static register(name = "auro-alert") {
@@ -130,7 +144,7 @@ export class AuroAlert extends AuroElement {
    * @private
    * @param {string} category - The category of the icon.
    * @param {string} name - The name of the icon.
-   * @returns {string} - The html template for the icon.
+   * @returns {import("lit").TemplateResult} The HTML template for the icon, or an empty template when `noIcon` is set.
    */
   generateIconHtml(category, name) {
     return this.noIcon

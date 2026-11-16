@@ -16,11 +16,11 @@
 
 </auro-accordion>
 
-## Property & Attribute Examples
+## Property and attribute examples
 
 ### Hidden
 
-Use the `hidden` attribute to hide the `auro-alert` component from the user and screenreader.
+Use the `hidden` attribute to hide the alert both visually and from screen readers.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/hidden.html) -->
@@ -35,9 +35,9 @@ Use the `hidden` attribute to hide the `auro-alert` component from the user and 
 
 </auro-accordion>
 
-### Hidden Audibly
+### Hidden audibly
 
-Use the `hiddenAudible` attribute to hide the `auro-alert` component from the screenreader only.
+Use the `hiddenAudible` attribute to hide the alert from screen readers while keeping it visible.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/hidden-audible.html) -->
@@ -52,9 +52,9 @@ Use the `hiddenAudible` attribute to hide the `auro-alert` component from the sc
 
 </auro-accordion>
 
-### Hidden Visually
+### Hidden visually
 
-Use the `hiddenVisually` attribute to visually hide the `auro-alert` component from the user only.
+Use the `hiddenVisually` attribute to hide the alert visually while screen readers still read it.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/hidden-visually.html) -->
@@ -69,7 +69,7 @@ Use the `hiddenVisually` attribute to visually hide the `auro-alert` component f
 
 </auro-accordion>
 
-### No Icon
+### No icon
 
 Use the `noIcon` attribute to remove the icon from the alert UI when the `type` attribute is set.
 
@@ -103,9 +103,9 @@ Use the `type` attribute to apply an icon and border color that match the alertâ
 
 </auro-accordion>
 
-## Common Usage Patterns & Functional Examples
+## Common usage patterns
 
-### Multi-line Alert
+### Multi-line alert
 
 If you need to present multiple lines in the same alert, wrap each line in a `<p>` tag.
 
@@ -124,7 +124,7 @@ If you need to present multiple lines in the same alert, wrap each line in a `<p
 
 ### Customize content
 
-While Auro components, `auro-alert` included, come with a pre-defined UI opinion, another feature that is fully supported is a user's ability to customize any content in the slot. The following example illustrates how a user can completely customize the content in the `<slot>` of the element, while not needing to recreate the `auro-alert` UI.
+Put your own content in the default slot to replace the standard alert text. The following example customizes the slot content and keeps the alert's icon and border.
 
 <div class="exampleWrapper">
   <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/custom-content.html) -->
@@ -139,9 +139,9 @@ While Auro components, `auro-alert` included, come with a pre-defined UI opinion
 
 </auro-accordion>
 
-## Restyle Component with CSS Variables
+## Restyle with CSS custom properties
 
-The component may be restyled by changing the values of the following token(s).
+Restyle the component by changing the values of the following tokens.
 
 <!-- AURO-GENERATED-CONTENT:START (CODE:src=./../src/styles/tokens.scss) -->
 <!-- AURO-GENERATED-CONTENT:END -->
