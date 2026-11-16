@@ -34,7 +34,7 @@ import tokensCss from "./styles/tokens.scss";
  * @summary An inline alert with icons and colors for error, success, warning, and information messages.
  * @customElement auro-alert
  *
- * @slot - Provide text for the alert. If using multiple lines, separate each line with `<p>` tags.
+ * @slot - Provide text for the alert. If using multiple lines, separate each line with `<p>` tags. Screen readers also hear a hidden type label before your text, such as "Warning." for `warning` alerts, so don't repeat the type in your message.
  * @csspart alert - The outer container that holds the icon and the message.
  * @csspart alert-content - The area next to the icon that holds the alert message.
  *
@@ -113,7 +113,7 @@ export class AuroAlert extends AuroElement {
       },
 
       /**
-       * Sets the alert's purpose, which controls its icon and border color: `error`, `warning`, `success`, or `information`. Without a value, the alert shows no icon and uses a default border color. Screen readers announce `error`, `success`, and `warning` alerts right away because they set `role="alert"`, but `information` alerts set no role, so screen readers don't announce them automatically. The alert does not currently reset its role when `type` changes, so set `type` before the alert is shown.
+       * Sets the alert's purpose, which controls its icon and border color: `error`, `warning`, `success`, or `information`. Without a value, the alert shows no icon and uses a default border color. Screen readers announce `error`, `success`, and `warning` alerts right away because they set `role="alert"`, but `information` alerts set no role, so screen readers don't announce them automatically.
        * @type {'information' | 'error' | 'success' | 'warning'}
        */
       type: {
@@ -160,32 +160,38 @@ export class AuroAlert extends AuroElement {
   // function that renders the HTML and CSS into the scope of the component
   render() {
     let output = html``;
+    let role;
+    let typeStr;
 
     switch (this.type) {
       case undefined:
         break;
       case "error":
         output = this.generateIconHtml("alert", "error-stroke");
-        this.role = "alert";
-        this.typeStr = "Error.";
+        role = "alert";
+        typeStr = "Error.";
         break;
       case "success":
         output = this.generateIconHtml("interface", "check-stroke");
-        this.role = "alert";
-        this.typeStr = "Success.";
+        role = "alert";
+        typeStr = "Success.";
         break;
       case "warning":
         output = this.generateIconHtml("alert", "warning-stroke");
-        this.role = "alert";
-        this.typeStr = "Warning.";
+        role = "alert";
+        typeStr = "Warning.";
         break;
       case "information":
         output = this.generateIconHtml("alert", "information-stroke");
-        this.typeStr = "Informational notice.";
+        typeStr = "Informational notice.";
         break;
       default:
         break;
     }
+
+    // Set both values on every render so they never keep a previous type's role or label
+    this.role = role;
+    this.typeStr = typeStr;
 
     return html`
       <div part="alert" class="alert"
