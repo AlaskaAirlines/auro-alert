@@ -16,13 +16,13 @@ Shows an inline message that gives feedback about a user action, such as an erro
 
 ### Properties and attributes
 
-| Properties     | Attributes     | Modifiers | Type                                               | Default | Relevant when | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| -------------- | -------------- | --------- | -------------------------------------------------- | ------- | ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| hidden         | hidden         |           | boolean                                            |         |               | Hides the alert both visually and from screen readers.                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| hiddenAudible  | hiddenAudible  |           | boolean                                            |         |               | Hides the alert from screen readers while keeping it visible.                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
-| hiddenVisually | hiddenVisually |           | boolean                                            |         |               | Hides the alert visually while keeping it available to screen readers.                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| noIcon         | noIcon         |           | boolean                                            |         | `type`        | Removes the icon from the alert. Applies only when `type` is set, because an alert without a type has no icon.                                                                                                                                                                                                                                                                                                                                                                                                   |
-| type           | type           |           | `information` \| `error` \| `success` \| `warning` |         |               | Sets the alert's purpose, which controls its icon and border color: `error`, `warning`, `success`, or `information`. Without a value, the alert shows no icon and uses a default border color. Screen readers announce `error`, `success`, and `warning` alerts right away because they set `role="alert"`, but `information` alerts set no role, so screen readers don't announce them automatically. The alert does not currently reset its role when `type` changes, so set `type` before the alert is shown. |
+| Properties     | Attributes     | Modifiers | Type                                               | Default | Relevant when | Description                                                                                                                                                                                                                                                                                                                                                                                                    |
+| -------------- | -------------- | --------- | -------------------------------------------------- | ------- | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| hidden         | hidden         |           | boolean                                            |         |               | Hides the alert both visually and from screen readers.                                                                                                                                                                                                                                                                                                                                                         |
+| hiddenAudible  | hiddenAudible  |           | boolean                                            |         |               | Hides the alert from screen readers while keeping it visible.                                                                                                                                                                                                                                                                                                                                                  |
+| hiddenVisually | hiddenVisually |           | boolean                                            |         |               | Hides the alert visually while keeping it available to screen readers.                                                                                                                                                                                                                                                                                                                                         |
+| noIcon         | noIcon         |           | boolean                                            |         | `type`        | Removes the icon from the alert. Applies only when `type` is set, because an alert without a type has no icon.                                                                                                                                                                                                                                                                                                 |
+| type           | type           |           | `information` \| `error` \| `success` \| `warning` |         |               | Sets the alert's purpose, which controls its icon and border color: `error`, `warning`, `success`, or `information`. Without a value, the alert shows no icon and uses a default border color. Screen readers announce `error`, `success`, and `warning` alerts right away because they set `role="alert"`, but `information` alerts set no role, so screen readers don't announce them automatically.       * |
 
 ### Methods
 
@@ -32,9 +32,9 @@ Shows an inline message that gives feedback about a user action, such as an erro
 
 ### Slots
 
-| Name      | Description                                                                              |
-| --------- | ---------------------------------------------------------------------------------------- |
-| (default) | Provide text for the alert. If using multiple lines, separate each line with `<p>` tags. |
+| Name      | Description                                                                                                                                                                                                                                |
+| --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| (default) | Provide text for the alert. If using multiple lines, separate each line with `<p>` tags. Screen readers also hear a hidden type label before your text, such as "Warning." for `warning` alerts, so don't repeat the type in your message. |
 
 ### CSS shadow parts
 
@@ -162,7 +162,8 @@ Use the `noIcon` attribute to remove the icon from the alert UI when the `type` 
 
 ### Type
 
-Use the `type` attribute to apply an icon and border color that match the alertâ€™s purpose. It supports the following values: `error`, `information`, `success`, and `warning`. The `error`, `success`, and `warning` types set `role="alert"`, so screen readers announce them right away. The `information` type sets no role, so screen readers don't announce it automatically. The alert does not currently reset its role when `type` changes, so set `type` before the alert is shown.
+Use the `type` attribute to apply an icon and border color that match the alertâ€™s purpose. It supports the following values: `error`, `information`, `success`, and `warning`. The `error`, `success`, and `warning` types set `role="alert"`, so screen readers announce them right away. The `information` type sets no role, so screen readers don't announce it automatically.
+Each type also adds a hidden label that screen readers hear before your text, such as "Warning." for `warning` and "Informational notice." for `information`. Don't repeat the type in your message.
 
 <div class="exampleWrapper">
 <!-- AURO-GENERATED-CONTENT:START (FILE:src=./../apiExamples/type.html) -->
@@ -173,7 +174,7 @@ Use the `type` attribute to apply an icon and border color that match the alertâ
 <br />
 <auro-alert type="success">Your status for Flight 20 to Aruba has been updated.</auro-alert>
 <br />
-<auro-alert type="warning">Warning. Session timed out. Look for a confirmation email to verify your transaction.</auro-alert>
+<auro-alert type="warning">Session timed out. Look for a confirmation email to verify your transaction.</auro-alert>
 <!-- AURO-GENERATED-CONTENT:END -->
 </div>
 <auro-accordion alignRight>
@@ -187,7 +188,7 @@ Use the `type` attribute to apply an icon and border color that match the alertâ
 &lt;br /&gt;
 &lt;auro-alert type="success"&gt;Your status for Flight 20 to Aruba has been updated.&lt;/auro-alert&gt;
 &lt;br /&gt;
-&lt;auro-alert type="warning"&gt;Warning. Session timed out. Look for a confirmation email to verify your transaction.&lt;/auro-alert&gt;</code></pre>
+&lt;auro-alert type="warning"&gt;Session timed out. Look for a confirmation email to verify your transaction.&lt;/auro-alert&gt;</code></pre>
 <!-- AURO-GENERATED-CONTENT:END -->
 </auro-accordion>
 
