@@ -1,3 +1,3 @@
-The `auro-alert` element should be used:
+Use `auro-alert` to:
 
-* To communicate important, time-sensitive or state-changing information to users
+* Communicate important, time-sensitive, or state-changing information to users.

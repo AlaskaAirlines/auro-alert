@@ -18,12 +18,30 @@ import styleCss from "./styles/style.scss";
 import tokensCss from "./styles/tokens.scss";
 
 /**
- * The `auro-alert` element is used to provide contextual feedback messages for typical user actions.
+ * Shows an inline message that gives feedback about a user action, such as an error, success, warning, or information message.
+ *
+ * **Key capabilities**
+ * - **Alert types**: Set `type` to `error`, `information`, `success`, or `warning` to change the icon and border color.
+ * - **Optional icon**: Set `noIcon` to remove the icon.
+ * - **Hiding**: Set `hidden` to hide the alert from everyone, `hiddenVisually` to hide it visually but keep it available to screen readers, or `hiddenAudible` to keep it visible but hidden from screen readers.
+ * - **Custom content**: The default slot accepts any content, and each `<p>` tag starts a new line.
+ *
+ * **Example**
+ * ```html
+ * <auro-alert type="success">Your changes are saved.</auro-alert>
+ * ```
+ *
+ * @summary An inline alert with icons and colors for error, success, warning, and information messages.
  * @customElement auro-alert
- * 
- * @slot - Provide text for the alert. If using multiple lines, separate each line with `<p>` tags.
- * @csspart alert - Use for customizing the style of the alert container
- * @csspart alert-content - Use for customizing the style of the alert content
+ *
+ * @slot - Provide text for the alert. If using multiple lines, separate each line with `<p>` tags. Screen readers also hear a hidden type label before your text, such as "Warning." for `warning` alerts, so don't repeat the type in your message.
+ * @csspart alert - The outer container that holds the icon and the message.
+ * @csspart alert-content - The area next to the icon that holds the alert message.
+ *
+ * @cssprop --ds-auro-alert-border-color - Color of the alert's border.
+ * @cssprop --ds-auro-alert-container-color - Background color of the alert.
+ * @cssprop --ds-auro-alert-icon-color - Color of the alert's icon.
+ * @cssprop --ds-auro-alert-text-color - Color of the alert's text.
  */
 export class AuroAlert extends AuroElement {
   constructor() {
@@ -47,7 +65,7 @@ export class AuroAlert extends AuroElement {
       ...AuroElement.properties,
 
       /**
-       * If present, the component will be hidden both visually and from screen readers
+       * Hides the alert both visually and from screen readers.
        */
       hidden: { 
         type: Boolean,
@@ -55,7 +73,7 @@ export class AuroAlert extends AuroElement {
       },
 
       /**
-       * If present, the component will be hidden from screen readers, but seen visually
+       * Hides the alert from screen readers while keeping it visible.
        */
       hiddenAudible:  { 
         type: Boolean,
@@ -63,7 +81,7 @@ export class AuroAlert extends AuroElement {
       },
 
       /**
-       * If present, the component will be hidden visually, but still read by screen readers
+       * Hides the alert visually while keeping it available to screen readers.
        */
       hiddenVisually: { 
         type: Boolean,
@@ -78,7 +96,8 @@ export class AuroAlert extends AuroElement {
       },
 
       /**
-       * Removes icon from alert UI when `type` attribute is set
+       * Removes the icon from the alert. Applies only when `type` is set, because an alert without a type has no icon.
+       * @relevantWhen type
        */
       noIcon: {
         type: Boolean,
@@ -94,7 +113,7 @@ export class AuroAlert extends AuroElement {
       },
 
       /**
-       * Component will render visually based on which type value is set
+       * Sets the alert's purpose, which controls its icon and border color: `error`, `warning`, `success`, or `information`. Without a value, the alert shows no icon and uses a default border color. Screen readers announce `error`, `success`, and `warning` alerts right away because they set `role="alert"`, but `information` alerts set no role, so screen readers don't announce them automatically.
        * @type {'information' | 'error' | 'success' | 'warning'}
        */
       type: {
@@ -110,11 +129,11 @@ export class AuroAlert extends AuroElement {
   }
 
   /**
-   * This will register this element with the browser.
-   * @param {string} [name="auro-alert"] - The name of the element that you want to register.
+   * Registers the element with the browser under a tag name.
+   * @param {string} [name="auro-alert"] - The tag name to register the element under.
    *
    * @example
-   * AuroAlert.register("custom-alert") // this will register this element to <custom-alert/>
+   * AuroAlert.register("custom-alert") // Registers the element as <custom-alert>
    *
    */
   static register(name = "auro-alert") {
@@ -130,7 +149,7 @@ export class AuroAlert extends AuroElement {
    * @private
    * @param {string} category - The category of the icon.
    * @param {string} name - The name of the icon.
-   * @returns {string} - The html template for the icon.
+   * @returns {import("lit").TemplateResult} The HTML template for the icon, or an empty template when `noIcon` is set.
    */
   generateIconHtml(category, name) {
     return this.noIcon
@@ -141,32 +160,38 @@ export class AuroAlert extends AuroElement {
   // function that renders the HTML and CSS into the scope of the component
   render() {
     let output = html``;
+    let role;
+    let typeStr;
 
     switch (this.type) {
       case undefined:
         break;
       case "error":
         output = this.generateIconHtml("alert", "error-stroke");
-        this.role = "alert";
-        this.typeStr = "Error.";
+        role = "alert";
+        typeStr = "Error.";
         break;
       case "success":
         output = this.generateIconHtml("interface", "check-stroke");
-        this.role = "alert";
-        this.typeStr = "Success.";
+        role = "alert";
+        typeStr = "Success.";
         break;
       case "warning":
         output = this.generateIconHtml("alert", "warning-stroke");
-        this.role = "alert";
-        this.typeStr = "Warning.";
+        role = "alert";
+        typeStr = "Warning.";
         break;
       case "information":
         output = this.generateIconHtml("alert", "information-stroke");
-        this.typeStr = "Informational notice.";
+        typeStr = "Informational notice.";
         break;
       default:
         break;
     }
+
+    // Set both values on every render so they never keep a previous type's role or label
+    this.role = role;
+    this.typeStr = typeStr;
 
     return html`
       <div part="alert" class="alert"

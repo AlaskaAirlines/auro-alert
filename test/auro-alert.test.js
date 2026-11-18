@@ -70,6 +70,48 @@ describe("auro-alert", () => {
     await expect(iconName).to.equal("information-stroke");
   });
 
+  it("sets role alert for error, success, and warning types only", async () => {
+    for (const type of ["error", "success", "warning"]) {
+      const el = await fixture(html`<auro-alert type="${type}"></auro-alert>`);
+
+      await expect(el.getAttribute("role")).to.equal("alert");
+    }
+
+    const info = await fixture(
+      html`<auro-alert type="information"></auro-alert>`,
+    );
+
+    await expect(info.hasAttribute("role")).to.be.false;
+  });
+
+  it("clears role and type label when type changes to information", async () => {
+    const el = await fixture(html`<auro-alert type="error"></auro-alert>`);
+
+    await expect(el.getAttribute("role")).to.equal("alert");
+
+    el.type = "information";
+    await el.updateComplete;
+    await el.updateComplete;
+
+    const label = el.shadowRoot.querySelector(".content span");
+
+    await expect(el.hasAttribute("role")).to.be.false;
+    await expect(label.textContent.trim()).to.equal("Informational notice.");
+  });
+
+  it("clears role and type label when type is removed", async () => {
+    const el = await fixture(html`<auro-alert type="warning"></auro-alert>`);
+
+    el.removeAttribute("type");
+    await el.updateComplete;
+    await el.updateComplete;
+
+    const label = el.shadowRoot.querySelector(".content span");
+
+    await expect(el.hasAttribute("role")).to.be.false;
+    await expect(label.textContent.trim()).to.equal("");
+  });
+
   it("auro-alert is accessible", async () => {
     const el = await fixture(html`
       <auro-alert type="information">
